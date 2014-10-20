@@ -1323,6 +1323,23 @@ font-weight: bold; font-size: 40px; text-align: center; color: #8d8d8d; line-hei
 .spokesman span {font-size: 11px; color: #ffffff; font-weight: bold; text-align: left; text-transform: uppercase; font-family: 'helveticaNeue', Helvetica, Arial, sans-serif; }
 .spokesman p{font-size: 18px; font-family: 'helveticaNeue', Helvetica, Arial, sans-serif; text-align: left; font-weight: lighter; line-height: 160%; color: #ffffff; padding-right: 15%; padding-top:15px;}
 
+
+/* Beneficiadas Área Solange Lackington */
+.actress{background-image: url("images/bg-solange.jpg");  background-repeat: no-repeat; background-size: 100%; height: auto;}
+.actress h3{text-align: left; font-family:'helveticaNeue', helvetica, arial, sans-serif; font-size: 40px; color: #ffffff; line-height: 140%; font-weight: bold; margin-bottom: 0; margin-top: 80px;}
+.actress span {font-size: 11px; color: #ffffff; font-weight: bold; text-align: left; text-transform: uppercase; font-family: 'helveticaNeue', Helvetica, Arial, sans-serif; }
+.actress p{font-size: 18px; font-family: 'helveticaNeue', Helvetica, Arial, sans-serif; text-align: left; font-weight: lighter; line-height: 160%; color: #ffffff; padding-right: 15%; padding-top:15px;}
+
+/* Área Slider Beneficiadas */
+.line-text{border-top: 3px solid #eb4483; width: 120px; display:block; margin:10px auto;}
+.benefit li{text-align: center; list-style: none; font-size:20px;}
+.benefit li h4{font-size:25px; font-family:'helveticaNeue', helvetica, arial, sans-serif; text-align: center; color:#6c6c6c; font-weight: bold; margin-top: 30px;}
+.slides-navigation.benefit-ctrl {position: relative; width: 100%; display: block; top: 160px; height: 20px; max-width: 1000px;}
+.benefit-ctrl a.lefta{background: url("images/left-arrow.png"); background-size: 100%; background-repeat: no-repeat; width: 20px; height: 14px; list-style: none; float: left; display: block;}
+.benefit-ctrl a.righta{ background: url("images/right-arrow.png");
+background-size: 100%; background-repeat: no-repeat; width: 20px; height: 14px; list-style: none; float: right; margin-left: 100%;}
+
+
 /******* ESTILOS RELACIONADOS AL FOOTER *******/
 .pinkfoot{background: #eb4483;}
 .pinkfoot ul{list-style: none; margin-top:20px;}

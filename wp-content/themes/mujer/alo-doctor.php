@@ -25,7 +25,7 @@ Template Name: Alo Doctor
                     <div class="col-md-12 medic-ask jumbotron">
                         <h2>¿Tienes consultas?</h2>
                         <div class="line-green"></div>
-                        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                        <?php echo apply_filters('the_content' , $post->post_content)?>
                     </div>
                 </div>
         </section>
@@ -36,23 +36,18 @@ Template Name: Alo Doctor
                     <img src="<?php bloginfo('template_directory'); ?>/images/docarancibia.png">
                 </div>
                 <div class="col-md-6">
-                    <h3>Dr. Arancibia</h3>
+                    <h3><?php echo get_field('vocero_medico')?></h3>
                     <div class="line-green-0"></div>
                     <span>Vocero Médico</span>
-                    <p>
-                        Chambray authentic aute paleo. Street art accusamus nesciunt excepteur, Thundercats try-hard kogi dolor bitters asymmetrical magna pop-up. Twee skateboard pork belly delectus, blog irony Neutra artisan organic commodo. 
-                    </p>
-                    <p>
-                        Qui asymmetrical mollit, eiusmod Thundercats selfies vero wayfarers tempor butcher put a bird on it chillwave cardigan. Portland letterpress hoodie, distillery anim cardigan kale chips reprehenderit craft beer. In stumptown cornhole, locavore PBR kogi nulla ut ethical plaid PBR&B Godard YOLO non labore.
-                    </p>
+                    <?php echo apply_filters('the_content' , get_field('comentario_vocero'))?>
                 </div>
             </div>
         </section>
 
         <section class="container chat-consult">
         	<div class="row">
-        		<?php comments_template(); ?>
-        		
+        		<?php comments_template('comments_template_doctor.php'); ?>
+                <?php wp_list_comments("callback=my_custom_comments"); ?>
         	</div>
         </section>
 

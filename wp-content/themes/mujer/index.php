@@ -99,7 +99,7 @@ Template Name: Home
                         <?php the_post_thumbnail('home-boxes'); ?>
                         <figcaption>
                             <h3><?php the_title(); ?></h3>
-                            <span><? echo truncate(get_the_excerpt(), 100, ' '); ?></span>
+                            
                             <a href="<?php the_permalink(); ?>" title="<?php the_permalink(); ?>" >Ver Más</a>
                         </figcaption>
                     </figure>
@@ -112,7 +112,7 @@ Template Name: Home
                         <?php the_post_thumbnail('home-boxes'); ?>
                         <figcaption>
                             <h3><?php the_title(); ?></h3>
-                            <span><? echo truncate(get_the_excerpt(), 100, ' '); ?></span>
+                            
                             <a href="<?php the_permalink(); ?>" title="<?php the_permalink(); ?>" >Ver Más</a>
                         </figcaption>
                     </figure>
@@ -125,7 +125,7 @@ Template Name: Home
                         <?php the_post_thumbnail('home-boxes'); ?>
                         <figcaption>
                             <h3><?php the_title(); ?></h3>
-                            <span><? echo truncate(get_the_excerpt(), 100, ' '); ?></span>
+                            
                             <a href="<?php the_permalink(); ?>" title="<?php the_permalink(); ?>" >Ver Más</a>
                         </figcaption>
                     </figure>
