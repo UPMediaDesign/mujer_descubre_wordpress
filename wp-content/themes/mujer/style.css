@@ -1335,9 +1335,24 @@ font-weight: bold; font-size: 40px; text-align: center; color: #8d8d8d; line-hei
 .benefit li{text-align: center; list-style: none; font-size:20px;}
 .benefit li h4{font-size:25px; font-family:'helveticaNeue', helvetica, arial, sans-serif; text-align: center; color:#6c6c6c; font-weight: bold; margin-top: 30px;}
 .slides-navigation.benefit-ctrl {position: relative; width: 100%; display: block; top: 160px; height: 20px; max-width: 1000px;}
-.benefit-ctrl a.lefta{background: url("images/left-arrow.png"); background-size: 100%; background-repeat: no-repeat; width: 20px; height: 14px; list-style: none; float: left; display: block;}
+.benefit-ctrl a.lefta{background: url("images/left-arrow.png"); background-size: 100%; background-repeat: no-repeat; width: 20px; height: 14px; list-style: none; float: left; display: block; border:none;}
 .benefit-ctrl a.righta{ background: url("images/right-arrow.png");
-background-size: 100%; background-repeat: no-repeat; width: 20px; height: 14px; list-style: none; float: right; margin-left: 100%;}
+background-size: 100%; background-repeat: no-repeat; width: 20px; height: 14px; list-style: none; float: right; margin-left: 100%; border:none;}
+
+/* Caja Video Mujeres Beneficiadas */
+.videos h2{font-family: 'helveticaNeue', Helvetica, Arial, sans-serif;
+font-weight: bold; font-size: 40px; text-align: center; color: #8d8d8d; line-height: 140%; margin-bottom: 0;}
+.videos.jumbotron p{text-align: center; font-family:'helveticaNeue', helvetica, arial, sans-serif; font-weight: lighter; font-size: 20px; padding: 10px 10%; color: #6c6c6c; line-height: 160%;}
+ul.videos-area{}
+.videos-area li{list-style: none; display: block; float: left; font-family:'helveticaNeue', helvetica, arial, sans-serif;}
+.videos-area img{background: transparent; border: none; width: 100%; padding: 0 5px 10px;}
+.videos-area img:hover{background: transparent; border: none;}
+section.container.white.pdlr0.videos{padding:0;}
+.row.videos-area {margin: 0; }
+.col-md-4.pdlr0 {padding: 0; }
+.slides-pagination.videos-ctrl{position: relative; width: 100%; margin: 0 auto; display: block;}
+.slides-pagination.videos-ctrl a{ margin: 0 5px; background:#eb4483; border:3px solid #ffffff; float: left; display: block;}
+
 
 
 /******* ESTILOS RELACIONADOS AL FOOTER *******/

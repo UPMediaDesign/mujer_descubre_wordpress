@@ -80,53 +80,86 @@ Template Name: Beneficiadas
         	</div>
         </section>
 
-        <section class="container white">
+        <section class="container white pdlr0 videos">
         	<div class="row">
         		<div class="col-md-12 videos">
         			<h2>Videos</h2>
         			<div class="line-green"></div>
-        			<ul class="videos-area">
-        				<li class="col-md-4"><!-- Large modal -->
-							<button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
-
-							<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-							  <div class="modal-dialog modal-lg">
-							    <div class="modal-content">
-							      <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='http://player.vimeo.com/video/66140585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-							    </div>
-							  </div>
-							</div>
-						</li>
-
-						<li class="col-md-4"><!-- Large modal -->
-							<button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
-
-							<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-							  <div class="modal-dialog modal-lg">
-							    <div class="modal-content">
-							      <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='http://player.vimeo.com/video/66140585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-							    </div>
-							  </div>
-							</div>
-						</li>
-
-						<li class="col-md-4"><!-- Large modal -->
-							<button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
-
-							<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-							  <div class="modal-dialog modal-lg">
-							    <div class="modal-content">
-							      <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='http://player.vimeo.com/video/66140585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-							    </div>
-							  </div>
-							</div>
-						</li>
-        			</ul>
-        			<nav class="slides-navigation videos-ctrl">
-        				<a href="#" class="slides-navigation"><span class="fa fa-chevron-right"></span></a>
-        				<a href="#" class="slides-navigation"><span class="fa fa-chevron-left"></span></a>
-         			</nav>
         		</div>
+        	</div>
+
+        	<div class="row videos-area">
+        		<!-- Modal 1 -->
+        		<div class="col-md-4 pdlr0"><!-- Large modal -->
+					<img class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"src="<?php bloginfo('template_directory')?>/images/embed1.jpg">
+						
+					<!-- Ventana Modal -->
+					<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<!-- Embed -->
+									      <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+									      <div class='embed-container'>
+									      	<iframe src='http://player.vimeo.com/video/66140585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+									      </div>
+								<!-- Fin Embed -->
+							</div>
+						</div>
+					</div>
+					<!-- Fin Ventana Modal -->
+				</div>
+
+				<!-- Modal 1 -->
+        		<div class="col-md-4 pdlr0"><!-- Large modal -->
+					<img class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"src="<?php bloginfo('template_directory')?>/images/embed2.jpg">
+						
+					<!-- Ventana Modal -->
+					<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<!-- Embed -->
+									      <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+									      <div class='embed-container'>
+									      	<iframe src='http://player.vimeo.com/video/66140585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+									      </div>
+								<!-- Fin Embed -->
+							</div>
+						</div>
+					</div>
+					<!-- Fin Ventana Modal -->
+				</div>
+
+				<!-- Modal 1 -->
+        		<div class="col-md-4 pdlr0"><!-- Large modal -->
+					<img class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"src="<?php bloginfo('template_directory')?>/images/embed3.jpg">
+						
+					<!-- Ventana Modal -->
+					<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<!-- Embed -->
+									      <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+									      <div class='embed-container'>
+									      	<iframe src='http://player.vimeo.com/video/66140585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+									      </div>
+								<!-- Fin Embed -->
+							</div>
+						</div>
+					</div>
+					<!-- Fin Ventana Modal -->
+				</div>
+
+<!-- 	        	<nav class="slides-pagination videos-ctrl">
+	        		<a href="#" class="slides-pagination"><span class="fa fa-chevron-right"></span></a>
+	        		<a href="#" class="slides-pagination"><span class="fa fa-chevron-right"></span></a>
+	        		<a href="#" class="slides-pagination"><span class="fa fa-chevron-left"></span></a>
+	         	</nav>
+
+	         	<nav class="slides-pagination">
+	         		<a href="#1" class="current">1</a>
+	         		<a href="#2">2</a>
+	         		<a href="#3">3</a>
+	         	</nav> -->
         	</div>
         </section>
 
