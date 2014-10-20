@@ -155,12 +155,39 @@ Template Name: Las Varices
                 <div class="row">
                     <div class="col-md-12">
                         <h3>Inscribete en el Programa</h3>
-                        <a href="" title="" rel="">Ingresa Aquí</a>
+                        <a title="" rel="" data-toggle="modal" data-target="#myModal" >Ingresa Aquí</a>
                     </div>
 
                 </div>
 
             </div>
+            
+            
+            
+            
+        
+        
+        
+        
+        <!-- Modal -->
+        <div class="modal fade container modal-inscripcion" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog col-md-10 col-md-offset-1" style="width:100%">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Inscríbete</h4>
+              </div>
+              <div class="modal-body">
+                <?php echo do_shortcode('[contact-form-7 id="79" title="Formulario inscripcion"]')?>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+            
+            
         </section>
         <!-- Fin Contenido Varices -->
 

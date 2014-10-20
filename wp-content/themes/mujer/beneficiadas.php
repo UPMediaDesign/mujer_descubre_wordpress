@@ -25,7 +25,7 @@ Template Name: Beneficiadas
                     <div class="col-md-12 medic-ask jumbotron">
                         <h2>¿Tienes consultas?</h2>
                         <div class="line-green"></div>
-                        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                        <?php echo apply_filters('the_content' , $post->post_content)?>
                     </div>
                 </div>
         </section>
@@ -39,12 +39,9 @@ Template Name: Beneficiadas
                     <h3>Solange Lackington</h3>
                     <div class="line-green-0"></div>
                     <span>Actriz</span>
-                    <p>
-                        Chambray authentic aute paleo. Street art accusamus nesciunt excepteur, Thundercats try-hard kogi dolor bitters asymmetrical magna pop-up. Twee skateboard pork belly delectus, blog irony Neutra artisan organic commodo. 
-                    </p>
-                    <p>
-                        Qui asymmetrical mollit, eiusmod Thundercats selfies vero wayfarers tempor butcher put a bird on it chillwave cardigan. Portland letterpress hoodie, distillery anim cardigan kale chips reprehenderit craft beer. In stumptown cornhole, locavore PBR kogi nulla ut ethical plaid PBR&B Godard YOLO non labore.
-                    </p>
+                   
+                    <?php echo apply_filters('the_content' , get_field('testimonio_solange_lackington'))?>
+                    
                 </div>
             </div>
         </section>
@@ -56,25 +53,29 @@ Template Name: Beneficiadas
         			<!-- Slider Casos Beneficiadas -->
         			<div class="line-green"></div>
                     <ul class="benefit">
+                       
+                       <?php $testimonios = get_posts(array('post_type' => 'testimonio', 'numberposts' => 2))?>
+                       <?php foreach($testimonios as $testimonio):?>
                        <li class="col-md-6">
-                        	<img src="<?php bloginfo('template_directory')?>/images/marcelagarrido.png" alt="">
-                        	<h4>Marcela Garrido</h4>
+                      		<?php echo get_the_post_thumbnail($testimonio->ID , 'tratamiento' , array('class' => 'testiimagen'))?>
+                        	<!--<img src="<?php bloginfo('template_directory')?>/images/marcelagarrido.png" alt=""> -->
+                        	<h4><?php echo $testimonio->post_title?></h4>
                         	<div class="line-text"></div>
-                        	<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                        	<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, dolore eu feugiat nulla facilisis.</p>
+                        	<?php echo apply_filters('the_content' , $testimonio->post_content)?>
                        	</li>
-                        <li class="col-md-6">
+                        <?php endforeach;?>
+                        <!--<li class="col-md-6">
                         	<img src="<?php bloginfo('template_directory')?>/images/doragonzalez.png" alt="">
                         	<h4>Dora Gonzalez</h4>
                         		<div class="line-text"></div>
                         		<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
                         		<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, dolore eu feugiat nulla facilisis.</p>
-                        </li>
+                        </li> -->
                     </ul>
-                    <nav class="slides-navigation benefit-ctrl">
+                    <!--<nav class="slides-navigation benefit-ctrl">
                     	<a href="#" class="slides-navigation righta"><span class="fa fa-chevron-right"></span></a>
                     	<a href="#" class="slides-navigation lefta"><span class="fa fa-chevron-left"></span></a>
-                    </nav>
+                    </nav> -->
                     <!-- Fin Slider Casos Beneficiadas -->
                 </div>
         	</div>
@@ -89,18 +90,23 @@ Template Name: Beneficiadas
         	</div>
 
         	<div class="row videos-area">
+            
+            	<?php $cvideo = 0?>
+				<?php $videos = get_posts(array('post_type' => 'videos' , 'numberposts' => 3 ))?>
+                <?php foreach($videos as $video):?>
+                <?php $cvideo++?>
         		<!-- Modal 1 -->
         		<div class="col-md-4 pdlr0"><!-- Large modal -->
-					<img class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"src="<?php bloginfo('template_directory')?>/images/embed1.jpg">
+					<img class="btn btn-primary" data-toggle="modal" data-target="#modal-<?php echo $cvideo?>"src="<?php bloginfo('template_directory')?>/images/embed<?php echo $cvideo?>.jpg">
 						
 					<!-- Ventana Modal -->
-					<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal fade bs-example-modal-lg" id="modal-<?php echo $cvideo?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<!-- Embed -->
 									      <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
 									      <div class='embed-container'>
-									      	<iframe src='http://player.vimeo.com/video/66140585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+									      	<iframe src='http://player.vimeo.com/video/<?php echo get_field('id_del_video' , $video->ID)?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 									      </div>
 								<!-- Fin Embed -->
 							</div>
@@ -108,46 +114,11 @@ Template Name: Beneficiadas
 					</div>
 					<!-- Fin Ventana Modal -->
 				</div>
+                <?php endforeach?>
 
-				<!-- Modal 1 -->
-        		<div class="col-md-4 pdlr0"><!-- Large modal -->
-					<img class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"src="<?php bloginfo('template_directory')?>/images/embed2.jpg">
-						
-					<!-- Ventana Modal -->
-					<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-						<div class="modal-dialog modal-lg">
-							<div class="modal-content">
-								<!-- Embed -->
-									      <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
-									      <div class='embed-container'>
-									      	<iframe src='http://player.vimeo.com/video/66140585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-									      </div>
-								<!-- Fin Embed -->
-							</div>
-						</div>
-					</div>
-					<!-- Fin Ventana Modal -->
-				</div>
+				
 
-				<!-- Modal 1 -->
-        		<div class="col-md-4 pdlr0"><!-- Large modal -->
-					<img class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"src="<?php bloginfo('template_directory')?>/images/embed3.jpg">
-						
-					<!-- Ventana Modal -->
-					<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-						<div class="modal-dialog modal-lg">
-							<div class="modal-content">
-								<!-- Embed -->
-									      <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
-									      <div class='embed-container'>
-									      	<iframe src='http://player.vimeo.com/video/66140585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-									      </div>
-								<!-- Fin Embed -->
-							</div>
-						</div>
-					</div>
-					<!-- Fin Ventana Modal -->
-				</div>
+				
 
 <!-- 	        	<nav class="slides-pagination videos-ctrl">
 	        		<a href="#" class="slides-pagination"><span class="fa fa-chevron-right"></span></a>
@@ -167,10 +138,34 @@ Template Name: Beneficiadas
                 <div class="row">
                     <div class="col-md-12">
                         <h3>Inscribete en el Programa</h3>
-                        <a href="" title="" rel="">Ingresa Aquí</a>
+                        <a title="" rel="" data-toggle="modal" data-target="#myModal" >Ingresa Aquí</a>
                     </div>
                 </div>
         </section>
+        
+        
+        
+        
+        <!-- Modal -->
+        <div class="modal fade container modal-inscripcion" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog col-md-10 col-md-offset-1" style="width:100%">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Inscríbete</h4>
+              </div>
+              <div class="modal-body">
+                <?php echo do_shortcode('[contact-form-7 id="79" title="Formulario inscripcion"]')?>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+       	
+        
         <!-- Fin Contenido Varices -->
 
 <?php get_footer(); ?>
