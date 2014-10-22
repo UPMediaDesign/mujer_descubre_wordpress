@@ -25,7 +25,7 @@ Template Name: Las Varices
             <div class="container green-nav">
                     <div class="row">
                         <ul class="col-md-12 ">
-                            <li><a href="#quees" title="" rel="">¿Qué es?</a></li>
+                            <li><a href="#que-son-las-varices" title="" rel="">¿Qué son las várices?</a></li>
                             <li><a href="#tratamientos" title="" rel="">Tratamientos</a></li>
                             <li><a href="#preguntas-frecuentes" title="" rel="">Preguntas Frecuentes</a></li>
                             <li><a href="#precauciones" title="" rel="">Precauciones</a></li>
@@ -41,7 +41,7 @@ Template Name: Las Varices
             <div class="container white">
                 <div class="row">
                     <div class="col-md-12 about">
-                        <h2 id="quees">¿Qué es?</h2>
+                        <h2 id="que-son-las-varices">¿Qué son las várices?</h2>
                         <div class="line-green"></div>
                         <?php echo apply_filters('the_content' , $post->post_content)?>
                     </div>
@@ -151,15 +151,16 @@ Template Name: Las Varices
 
                 
             </div>
-            <div class="container suscribe">
+            
+            <div class="separator"></div>
+            
+            <div class="container-fluid suscribe">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Inscribete en el Programa</h3>
+                        <h3>Inscríbete en el Programa</h3>
                         <a title="" rel="" data-toggle="modal" data-target="#myModal" >Ingresa Aquí</a>
                     </div>
-
                 </div>
-
             </div>
             
             

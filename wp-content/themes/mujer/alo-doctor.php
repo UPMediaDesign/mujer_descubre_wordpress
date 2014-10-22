@@ -46,83 +46,89 @@ Template Name: Alo Doctor
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-        <section class="container chat-consult">
+        <section class="container chat-consult" style=" height:600px; overflow:auto">
         	<div class="row">
             <div class="separator"></div>
                 <?php
 					//Gather comments for a specific page/post 
 					$comments = get_comments(array(
 						'post_id' => $post->ID,
-						'status' => 'approve' //Change this to the type of comments to be displayed
+						'status' => 'approve', //Change this to the type of comments to be displayed
+						//'orderby' => 'ID',
+                        'order' => 'ASC',
 					));
 				?>
-                
+               
                 <?php foreach($comments as $comentario):?>
                 	
-                    <?php if($comentario->user_id == 1){?>
-                        <div class="comentario col-md-10 col-md-offset-2 comentario-doc">
-                            
-                            <div class="content-coment col-md-10">
-                            	<?php echo $comentario->comment_content?>
-                            </div>
-                            <div class="avatar col-md-2">
-                            	<img src="<?php bloginfo('template_directory')?>/images/avatar-doc.png" alt="" />
-                            </div>
-                            
-                        </div>
-                    <?php }else{?>
-                        <div class="comentario col-md-10 comentario-user">
-                        	
-                            <div class="avatar col-md-2">
-                            	<img src="<?php bloginfo('template_directory')?>/images/avatar-user.png" alt="" />
-                            </div>
-                            <div class="content-coment col-md-10">
-                            	<?php echo $comentario->comment_content?>
+                    <?php if( $comentario->comment_parent == 0){?>
+                            <div class="comentario col-md-10 comentario-user">
+                                
+                                <div class="avatar col-md-2 hide-on-mobile">
+                                    <img src="<?php bloginfo('template_directory')?>/images/avatar-user.png" alt="" />
+                                </div>
+                                <div class="content-coment col-md-10">
+                                    <div class="avatar col-md-2 display-on-mobile">
+                                        <img src="<?php bloginfo('template_directory')?>/images/avatar-user.png" alt="" />
+                                    </div>
+                                    <?php echo $comentario->comment_content?>
+                                </div>
+                                
                             </div>
                             
-                        </div>
+                            <?php foreach($comments as $comentarioinside):?>
+                            
+                            	<?php if($comentarioinside->user_id == 1  && $comentarioinside->comment_parent == $comentario->comment_ID ){?>
+                                    <div class="comentario col-md-10 col-md-offset-2 comentario-doc">
+                                        
+                                        <?php //var_dump($comentario)?>
+                                        
+                                        <div class="content-coment col-md-10">
+                                            <div class="avatar col-md-2 display-on-mobile">
+                                                <img src="<?php bloginfo('template_directory')?>/images/avatar-doc.png" alt="" />
+                                            </div>
+                                            <?php echo $comentario->comment_content?>
+                                        </div>
+                                        <div class="avatar col-md-2 hide-on-mobile">
+                                            <img src="<?php bloginfo('template_directory')?>/images/avatar-doc.png" alt="" />
+                                        </div>
+                                        
+                                    </div>
+                        		<?php }?>
+                            
+                            <?php endforeach?>
+                            
                     <?php }?>
                 <?php endforeach;?>
                <div class="separator"></div> 
         	</div>
         </section>
-        
+        <div class="clear separator"></div>
         <section class="container contactt">
         	<div class="row">
             	<h2>Haz tu consulta aquí</h2>
                 <div class="line-green"></div>
-                
-                
                 <div class="form">
-                
-                
-                
-                
-                
-                <?php $args = array(
-				
-				
-					'fields' => apply_filters( 'comment_form_default_fields', array(
-    			'author' => '<div class="col-md-6"><p class="comment-form-author">'. ( $req ? '<span class="required">*</span>' : '' ) .
-                '<input id="author" name="author" type="text" placeholder="Nombre" value="' .
-                esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />' .
-                '</p></div>',
-    'email'  => '<div class="col-md-6"><p class="comment-form-email">' .
-                '' .
-                ( $req ? '<span class="required">*</span>' : '' ) .
-                '<input id="email" name="email" type="text" placeholder="Email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />' .
-		'</p></div>',
-    'url'    => '' )),
-				
-					'label_submit'=>'Enviar consulta',
-					
-					'comment_field' => '<div class="col-md-12"><p class="comment-form-comment"><textarea id="comment" placeholder="Mensaje" name="comment" aria-required="true"></textarea></p></div>',
-				
-				);?>
-                
-                <?php comment_form($args)?>
+                    <?php $args = array(
+        				'fields' => apply_filters( 'comment_form_default_fields', array(
+            			'author' => '<div class="col-md-6"><p class="comment-form-author">'. ( $req ? '<span class="required">*</span>' : '' ) .
+                        '<input id="author" name="author" type="text" placeholder="Nombre" value="' .
+                        esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />' .
+                        '</p></div>',
+                        'email'  => '<div class="col-md-6"><p class="comment-form-email">' .
+                        '' .
+                        ( $req ? '<span class="required">*</span>' : '' ) .
+                        '<input id="email" name="email" type="text" placeholder="Email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />' .
+        		        '</p></div>',
+                        'url'    => '' )),
+        				
+        				'label_submit'=>'Enviar consulta',
+        					
+        				'comment_field' => '<div class="col-md-12"><p class="comment-form-comment"><textarea id="comment" placeholder="Mensaje" name="comment" aria-required="true"></textarea></p></div>',
+    				);?>
+                    
+                    <?php comment_form($args)?>
                 </div>
-                
             </div>
         </section>
         
@@ -130,11 +136,13 @@ Template Name: Alo Doctor
         Sorry, no posts matched your criteria.
         <?php endif; ?>
 
-
-        <section class="container suscribe">
+		
+        <div class="clear separator"></div>
+        
+        <section class="container-fluid suscribe">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Inscribete en el Programa</h3>
+                        <h3>Inscríbete en el Programa</h3>
                         <a title="" rel="" data-toggle="modal" data-target="#myModal" >Ingresa Aquí</a>
                     </div>
                 </div>

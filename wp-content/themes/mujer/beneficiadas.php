@@ -23,7 +23,7 @@ Template Name: Beneficiadas
         <section class="container white">
                 <div class="row">
                     <div class="col-md-12 medic-ask jumbotron">
-                        <h2>¿Tienes consultas?</h2>
+                        <h2>Historias Reales</h2>
                         <div class="line-green"></div>
                         <?php echo apply_filters('the_content' , $post->post_content)?>
                     </div>
@@ -80,7 +80,7 @@ Template Name: Beneficiadas
                 </div>
         	</div>
         </section>
-
+		
         <section class="container white pdlr0 videos">
         	<div class="row">
         		<div class="col-md-12 videos">
@@ -90,25 +90,51 @@ Template Name: Beneficiadas
         	</div>
 
         	<div class="row videos-area">
-            
+            	<script src="//f.vimeocdn.com/js/froogaloop2.min.js"></script>
             	<?php $cvideo = 0?>
 				<?php $videos = get_posts(array('post_type' => 'videos' , 'numberposts' => 3 ))?>
                 <?php foreach($videos as $video):?>
                 <?php $cvideo++?>
-        		<!-- Modal 1 -->
-        		<div class="col-md-4 pdlr0"><!-- Large modal -->
-					<img class="btn btn-primary" data-toggle="modal" data-target="#modal-<?php echo $cvideo?>"src="<?php bloginfo('template_directory')?>/images/embed<?php echo $cvideo?>.jpg">
+
+        		<div class="col-md-4 pdlr0">
+                
+                	<figure>
+                    	<?php echo get_the_post_thumbnail($video->ID , 'filosofia' , array('data-toggle' => 'modal' , 'data-target'=> '#modal-'.$cvideo , 'class' => 'btn btn-primary'))?>
+                    	<figcaption>
+                        	<img src="<?php bloginfo('template_directory')?>/images/play.png" alt="" width="90" data-toggle="modal" data-target="#modal-<?php echo $cvideo?>" />
+                        </figcaption>
+                    </figure>
+                
+					<?php /* <img class="btn btn-primary" data-toggle="modal" data-target="#modal-<?php echo $cvideo?>"src="<?php bloginfo('template_directory')?>/images/embed<?php echo $cvideo?>.jpg">  */?>
 						
-					<!-- Ventana Modal -->
 					<div class="modal fade bs-example-modal-lg" id="modal-<?php echo $cvideo?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 						<div class="modal-dialog modal-lg">
+                            <div class="modal-header">
+                            	<button type="button" id="cerrar-v-<?php echo get_field('id_del_video' , $video->ID)?>" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            	<h4 class="modal-title" id="myModalLabel">&nbsp;</h4>
+                          	</div>
 							<div class="modal-content">
-								<!-- Embed -->
-									      <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
-									      <div class='embed-container'>
-									      	<iframe src='http://player.vimeo.com/video/<?php echo get_field('id_del_video' , $video->ID)?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-									      </div>
-								<!-- Fin Embed -->
+                                  <div class='embed-container'>
+                                    <iframe src='http://player.vimeo.com/video/<?php echo get_field('id_del_video' , $video->ID)?>?api=1' id="vi-<?php echo get_field('id_del_video' , $video->ID)?>" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                                  	<script type="text/javascript">
+                                    jQuery(document).ready(function($) {
+                                    	var iframe = document.getElementById('vi-<?php echo get_field('id_del_video' , $video->ID)?>');
+										$f == Froogaloop
+										var player = $f(iframe);
+										
+										var pauseButton = document.getElementById("cerrar-v-<?php echo get_field('id_del_video' , $video->ID)?>");
+										pauseButton.addEventListener("click", function() {
+										  player.api("pause");
+										});
+										
+										var pauseButton = document.getElementById("modal-<?php echo $cvideo?>");
+										pauseButton.addEventListener("click", function() {
+										  player.api("pause");
+										});
+										
+									});	
+                                    </script>
+                                  </div>
 							</div>
 						</div>
 					</div>
@@ -116,7 +142,8 @@ Template Name: Beneficiadas
 				</div>
                 <?php endforeach?>
 
-				
+				<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+                
 
 				
 
@@ -133,11 +160,11 @@ Template Name: Beneficiadas
 	         	</nav> -->
         	</div>
         </section>
-
- 		<section class="container suscribe">
+		<div class="clear separator"></div>
+ 		<section class="container-fluid suscribe">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Inscribete en el Programa</h3>
+                        <h3>Inscríbete en el Programa</h3>
                         <a title="" rel="" data-toggle="modal" data-target="#myModal" >Ingresa Aquí</a>
                     </div>
                 </div>

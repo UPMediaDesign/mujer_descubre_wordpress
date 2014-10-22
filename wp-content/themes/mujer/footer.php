@@ -7,13 +7,13 @@
                        <li><a href="" title="Las Varices" rel="nofollow">Las Varices</a></li>
                        <li><a href="" title="Aló Doctor" rel="nofollow">Aló Doctor</a></li>
                        <li><a href="" title="Mujeres Beneficiadas" rel="nofollow">Mujeres Beneficiadas</a></li>
-                       <li><a href="" title="Inscribite en el Programa" rel="nofollow">Inscribite en el Programa</a></li>  
+                       <li><a href="" title="Inscribite en el Programa" rel="nofollow">Inscríbite en el Programa</a></li>  
                     </ul> 
 
                     <div class="col-md-5 credits">
                         <span>Una iniciativa de:</span>
-                        <a href="" title="Fundación Banmédica" rel="nofollow"><img src="<?php bloginfo('template_directory'); ?>/images/logo-white.png"></a>
-                        <p>Dreamcatcher tattooed McSweeney's seitan, Echo Park beard High Life.</p>
+                        <a href="http://www.fundacionbanmedica.cl" title="Fundación Banmédica" rel="nofollow"><img src="<?php bloginfo('template_directory'); ?>/images/logo-white.png"></a>
+                        <p>Por un Chile más saludable y feliz.</p>
                     </div>
 
                     <div class="col-md-4 mailsender">

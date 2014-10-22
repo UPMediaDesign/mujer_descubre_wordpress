@@ -85,17 +85,17 @@ Template Name: Home
 
         <!-- Listado de casos -->
         <section>
-            <div class="row">
-                <h3 class="title-case">Historias Reales</h3>
+            <div class="container">
+                <h3 class="title-case">Mujer Descubre Tus Piernas</h3>
                 <!-- <div class="title-line"></div> -->
-                <span class="reference-case">Mujeres Beneficiadas</span>
+                <span class="reference-case">Un Proyecto de la Fundación Banmédica</span>
             </div>
             <div class="container-fluid">
                 <div class="row mgauto">
 
                     <?php query_posts( 'page_id=6' );?>
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                    <figure class="col-md-esp case">
+                    <figure class="col-md-esp col-md-4 case">
                         <?php the_post_thumbnail('home-boxes'); ?>
                         <figcaption>
                             <h3><?php the_title(); ?></h3>
@@ -108,7 +108,7 @@ Template Name: Home
 
                     <?php query_posts( 'page_id=10' );?>
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                    <figure class="col-md-esp case">
+                    <figure class="col-md-esp col-md-4 case">
                         <?php the_post_thumbnail('home-boxes'); ?>
                         <figcaption>
                             <h3><?php the_title(); ?></h3>
@@ -121,7 +121,7 @@ Template Name: Home
 
                     <?php query_posts( 'page_id=8' );?>
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                    <figure class="col-md-esp case">
+                    <figure class="col-md-esp col-md-4 case">
                         <?php the_post_thumbnail('home-boxes'); ?>
                         <figcaption>
                             <h3><?php the_title(); ?></h3>
@@ -142,25 +142,25 @@ Template Name: Home
                 <div class="row">
                     <div class="col-md-12 consult">
                         <img src="<?php bloginfo('template_directory'); ?>/images/dr-arancibia.png">
-                    <h3>Dr. Arancibia</h3>
+                    <h3>Dr. Fuenzalida</h3>
                     <p>Vocero Médico</p>
                     <a class="blue-btn" href="<?php echo get_page_link(8)?>" title="" rel="">Ingresa a Aló Doctor</a>
                     </div>
 
                     <div class="col-md-12 council">
                         <p>
-                            Las várices han sido por años una de las patologías más frecuentes a <strong>nivel mundial</strong>, de hecho, según cifras internacionales, aproximadamente en el mundo 1 de 3 personas en edad adulta sufren de algún grado de várices, de éstas un <strong>70% son mujeres</strong>.
+                            Las várices es una de las patologías más frecuentes a <strong>nivel mundial</strong>. Según cifras internacionales, aproximadamente 1 de 3 personas en edad adulta sufren de algún grado de várices. De éstas el <strong>70% son mujeres</strong>.
                         </p>
                     </div>
 
-                    <div class="col-md-4 stadistics">
+                    <div class="col-md-3 col-md-offset-1 stadistics">
                         <img src="<?php bloginfo('template_directory'); ?>/images/graph1.png" title="" rel="">
                     </div>
                     <div class="col-md-4 stadistics mtop60">
                         <p>Probabilidad de Varices por Edad</p>
                     </div>
-                    <div class="col-md-4 stadistics">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/graph1.png" title="" rel="">
+                    <div class="col-md-3 stadistics">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/graph-2.png" title="" rel="">
                     </div>
                 </div>
 
