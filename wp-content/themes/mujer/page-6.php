@@ -96,37 +96,41 @@ Template Name: Las Varices
                     <div class="col-md-12 questions">
                         <h2 id="preguntas-frecuentes">Preguntas Frecuentes</h2>
                         <div class="line-green"></div>
-                    <!-- Contenido Colapsable -->
+                    </div>
+
+                </div>
+
+                <div class="row">
+                           <!-- Elastislide Carousel -->
+                    <div class="col-md-12">
+                    <ul class="bxSlider panel-group questions">
                         
-                        <div class="panel-group questions" id="accordion">
-                          
-                          <?php $npreg = 0;?>
-                          <?php $preguntas = get_posts(array('post_type' => 'preguntas_frecuentes' , 'numberposts' => 5 ))?>
+                        
+                         <?php $npreg = 0;?>
+                          <?php $preguntas = get_posts(array('post_type' => 'preguntas_frecuentes' , 'numberposts' => 10 ))?>
                           <?php foreach($preguntas as $pregunta):?>
                           <?php $npreg++?>
-                          <div class="panel panel-default">
+                          <li class="panel panel-default">
                             <div class="panel-heading">
                               <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse-<?php echo $npreg?>">
+                                <a data-toggle="modal" data-target="#myModalb-<?php echo $npreg?>" >
                                   <?php echo $pregunta->post_title?>
                                 </a>
                               </h4>
                             </div>
+
                             <div id="collapse-<?php echo $npreg?>" class="panel-collapse collapse">
                               <div class="panel-body">
                                 <p>
                                 <?php echo $pregunta->post_content?>
                                 </p>
                               </div>
-                            </div>
-                          </div>
-                          
-                          <?php endforeach?>
-		
-                         
-                        </div>
-                    <!-- Fin Contenido Colapsable -->
-                    </div>
+                            </div> 
+                            
+                        </li>
+                        <?php endforeach ?>
+                    </ul>
+                    <!-- End Elastislide Carousel -->
 
                 </div>
 
@@ -148,8 +152,6 @@ Template Name: Las Varices
                     <?php endforeach?>
                     
                 </div>
-
-                
             </div>
             
             <div class="separator"></div>
@@ -162,12 +164,26 @@ Template Name: Las Varices
                     </div>
                 </div>
             </div>
-            
-            
-            
-            
-        
-        
+       					<!-- Modal preguntas -->
+                        <?php $npreg = 0;?>
+                        <?php foreach($preguntas as $pregunta):?>
+                        <?php $npreg++?>
+                        <div class="modal fade" id="myModalb-<?php echo $npreg?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h4 class="modal-title" id="myModalLabel"><?php echo $pregunta->post_title?></h4>
+                              </div>
+                              <div class="modal-body">
+                                <?php echo $pregunta->post_content?>
+                              </div>
+                              
+                            </div>
+                          </div>
+                        </div>
+                        <?php endforeach;?>
+                        <!-- Fin Modal  -->
         
         
         <!-- Modal -->
@@ -191,5 +207,12 @@ Template Name: Las Varices
             
         </section>
         <!-- Fin Contenido Varices -->
+
+        <script>
+          jQuery('.bxSlider').bxSlider({
+            mode: 'vertical',
+            minSlides: 5,
+          });
+    </script>
 
 <?php get_footer()?>

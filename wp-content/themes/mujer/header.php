@@ -15,18 +15,20 @@
     <?php if ( is_search() ) { ?><?php bloginfo('name'); ?> · Resultados<?php } ?>
     <?php if (function_exists('is_tag')) { if ( is_tag() ) { ?><?php bloginfo('name'); ?> · Archivo por Tag · <?php  single_tag_title("", true); } } ?>
 </title>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<?php wp_head(); ?>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 
 <!--BOOTSTRAP-->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ 
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/jstyle.css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/superslides.css">
 <!-- bxSlider CSS file -->
+<script src="<?php bloginfo('template_directory'); ?>/js/bxslider.js"></script>
 <link href="<?php bloginfo('template_directory'); ?>/css/jquery.bxslider.css" rel="stylesheet" />
     <!--[if lte IE 8]>
     <style>
@@ -39,16 +41,14 @@
     <![endif]-->
 
     
-<?php wp_head(); ?>
+
 
 <script type="text/javascript" src="<?php bloginfo('template_directory')?>/js/superslides.js"></script>
 
 <!--FACEBOOK OG-->
 
-<?php if (have_posts()):while(have_posts()):the_post(); endwhile; endif;?>
+<?php //if (have_posts()):while(have_posts()):the_post(); endwhile; endif;?>
 <!-- the default values -->
-<meta property="fb:app_id" content="702517839779860" />
-<meta property="fb:admins" content="1108564427" />
 
 <!-- if page is content page -->
 <?php if (is_single()) { ?>

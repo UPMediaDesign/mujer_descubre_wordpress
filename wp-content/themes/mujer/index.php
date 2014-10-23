@@ -156,7 +156,7 @@ Template Name: Home
                     <div class="col-md-3 col-md-offset-1 stadistics">
                         <img src="<?php bloginfo('template_directory'); ?>/images/graph1.png" title="" rel="">
                     </div>
-                    <div class="col-md-4 stadistics mtop60">
+                    <div class="col-md-4 stadistics mtop60 nophone">
                         <p>Probabilidad de Varices por Edad</p>
                     </div>
                     <div class="col-md-3 stadistics">

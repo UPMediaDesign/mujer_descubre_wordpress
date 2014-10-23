@@ -1242,7 +1242,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05060402', e
 .stadistics img{margin: 0 auto; display: block; width:100%; height:auto;}
 /* Area sugerencias contra las varices */
 .sugerences {background: url("images/bg-varices.jpg"); background-size: 100%; width:100%; background-repeat:no-repeat; padding-bottom: 60px; padding-top:30px;}
-.sugerences a{text-align: center; display: table; margin: 0 auto; color: #ffffff; text-decoration: none; margin-bottom: 45px;}
+.sugerences a{text-align: center; display: table; margin: 0 auto; color: #ffffff; text-decoration: none; margin-bottom: 45px; transition: 0.5s ease;
+-webkit-transition: 0.5s ease;}
+.sugerences a:hover{color:#ffffff; text-decoration: none; transition: 0.5s ease;
+-webkit-transition: 0.5s ease;}
 .sugerences p{text-align: center; color: #ffffff; font-family:'helveticaNeue', helvetica, arial, sans-serif; font-weight: lighter; font-size: 30px; line-height: 140%; margin: 20px 15%;}
 .sugerences h4{text-align: center; font-family: 'helveticaNeue', helvetica, arial, sans-serif; font-size: 30px; font-weight: bold; line-height: 140%; color: #ffffff; margin-bottom: 15px;}
 
@@ -1308,7 +1311,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05060402', e
 
 /* Preguntas Frecuentes */
 .questions h2{text-align: center;font-family: 'helveticaNeue',Helvetica, Arial, sans-serif; font-weight: bold ;font-size: 40px ; text-align: center; color:#8d8d8d; line-height: 140%; margin-bottom:0; margin-top: -90px; padding-top: 60px;}
-.questions a{font-family: 'helveticaNeue', helvetica, arial, sans-serif; font-size: 27px; font-weight: lighter; text-align: center; line-height: 160%; display: block; color: #8d8d8d; border: 2px solid #8d8d8d; border-radius: 5px; margin: 3px 18%; padding: 2%; text-decoration: none; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease;}
+.questions a{font-family: 'helveticaNeue', helvetica, arial, sans-serif; font-size: 27px; font-weight: lighter; text-align: center; line-height: 160%; display: block; color: #8d8d8d; border: 2px solid #8d8d8d; border-radius: 5px; margin: 3px 18%; padding: 2%; text-decoration: none; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; cursor: pointer;}
 .questions a:hover{color: #adadad;
 border: 2px solid #adadad;-webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; border-radius: 15px; border:2px solid transparent;}
 .questions.panel-default {border-color: none; }
@@ -1375,7 +1378,9 @@ section.container.white.pdlr0.videos{padding:0;}
 .slides-pagination.videos-ctrl{position: relative; width: 100%; margin: 0 auto; display: block;}
 .slides-pagination.videos-ctrl a{ margin: 0 5px; background:#eb4483; border:3px solid #ffffff; float: left; display: block;}
 
-
+/* Area Modal Box */
+.modal.in .modal-dialog{background: #f7f7f7; border-radius: 10px;}
+.modal-content{padding:5px;}
 
 /******* ESTILOS RELACIONADOS AL FOOTER *******/
 .pinkfoot{background: #eb4483;}
@@ -1396,6 +1401,8 @@ section.container.white.pdlr0.videos{padding:0;}
 .copyrighted{float:right; text-align: right; font-size: 11px; font-family:'helveticaNeue', helvetica, arial, sans-serif; font-weight: 400; color: #ffffff; margin: 20px 0; display: inline-table; padding-right: 3%;}
 
 .logged-in-as{padding: 0 0 0 20px;}
+
+ul.bxslider.panel-group.questions{padding: 0;}
 
 
 /*NAV*/
@@ -1521,7 +1528,12 @@ transform: translateY(10px);
   opacity: 1;
   width: 100%;
   height: 4px;
+/*  margin-left: 15px;
+  margin-right:0;*/
 
+}
+#menu.container>.navbar-header, .container-fluid>.navbar-header, .container>.navbar-collapse, .container-fluid>.navbar-collapse{
+  margin: 0;
 }
 
 .nav>ul>li>a span.active {
@@ -1655,11 +1667,9 @@ border-radius: 5px 5px 5px 5px;
 
 
 .slides-pagination {
-  position: absolute;
-  z-index: 3;
-  bottom: 120px;
   text-align: center;
   width: 100%;
+  margin:20px auto;
 }
 /*.slides-pagination a {
   border: 2px solid #222;
@@ -1707,7 +1717,7 @@ border-radius: 5px 5px 5px 5px;
 @media only screen and (min-width: 1024px) and (max-width: 1199px){
     .nav>ul>li{padding-left:2.3%;}
     .spokesman {background-size: cover !important;}
-    .spokesman img{display:none;}
+    .spokesman img{margin-top: 5%;}
     .spokesman h3{margin-top:25px;}
     .varices {background-size: cover !important; height: 75vh; }
     .display-on-mobile{display: none}
@@ -1726,7 +1736,7 @@ border-radius: 5px 5px 5px 5px;
 
   .sugerences p{font-size: 20px;}
   .spokesman {background-size: cover !important;}
-  .spokesman img{display:none;}
+  .spokesman img{margin-top: 5%;}
   .spokesman h3{margin-top:25px;}
   .varices {background-size: cover !important; height: 75vh; }
 
@@ -1743,7 +1753,7 @@ border-radius: 5px 5px 5px 5px;
 
 @media only screen and (min-width: 641px) and (max-width: 768px){
   .nav>ul{float: none; width: 100%; background-color: rgba(235,68,131,0.5); margin-top: 20px; border-radius: 20px;}
-  .nav>ul>li{float: none; display: block; padding-top:10px; padding-left:2%;}
+  .nav>ul>li{float: none; display: table; margin: 0 auto; padding: 10px 0;}
   .display-on-mobile{display: block; margin-bottom: 15px;}
   .hide-on-mobile{display: none;}
 
@@ -1777,63 +1787,76 @@ border-radius: 5px 5px 5px 5px;
    .actress span{text-align: center; margin: 0 auto; display: block; padding: 10px 0 0;}
    .actress p{text-align: center; padding:15px 0;}
 
-      .line-green{margin: 10px auto;}
-      .line-green-0{margin: 10px auto;}
-      .display-on-mobile{display: block; margin-bottom: 15px;}
-      .hide-on-mobile{display: none;}
+   .line-green{margin: 10px auto;}
+   .line-green-0{margin: 10px auto;}
+   .display-on-mobile{display: block; margin-bottom: 15px;}
+   .hide-on-mobile{display: none;}
+   .comentario-doc .content-coment:after{display: none;}
+   .comentario-user .content-coment:after{display: none;}
 }
 
 @media only screen and (max-width: 640px){
   .logo{width: 60%; max-width: 200px;}
   .logo img{width: 100%; max-width: 400px;}
-  .nav>ul{float: none; width: 100%; background-color: rgba(235,68,131,0.7); margin-top: 20px; border-radius: 20px; padding-bottom: 30px; margin:10px 5.5% ;}
+  .nav>ul{float: none; width: 100%; background-color: rgba(235,68,131,0.7); margin-top: 20px; border-radius: 20px; padding-bottom: 30px; margin:10px auto ;}
   .nav>ul>li{float: none; display: table; margin: 0 auto; padding: 10px 0;} 
-  .nav>ul>li.current-menu-item>a {padding: 20px 2px;}
+  .nav>ul>li.current-menu-item>a {padding: 0 2px 20px 2px;}
+  .nav>ul>li>a:hover {padding: 10px 2px 20px;}
   li.bg1{background-size: cover !important;}
   .sugerences{background-size: cover !important;}
-  .carousel-caption.jumbotron{width: 100%; left: 0;}
+  .carousel-caption.jumbotron{width: 100%; left: 0; top:120px;}
+  .carousel-caption.jumbotron h1 {font-size: 35px;}
 
   .case{height:225px;}
 
   .jumbotron.caption.centered p{margin:0 auto; font-size: 15px;}
 
-   .council p{font-size: 20px;}
+  .council p{font-size: 20px;}
 
-   .consult p{margin: 25px 36%;}
+  .consult p{margin: 25px 36%;}
 
-   .copyrighted{float:left;}
-   .sugerences h4{margin-bottom:10pxs;}
-   .border-solid{margin-bottom:15px;}
-   .sugerences p{font-size: 20px; margin: 20px 2%;}
-   .beneficiadas{/*height: 65vh;*/ background-position: 50%;}
+  .copyrighted{float:left;}
+  .sugerences h4{margin-bottom:10pxs;}
+  .border-solid{margin-bottom:15px;}
+  .sugerences p{font-size: 20px; margin: 20px 2%;}
+  .beneficiadas{/*height: 65vh;*/ background-position: 50%;}
 
-   .medic-ask.jumbtron p{font-size: 18px; padding: 10px 0;}
-   .spokesman {background-size: cover !important;}
-   .spokesman img{display:none;}
-   .spokesman h3{margin-top:25px !important; text-align: center;}
-   .spokesman span{text-align: center; margin: 0 auto; display: block; padding: 10px 0 0;}
-   .spokesman p{text-align: center; padding:15px 0 30px;}
+  .medic-ask.jumbtron p{font-size: 18px; padding: 10px 0;}
+  .spokesman {background-size: cover !important;}
+  .spokesman img{display:none;}
+  .spokesman h3{margin-top:25px !important; text-align: center;}
+  .spokesman span{text-align: center; margin: 0 auto; display: block; padding: 10px 0 0;}
+  .spokesman p{text-align: center; padding:15px 0 30px;}
 
-   .actress {background-size: cover !important;}
-   .actress img{display:none;}
-   .actress h3{margin-top:25px !important; text-align: center;}
-   .actress span{text-align: center; margin: 0 auto; display: block; padding: 10px 0 0;}
-   .actress p{text-align: center; padding:15px 0;}
+  .actress {background-size: cover !important;}
+  .actress img{display:none;}
+  .actress h3{margin-top:25px !important; text-align: center;}
+  .actress span{text-align: center; margin: 0 auto; display: block; padding: 10px 0 0;}
+  .actress p{text-align: center; padding:15px 0;}
 
-   .line-green-0,
-   .line-green{margin: 10px auto;}
-   .form-submit{margin-bottom: 30px;}
+  .line-green-0,
+  .line-green{margin: 10px auto;}
+  .form-submit{margin-bottom: 30px;}
 
-   .varices{height:75vh;}
-   .about p{margin: 10px auto 30px; font-size: 18px;}
+  .varices{height:560px;}
+  .about p{margin: 10px auto 30px; font-size: 18px;}
 
-   .treatments{margin-bottom:40px;}
-   figure.col-md-3.treatments {height: 280px; }
-   .questions a{margin:3px 0;}
-   .panel-default>.panel-heading+.panel-collapse .panel-body p{padding:0;}
-   .cautions p{padding:0 5% 40px;}
+  .treatments{margin-bottom:40px;}
+  figure.col-md-3.treatments {height: 280px; }
+  .questions h2{margin-top: 0; padding-top:20px}
+  .questions a{margin:3px 0;}
+  .panel-default>.panel-heading+.panel-collapse .panel-body p{padding:0;}
+  .cautions p{padding:0 5% 40px;}
 
-   .display-on-mobile{display: block; margin-bottom: 15px;}
-   .hide-on-mobile{display:none;}
-   .benefit li{padding:0;}
+  .display-on-mobile{display: block; margin-bottom: 15px;}
+  .hide-on-mobile{display:none;}
+  .benefit li{padding:0;}
+
+  .comentario-doc .content-coment:after{display: none;}
+  .comentario-user .content-coment:after{display: none;}
+
+  .col-md-4.stadistics.mtop60.nophone{margin-top:0;}
+  .stadistics p{border:none;}
+
+  .treatments figcaption{bottom:40.5%;}
 }

@@ -51,7 +51,7 @@ margin-top:40px;
 .contactt textarea{ min-height:200px}
 .form-allowed-tags{ display:none}
 
-.form-submit{ text-align:center; margin-top:30px;}
+.form-submit{ text-align:center; margin-top:30px; margin-bottom: 30px;}
 .contactt #submit{ background-color:#3ee1c4; color:#fff ; width:55%; margin: 0 auto;}
 
 .testiimagen{ padding:30px;border-radius:400px; width: 100%;

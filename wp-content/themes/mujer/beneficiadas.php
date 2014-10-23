@@ -82,7 +82,7 @@ Template Name: Beneficiadas
         	</div>
         </section>
 		
-        <section class="container white pdlr0 videos">
+        <section class="container white videos">
         	<div class="row">
         		<div class="col-md-12 videos">
         			<h2>Videos</h2>
@@ -90,76 +90,34 @@ Template Name: Beneficiadas
         		</div>
         	</div>
 
-        	<div class="row videos-area">
+        	<div class="row videos-area slider">
             	<script src="//f.vimeocdn.com/js/froogaloop2.min.js"></script>
             	<?php $cvideo = 0?>
-				<?php $videos = get_posts(array('post_type' => 'videos' , 'numberposts' => 3 ))?>
+				<?php $videos = get_posts(array('post_type' => 'videos' , 'numberposts' => 10 ))?>
                 <?php foreach($videos as $video):?>
                 <?php $cvideo++?>
 
-        		<div class="col-md-4 pdlr0">
+        		<div class="col-md-4 pdlr0 ">
                 
-                	<figure>
+                	<figure class="slide">
                     	<?php echo get_the_post_thumbnail($video->ID , 'filosofia' , array('data-toggle' => 'modal' , 'data-target'=> '#modal-'.$cvideo , 'class' => 'btn btn-primary'))?>
                     	<figcaption>
                         	<img src="<?php bloginfo('template_directory')?>/images/play.png" alt="" width="90" data-toggle="modal" data-target="#modal-<?php echo $cvideo?>" />
                         </figcaption>
                     </figure>
-                
-					<?php /* <img class="btn btn-primary" data-toggle="modal" data-target="#modal-<?php echo $cvideo?>"src="<?php bloginfo('template_directory')?>/images/embed<?php echo $cvideo?>.jpg">  */?>
 						
-					<div class="modal fade bs-example-modal-lg" id="modal-<?php echo $cvideo?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-						<div class="modal-dialog modal-lg">
-                            <div class="modal-header">
-                            	<button type="button" id="cerrar-v-<?php echo get_field('id_del_video' , $video->ID)?>" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                            	<h4 class="modal-title" id="myModalLabel">&nbsp;</h4>
-                          	</div>
-							<div class="modal-content">
-                                  <div class='embed-container'>
-                                    <iframe src='http://player.vimeo.com/video/<?php echo get_field('id_del_video' , $video->ID)?>?api=1' id="vi-<?php echo get_field('id_del_video' , $video->ID)?>" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                                  	<script type="text/javascript">
-                                    jQuery(document).ready(function($) {
-                                    	var iframe = document.getElementById('vi-<?php echo get_field('id_del_video' , $video->ID)?>');
-										$f == Froogaloop
-										var player = $f(iframe);
-										
-										var pauseButton = document.getElementById("cerrar-v-<?php echo get_field('id_del_video' , $video->ID)?>");
-										pauseButton.addEventListener("click", function() {
-										  player.api("pause");
-										});
-										
-										var pauseButton = document.getElementById("modal-<?php echo $cvideo?>");
-										pauseButton.addEventListener("click", function() {
-										  player.api("pause");
-										});
-										
-									});	
-                                    </script>
-                                  </div>
-							</div>
-						</div>
-					</div>
+					
 					<!-- Fin Ventana Modal -->
 				</div>
                 <?php endforeach?>
 
-				<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
-                
 
-				
+				<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+                </style>
 
-<!-- 	        	<nav class="slides-pagination videos-ctrl">
-	        		<a href="#" class="slides-pagination"><span class="fa fa-chevron-right"></span></a>
-	        		<a href="#" class="slides-pagination"><span class="fa fa-chevron-right"></span></a>
-	        		<a href="#" class="slides-pagination"><span class="fa fa-chevron-left"></span></a>
-	         	</nav>
-
-	         	<nav class="slides-pagination">
-	         		<a href="#1" class="current">1</a>
-	         		<a href="#2">2</a>
-	         		<a href="#3">3</a>
-	         	</nav> -->
         	</div>
+
+            <!-- Llamado a inscripción -->
         </section>
 		<div class="clear separator"></div>
  		<section class="container-fluid suscribe">
@@ -171,9 +129,46 @@ Template Name: Beneficiadas
                 </div>
         </section>
         
-        
-        
-        
+
+            <!-- Modal Videos -->
+            <?php $cvideo = 0;?>
+            <?php foreach($videos as $video):?>
+            <?php $cvideo++?>
+                <div class="modal fade bs-example-modal-lg" id="modal-<?php echo $cvideo?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-header">
+                                <button type="button" id="cerrar-v-<?php echo get_field('id_del_video' , $video->ID)?>" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h4 class="modal-title" id="myModalLabel">&nbsp;</h4>
+                            </div>
+                            <div class="modal-content">
+                                  <div class='embed-container'>
+                                    <iframe src='http://player.vimeo.com/video/<?php echo get_field('id_del_video' , $video->ID)?>?api=1' id="vi-<?php echo get_field('id_del_video' , $video->ID)?>" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                                    <script type="text/javascript">
+                                    jQuery(document).ready(function($) {
+                                        var iframe = document.getElementById('vi-<?php echo get_field('id_del_video' , $video->ID)?>');
+                                        $f == Froogaloop
+                                        var player = $f(iframe);
+                                        
+                                        var pauseButton = document.getElementById("cerrar-v-<?php echo get_field('id_del_video' , $video->ID)?>");
+                                        pauseButton.addEventListener("click", function() {
+                                          player.api("pause");
+                                        });
+                                        
+                                        var pauseButton = document.getElementById("modal-<?php echo $cvideo?>");
+                                        pauseButton.addEventListener("click", function() {
+                                          player.api("pause");
+                                        });
+                                        
+                                    }); 
+                                    </script>
+                                  </div>
+                            </div>
+                        </div>
+                </div>
+
+            <?php endforeach ?>
+                    <!-- Fin Modal Videos -->
+
         <!-- Modal -->
         <div class="modal fade container modal-inscripcion" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog col-md-10 col-md-offset-1" style="width:100%">
@@ -192,8 +187,15 @@ Template Name: Beneficiadas
           </div>
         </div>
         
-       	
-        
         <!-- Fin Contenido Varices -->
+        <script>
+            jQuery('.slider').bxSlider({
+                slideWidth: 600,
+                slideMargin:5,
+                minSlides: 3,
+                maxSlides: 3,
+                pager:true,    
+            });    
+        </script>
 
 <?php get_footer(); ?>
