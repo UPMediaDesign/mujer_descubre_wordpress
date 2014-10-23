@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"enfo",
+				"endforeach"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"line",
+				"line-green-0"
+			],
+			[
+				"navbar",
+				"navbar-toggle"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"tra",
+				"transparent"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
 				"slides",
 				"slides-pagination"
 			],
@@ -26,10 +66,6 @@
 			[
 				"videos",
 				"videos-area"
-			],
-			[
-				"font",
-				"font-weight"
 			],
 			[
 				"background",
@@ -72,16 +108,8 @@
 				"padding-top"
 			],
 			[
-				"margin",
-				"margin-top"
-			],
-			[
 				"font-",
 				"font-size"
-			],
-			[
-				"padding",
-				"padding"
 			],
 			[
 				"margi",
@@ -90,18 +118,6 @@
 			[
 				"sa",
 				"sans-serif"
-			],
-			[
-				"text",
-				"text-align"
-			],
-			[
-				"line",
-				"line-green"
-			],
-			[
-				"marg",
-				"margin-right"
 			],
 			[
 				"backgroun",
@@ -170,10 +186,6 @@
 			[
 				"bold",
 				"bolder"
-			],
-			[
-				"bor",
-				"border-top"
 			],
 			[
 				"s",
@@ -311,7 +323,7 @@
 			"file": "wp-content/themes/mujer/alo-doctor.php",
 			"settings":
 			{
-				"buffer_size": 7579,
+				"buffer_size": 8123,
 				"line_ending": "Unix"
 			}
 		},
@@ -319,7 +331,7 @@
 			"file": "wp-content/themes/mujer/beneficiadas.php",
 			"settings":
 			{
-				"buffer_size": 7670,
+				"buffer_size": 9492,
 				"line_ending": "Unix"
 			}
 		},
@@ -327,18 +339,15 @@
 			"file": "wp-content/themes/mujer/page-6.php",
 			"settings":
 			{
-				"buffer_size": 7491,
+				"buffer_size": 10043,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "<?php\n/*\nTemplate Name: Home\n*/\n?>\n<?php get_header(); ?>\n\n            \n\n            <div id=\"bigcarousel\">\n                <div id=\"slides\">\n                  <ul class=\"slides-container\">\n                    \n                    <?php $slides = get_posts(array('post_type'=>'slider' , 'posts_per_page'=>4));?>\n                    <?php $scount = 0?>\n                    <?php foreach($slides as $slide):$scount++?>\n                    <?php\n                    $thumb_id = get_post_thumbnail_id($slide->ID);\n                    $thumb_url = wp_get_attachment_image_src($thumb_id,'full', true);\n                    ?>\n                    <li style=\"background-image:url(<?php echo $thumb_url[0];?>); background-position:center top; height:580px; background-size:cover !important\">\n                      <?php //echo get_the_post_thumbnail($slide->ID , 'full')?>\n                        <div class=\"carousel-caption jumbotron\">\n                            <h1><?php echo get_the_title($slide->ID)?></h1>\n                            <h3><?php echo $slide->post_content?></h3>\n                            <span class=\"left-line\"></span>\n                            <p><?php echo $slide->post_excerpt?></p>\n                        </div>\n                    </li>\n                    <?php endforeach;?>\n                    \n                    \n                  </ul>\n                  <nav class=\"slides-navigation\">\n                    <a href=\"#\" class=\"next\"><span class=\"fa fa-chevron-right\"></span></a>\n                    <a href=\"#\" class=\"prev\"><span class=\"fa fa-chevron-left\"></span></a>\n                  </nav>\n                  \n                  \n                  \n                </div>\n                \n                \n                <script>\n                jQuery(document).ready(function($) {\n                    jQuery('#slides').superslides();\n                });\n              </script>\n    \n                        <?php /*\n                        <div id=\"slides\">\n                          <ul class=\"slides-container\">\n                            \n                            <?php $slides = get_posts(array('post_type'=>'slider' , 'posts_per_page'=>3));?>\n                            <?php $scount = 0?>\n                            <?php foreach($slides as $slide):$scount++?>\n                            <?php\n                            $thumb_id = get_post_thumbnail_id($slide->ID);\n                            $thumb_url = wp_get_attachment_image_src($thumb_id,'full', true);\n                            ?>\n                            <li style=\"background-image:url(<?php echo $thumb_url[0];?>); background-position:center top; height:580px; background-size:cover !important\">\n                              <?php //echo get_the_post_thumbnail($slide->ID , 'full')?>\n                              <div class=\"carousel-caption jumbotron\">\n                                <h1><?php echo get_the_title($slide->ID)?></h1>\n                                <h3><?php echo get_the_content($slide->ID)?></h3>\n                                <span class=\"left-line\"></span>\n                                <p><?php echo $slide->post_excerpt?></p>\n                              </div>\n                            </li>\n                            <?php endforeach;?>\n                          </ul>\n\n                          \n                        </div>\n                        \n                        <script>\n                            jQuery(document).ready(function($) {\n                                jQuery('#slides').superslides();\n                            });\n                        </script>\n                        */?>\n            </div>\n\n        \n\n        <!-- Listado de casos -->\n        <section>\n            <div class=\"container\">\n                <h3 class=\"title-case\">Mujer Descubre Tus Piernas</h3>\n                <!-- <div class=\"title-line\"></div> -->\n                <span class=\"reference-case\">Un Proyecto de la Fundación Banmédica</span>\n            </div>\n            <div class=\"container-fluid\">\n                <div class=\"row mgauto\">\n\n                    <?php query_posts( 'page_id=6' );?>\n                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>\n                    <figure class=\"col-md-esp case\">\n                        <?php the_post_thumbnail('home-boxes'); ?>\n                        <figcaption>\n                            <h3><?php the_title(); ?></h3>\n                            \n                            <a href=\"<?php the_permalink(); ?>\" title=\"<?php the_permalink(); ?>\" >Ver Más</a>\n                        </figcaption>\n                    </figure>\n                    <?php endwhile; endif; ?>\n                    <?php wp_reset_query(); ?>\n\n                    <?php query_posts( 'page_id=10' );?>\n                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>\n                    <figure class=\"col-md-esp case\">\n                        <?php the_post_thumbnail('home-boxes'); ?>\n                        <figcaption>\n                            <h3><?php the_title(); ?></h3>\n                            \n                            <a href=\"<?php the_permalink(); ?>\" title=\"<?php the_permalink(); ?>\" >Ver Más</a>\n                        </figcaption>\n                    </figure>\n                    <?php endwhile; endif; ?>\n                    <?php wp_reset_query(); ?>\n\n                    <?php query_posts( 'page_id=8' );?>\n                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>\n                    <figure class=\"col-md-esp case\">\n                        <?php the_post_thumbnail('home-boxes'); ?>\n                        <figcaption>\n                            <h3><?php the_title(); ?></h3>\n                            \n                            <a href=\"<?php the_permalink(); ?>\" title=\"<?php the_permalink(); ?>\" >Ver Más</a>\n                        </figcaption>\n                    </figure>\n                    <?php endwhile; endif; ?>\n                    <?php wp_reset_query(); ?>\n                </div>\n            </div>\n        </section>\n        <!-- Fin Listado de casos -->\n\n        <!-- Sugerencias del Médico -->\n        <section>\n            <div class=\"container mbottom80\">\n                <div class=\"row\">\n                    <div class=\"col-md-12 consult\">\n                        <img src=\"<?php bloginfo('template_directory'); ?>/images/dr-arancibia.png\">\n                    <h3>Dr. Arancibia</h3>\n                    <p>Vocero Médico</p>\n                    <a class=\"blue-btn\" href=\"<?php echo get_page_link(8)?>\" title=\"\" rel=\"\">Ingresa a Aló Doctor</a>\n                    </div>\n\n                    <div class=\"col-md-12 council\">\n                        <p>\n                            Las várices han sido por años una de las patologías más frecuentes a <strong>nivel mundial</strong>, de hecho, según cifras internacionales, aproximadamente en el mundo 1 de 3 personas en edad adulta sufren de algún grado de várices, de éstas un <strong>70% son mujeres</strong>.\n                        </p>\n                    </div>\n\n                    <div class=\"col-md-4 stadistics\">\n                        <img src=\"<?php bloginfo('template_directory'); ?>/images/graph1.png\" title=\"\" rel=\"\">\n                    </div>\n                    <div class=\"col-md-4 stadistics mtop60\">\n                        <p>Probabilidad de Varices por Edad</p>\n                    </div>\n                    <div class=\"col-md-4 stadistics\">\n                        <img src=\"<?php bloginfo('template_directory'); ?>/images/graph1.png\" title=\"\" rel=\"\">\n                    </div>\n                </div>\n\n            </div>\n        </section>\n        <!-- Fin Sugerencias del Médico -->\n\n        <!-- Sugerencias para varices  -->\n        <section>\n            <div class=\"container-fluid sugerences\">\n                <div class=\"row\">\n                    <div class=\"col-md-12\">\n                        <h4>Tratamientos Varices</h4>\n                        <div class=\"border-solid\"></div>\n                        <p>En los pacientes que no tienen indicación de cirugía, se pueden mencionar las siguientes medidas de tartamiento conservador para aliviar los síntomas y ayudar a evitar la progresión de la enfermedad</p>\n                        <a class=\"blue-btn\" href=\"<?php echo get_page_link(6)?>/#tratamientos\" title=\"\" rel=\"\">Infórmate Más</a>\n                    </div>\n                </div>\n            </div>  \n\n        </section>\n        <!-- Fin -->\n        \n        \n        <!-- Modal -->\n        <div class=\"modal fade container modal-inscripcion\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n          <div class=\"modal-dialog col-md-10 col-md-offset-1\" style=\"width:100%\">\n            <div class=\"modal-content\">\n              <div class=\"modal-header\">\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\"><span aria-hidden=\"true\">&times;</span><span class=\"sr-only\">Close</span></button>\n                <h4 class=\"modal-title\" id=\"myModalLabel\">Inscríbete</h4>\n              </div>\n              <div class=\"modal-body\">\n                <?php echo do_shortcode('[contact-form-7 id=\"79\" title=\"Formulario inscripcion\"]')?>\n              </div>\n              <div class=\"modal-footer\">\n                <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cerrar</button>\n              </div>\n            </div>\n          </div>\n        </div>\n        \n<?php get_footer(); ?>",
 			"file": "wp-content/themes/mujer/index.php",
-			"file_size": 9793,
-			"file_write_time": 1413905685000000,
 			"settings":
 			{
-				"buffer_size": 9570,
+				"buffer_size": 9586,
 				"line_ending": "Windows"
 			}
 		},
@@ -346,7 +355,39 @@
 			"file": "wp-content/themes/mujer/header.php",
 			"settings":
 			{
-				"buffer_size": 5224,
+				"buffer_size": 5220,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mujer/footer.php",
+			"settings":
+			{
+				"buffer_size": 1811,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/mujer/functions.php",
+			"settings":
+			{
+				"buffer_size": 15217,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mujer/jfunctions.php",
+			"settings":
+			{
+				"buffer_size": 3472,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mujer/css/jquery.bxslider.css",
+			"settings":
+			{
+				"buffer_size": 3840,
 				"line_ending": "Unix"
 			}
 		},
@@ -354,7 +395,7 @@
 			"file": "wp-content/themes/mujer/style.css",
 			"settings":
 			{
-				"buffer_size": 51053,
+				"buffer_size": 58612,
 				"line_ending": "Unix"
 			}
 		},
@@ -362,7 +403,15 @@
 			"file": "wp-content/themes/mujer/jstyle.css",
 			"settings":
 			{
-				"buffer_size": 74,
+				"buffer_size": 2972,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mujer/js/jquery.bxslider.js",
+			"settings":
+			{
+				"buffer_size": 50573,
 				"line_ending": "Unix"
 			}
 		},
@@ -379,7 +428,15 @@
 			"file": "wp-content/themes/mujer/alo-doctor-b.php",
 			"settings":
 			{
-				"buffer_size": 5436,
+				"buffer_size": 3995,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mujer/bootstrap/css/bootstrap.min.css",
+			"settings":
+			{
+				"buffer_size": 100275,
 				"line_ending": "Unix"
 			}
 		}
@@ -387,11 +444,11 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 387.0,
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 467.0
 	},
 	"console":
 	{
@@ -553,6 +610,21 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"panel-group",
+			"border",
+			"tratamiento",
+			"trata",
+			"tratanientos",
+			"navbar-collapse",
+			"navbar-collapse.container>.navbar-header, .container-fluid>.navbar-header, .container>.navbar-collapse, .container-fluid>.navbar-collapse",
+			"navbar-collapse",
+			"container",
+			";}",
+			"@media",
+			"navbar-toggle",
+			"ins",
+			"aranci",
+			"row",
 			"col-md-esp",
 			"body",
 			"primary",
@@ -665,22 +737,7 @@
 			".login h1 a",
 			"login",
 			"position",
-			"navigation",
-			"navi",
-			"navigation",
-			"navi",
-			"navigation",
-			"navigatiob",
-			"navi",
-			"navigation",
-			"map",
-			"post-thumbnails",
-			"{\n",
-			"navigation",
-			"type and press",
-			"see more",
-			".slider",
-			"bin"
+			"navigation"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -698,7 +755,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -706,15 +763,15 @@
 					"file": "wp-content/themes/mujer/alo-doctor.php",
 					"settings":
 					{
-						"buffer_size": 7579,
+						"buffer_size": 8123,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6154,
-								6154
+								4891,
+								4891
 							]
 						],
 						"settings":
@@ -725,7 +782,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 618.0,
+						"translation.y": 1754.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -735,15 +792,15 @@
 					"file": "wp-content/themes/mujer/beneficiadas.php",
 					"settings":
 					{
-						"buffer_size": 7670,
+						"buffer_size": 9492,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7670,
-								7670
+								4196,
+								4196
 							]
 						],
 						"settings":
@@ -754,7 +811,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2678.0,
+						"translation.y": 1514.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -764,26 +821,26 @@
 					"file": "wp-content/themes/mujer/page-6.php",
 					"settings":
 					{
-						"buffer_size": 7491,
+						"buffer_size": 10043,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7491,
-								7491
+								4950,
+								4970
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true,
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 923.0,
+						"translation.y": 1798.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -793,25 +850,26 @@
 					"file": "wp-content/themes/mujer/index.php",
 					"settings":
 					{
-						"buffer_size": 9570,
+						"buffer_size": 9586,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3779,
-								3779
+								6202,
+								6202
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1380.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -821,15 +879,15 @@
 					"file": "wp-content/themes/mujer/header.php",
 					"settings":
 					{
-						"buffer_size": 5224,
+						"buffer_size": 5220,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5037,
-								5037
+								1168,
+								1168
 							]
 						],
 						"settings":
@@ -840,7 +898,121 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1199.0,
+						"translation.y": 208.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "wp-content/themes/mujer/footer.php",
+					"settings":
+					{
+						"buffer_size": 1811,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								851,
+								851
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "wp-content/themes/mujer/functions.php",
+					"settings":
+					{
+						"buffer_size": 15217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								471,
+								474
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "wp-content/themes/mujer/jfunctions.php",
+					"settings":
+					{
+						"buffer_size": 3472,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1251,
+								1251
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 31.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "wp-content/themes/mujer/css/jquery.bxslider.css",
+					"settings":
+					{
+						"buffer_size": 3840,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								683,
+								564
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1159.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -848,23 +1020,23 @@
 			]
 		},
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
-					"buffer": 5,
+					"buffer": 9,
 					"file": "wp-content/themes/mujer/style.css",
 					"settings":
 					{
-						"buffer_size": 51053,
+						"buffer_size": 58612,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15135,
-								15145
+								24169,
+								24169
 							]
 						],
 						"settings":
@@ -875,39 +1047,70 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 12656.0,
+						"translation.y": 20056.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 10,
 					"file": "wp-content/themes/mujer/jstyle.css",
 					"settings":
 					{
-						"buffer_size": 74,
+						"buffer_size": 2972,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								61,
-								61
+								1512,
+								1512
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 6,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 978.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 11,
+					"file": "wp-content/themes/mujer/js/jquery.bxslider.js",
+					"settings":
+					{
+						"buffer_size": 50573,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 11689.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
 					"file": "wp-content/themes/mujer/js/superslides.js",
 					"settings":
 					{
@@ -937,19 +1140,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 13,
 					"file": "wp-content/themes/mujer/alo-doctor-b.php",
 					"settings":
 					{
-						"buffer_size": 5436,
+						"buffer_size": 3995,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3977,
-								3977
+								0,
+								0
 							]
 						],
 						"settings":
@@ -960,7 +1163,34 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 416.0,
+						"translation.y": 433.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "wp-content/themes/mujer/bootstrap/css/bootstrap.min.css",
+					"settings":
+					{
+						"buffer_size": 100275,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								86122,
+								86122
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 16010.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -996,7 +1226,7 @@
 		"cols":
 		[
 			0.0,
-			0.505959795638,
+			0.485282996762,
 			1.0
 		],
 		"rows":
@@ -1031,6 +1261,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 189.0,
+	"side_bar_width": 187.0,
 	"status_bar_visible": true
 }
