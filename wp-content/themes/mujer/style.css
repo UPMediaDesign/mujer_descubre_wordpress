@@ -1336,7 +1336,7 @@ border: 2px solid #adadad;-webkit-transition: 0.5s ease; -moz-transition: 0.5s e
 /* ¿Tienes Consultas? */
 .medic-ask h2{font-family: 'helveticaNeue', Helvetica, Arial, sans-serif;
 font-weight: bold; font-size: 40px; text-align: center; color: #8d8d8d; line-height: 140%; margin-bottom: 0;}
-.medic-ask.jumbotron p{text-align: center; font-family:'helveticaNeue', helvetica, arial, sans-serif; font-weight: lighter; font-size: 20px; padding: 10px 10%; color: #6c6c6c; line-height: 160%;}
+.medic-ask.jumbotron p{text-align: center; font-family:'helveticaNeue', helvetica, arial, sans-serif; font-weight: lighter; font-size: 20px; padding: 0; color: #6c6c6c; line-height: 160%;}
 
 /* Consultas al Doctor */
 .spokesman{background-image: url("images/bg-doctor.jpg");  background-repeat: no-repeat; background-size: 100%; height: auto;}
@@ -1354,7 +1354,7 @@ font-weight: bold; font-size: 40px; text-align: center; color: #8d8d8d; line-hei
 /* Área Slider Beneficiadas */
 .line-text{border-top: 3px solid #eb4483; width: 120px; display:block; margin:10px auto;}
 ul.benefit {padding:0;}
-.benefit li{text-align: center; list-style: none; font-size:20px;}
+.benefit li{text-align: center; list-style: none; font-size:20px; padding:0 80px;}
 .benefit li h4{font-size:25px; font-family:'helveticaNeue', helvetica, arial, sans-serif; text-align: center; color:#6c6c6c; font-weight: bold; margin-top: 30px;}
 .slides-navigation.benefit-ctrl {position: relative; width: 100%; display: block; top: 160px; height: 20px; max-width: 1000px;}
 .benefit-ctrl a.lefta{background: url("images/left-arrow.png"); background-size: 100%; background-repeat: no-repeat; width: 20px; height: 14px; list-style: none; float: left; display: block; border:none;}
@@ -1835,4 +1835,5 @@ border-radius: 5px 5px 5px 5px;
 
    .display-on-mobile{display: block; margin-bottom: 15px;}
    .hide-on-mobile{display:none;}
+   .benefit li{padding:0;}
 }

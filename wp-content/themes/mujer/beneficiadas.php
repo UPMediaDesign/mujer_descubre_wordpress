@@ -52,11 +52,11 @@ Template Name: Beneficiadas
         			<h2>Testimonios</h2>
         			<!-- Slider Casos Beneficiadas -->
         			<div class="line-green"></div>
-                    <ul class="benefit">
+                    <ul class="benefit bxslider">
                        
                        <?php $testimonios = get_posts(array('post_type' => 'testimonio', 'numberposts' => 2))?>
                        <?php foreach($testimonios as $testimonio):?>
-                       <li class="col-md-6">
+                       <li class="col-md-6 slide">
                       		<?php echo get_the_post_thumbnail($testimonio->ID , 'tratamiento' , array('class' => 'testiimagen'))?>
                         	<!--<img src="<?php bloginfo('template_directory')?>/images/marcelagarrido.png" alt=""> -->
                         	<h4><?php echo $testimonio->post_title?></h4>
@@ -64,18 +64,19 @@ Template Name: Beneficiadas
                         	<?php echo apply_filters('the_content' , $testimonio->post_content)?>
                        	</li>
                         <?php endforeach;?>
-                        <!--<li class="col-md-6">
-                        	<img src="<?php bloginfo('template_directory')?>/images/doragonzalez.png" alt="">
-                        	<h4>Dora Gonzalez</h4>
-                        		<div class="line-text"></div>
-                        		<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                        		<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, dolore eu feugiat nulla facilisis.</p>
-                        </li> -->
+                        <script type="text/javascript">
+                         $(document).ready(function(){
+                                $('.bxslider').bxSlider();
+                          });
+
+                        </script>
+                    
                     </ul>
-                    <!--<nav class="slides-navigation benefit-ctrl">
+
+                    <nav class="slides-navigation benefit-ctrl">
                     	<a href="#" class="slides-navigation righta"><span class="fa fa-chevron-right"></span></a>
                     	<a href="#" class="slides-navigation lefta"><span class="fa fa-chevron-left"></span></a>
-                    </nav> -->
+                    </nav> 
                     <!-- Fin Slider Casos Beneficiadas -->
                 </div>
         	</div>
