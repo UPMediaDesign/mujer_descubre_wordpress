@@ -75,6 +75,9 @@ function videos_register() {
     flush_rewrite_rules();
 }
 
+register_taxonomy("tipo", array( 'videos' ), array("hierarchical" => true, "label" => "Tipos", "singular_label" => "Tipo", "rewrite" => true));
+
+
 ?>
 <?php 
 

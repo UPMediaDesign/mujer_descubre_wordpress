@@ -12,7 +12,7 @@
 
                     <div class="col-md-5 credits">
                         <span>Una iniciativa de:</span>
-                        <a href="http://www.fundacionbanmedica.cl" title="Fundación Banmédica" rel="nofollow"><img src="<?php bloginfo('template_directory'); ?>/images/logo-white.png"></a>
+                        <a href="http://www.fundacionbanmedica.cl" title="Fundación Banmédica" rel="nofollow" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/logo-white.png"></a>
                         <p>Por un Chile más saludable y feliz.</p>
                     </div>
 

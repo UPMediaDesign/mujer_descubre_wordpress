@@ -9,7 +9,7 @@ Template Name: Alo Doctor
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 single-container ">
-                        <div class="jumbotron caption centered">
+                        <div class="col-md-12 jumbotron caption centered">
                             <h2><?php echo $post->post_title?></h2>
                             <span class="top-line"></span>
                             <p><?php echo $post->post_excerpt?></p>
@@ -29,85 +29,172 @@ Template Name: Alo Doctor
                     </div>
                 </div>
         </section>
-
-        <section class="container spokesman">
+        
+        <section class="container white videos">
             <div class="row">
-                <div class="col-md-6">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/docarancibia.png">
-                </div>
-                <div class="col-md-6">
-                    <h3><?php echo get_field('vocero_medico')?></h3>
-                    <div class="line-green-0"></div>
-                    <span>Vocero Médico</span>
-                    <?php echo apply_filters('the_content' , get_field('comentario_vocero'))?>
+                <div class="col-md-12 videos">
+                    <h2>Videos</h2>
+                    <div class="line-green"></div>
                 </div>
             </div>
-        </section>
+
+            <div class="row videos-area slider">
+                <script src="//f.vimeocdn.com/js/froogaloop2.min.js"></script>
+                <?php $cvideo = 0?>
+                <?php $videos = get_posts(array('post_type' => 'videos' , 'tipo'=>'alo-doc' , 'numberposts' => 10 ))?>
+
+                <?php foreach($videos as $video):?>
+                <?php $cvideo++?>
+
+                <div class="col-md-4 pdlr0 ">
+                
+                    <figure class="slide">
+                        <?php echo get_the_post_thumbnail($video->ID , 'filosofia' , array('data-toggle' => 'modal' , 'data-target'=> '#modal-'.$cvideo , 'class' => 'btn btn-primary'))?>
+                        <figcaption>
+                            <img src="<?php bloginfo('template_directory')?>/images/play.png" alt="" width="90" data-toggle="modal" data-target="#modal-<?php echo $cvideo?>" />
+                        </figcaption>
+                    </figure>
+                        
+                    
+                    <!-- Fin Ventana Modal -->
+                </div>
+                <?php endforeach?>
+
+
+                <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+                </style>
+
+            </div>
+
+        <!-- Fin Contenido Varices -->
+        <script>
+            jQuery('.slider').bxSlider({
+                slideWidth: 600,
+                slideMargin:5,
+                minSlides: 3,
+                maxSlides: 3,
+                pager:true,    
+            });    
+        </script>
+
+    </section>
+        
+
+            <!-- Modal Videos -->
+            <?php $cvideo = 0;?>
+            <?php foreach($videos as $video):?>
+            <?php $cvideo++?>
+                <div class="modal fade bs-example-modal-lg" id="modal-<?php echo $cvideo?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-header">
+                                <button type="button" id="cerrar-v-<?php echo get_field('id_del_video' , $video->ID)?>" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h4 class="modal-title" id="myModalLabel">&nbsp;</h4>
+                            </div>
+                            <div class="modal-content">
+                                  <div class='embed-container'>
+                                    <iframe src='http://player.vimeo.com/video/<?php echo get_field('id_del_video' , $video->ID)?>?api=1' id="vi-<?php echo get_field('id_del_video' , $video->ID)?>" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                                    <script type="text/javascript">
+                                    jQuery(document).ready(function($) {
+                                        var iframe = document.getElementById('vi-<?php echo get_field('id_del_video' , $video->ID)?>');
+                                        $f == Froogaloop
+                                        var player = $f(iframe);
+                                        
+                                        var pauseButton = document.getElementById("cerrar-v-<?php echo get_field('id_del_video' , $video->ID)?>");
+                                        pauseButton.addEventListener("click", function() {
+                                          player.api("pause");
+                                        });
+                                        
+                                        var pauseButton = document.getElementById("modal-<?php echo $cvideo?>");
+                                        pauseButton.addEventListener("click", function() {
+                                          player.api("pause");
+                                        });
+                                        
+                                    }); 
+                                    </script>
+                                  </div>
+                            </div>
+                        </div>
+                </div>
+
+            <?php endforeach ?>
+                    <!-- Fin Modal Videos -->
+
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-        <section class="container chat-consult" style=" height:600px; overflow:auto">
+
+        <section class="container contactt white">
+            <div class="row">
+                <h2>Haz tus consultas aquí</h2>
+                <div class="line-green"></div>
+            </div>
+        </section>
+        <section class="container white" style=" height:600px; overflow:auto">
         	<div class="row">
-            <div class="separator"></div>
-                <?php
-					//Gather comments for a specific page/post 
-					$comments = get_comments(array(
-						'post_id' => $post->ID,
-						'status' => 'approve', //Change this to the type of comments to be displayed
-						//'orderby' => 'ID',
-                        'order' => 'ASC',
-					));
-				?>
-               
-                <?php foreach($comments as $comentario):?>
-                	
-                    <?php if( $comentario->comment_parent == 0){?>
-                            <div class="comentario col-md-10 comentario-user">
-                                
-                                <div class="avatar col-md-2 hide-on-mobile">
-                                    <img src="<?php bloginfo('template_directory')?>/images/avatar-user.png" alt="" />
-                                </div>
-                                <div class="content-coment col-md-10">
-                                    <div class="avatar col-md-2 display-on-mobile">
+            
+            <div class="col-md-12">
+                <div class="chat-consult">
+                    <div class="separator"></div>
+                    <?php
+                        //Gather comments for a specific page/post 
+                        $comments = get_comments(array(
+                            'post_id' => $post->ID,
+                            'status' => 'approve', //Change this to the type of comments to be displayed
+                            //'orderby' => 'ID',
+                            'order' => 'ASC',
+                        ));
+                    ?>
+                   
+                    <?php foreach($comments as $comentario):?>
+                        
+                        <?php if( $comentario->comment_parent == 0){?>
+                                <div class="comentario col-md-10 comentario-user">
+                                    
+                                    <div class="avatar col-md-2 hide-on-mobile">
                                         <img src="<?php bloginfo('template_directory')?>/images/avatar-user.png" alt="" />
                                     </div>
-                                    <?php echo $comentario->comment_content?>
+                                    <div class="content-coment col-md-10">
+                                        <div class="avatar col-md-2 display-on-mobile">
+                                            <img src="<?php bloginfo('template_directory')?>/images/avatar-user.png" alt="" />
+                                        </div>
+                                        <?php echo $comentario->comment_content?>
+                                    </div>
+                                    
                                 </div>
                                 
-                            </div>
-                            
-                            <?php foreach($comments as $comentarioinside):?>
-                            
-                            	<?php if($comentarioinside->user_id == 1  && $comentarioinside->comment_parent == $comentario->comment_ID ){?>
-                                    <div class="comentario col-md-10 col-md-offset-2 comentario-doc">
-                                        
-                                        <?php //var_dump($comentario)?>
-                                        
-                                        <div class="content-coment col-md-10">
-                                            <div class="avatar col-md-2 display-on-mobile">
+                                <?php foreach($comments as $comentarioinside):?>
+                                
+                                    <?php if($comentarioinside->user_id == 1  && $comentarioinside->comment_parent == $comentario->comment_ID ){?>
+                                        <div class="comentario col-md-10 col-md-offset-2 comentario-doc">
+                                            
+                                            <?php //var_dump($comentario)?>
+                                            
+                                            <div class="content-coment col-md-10">
+                                                <div class="avatar col-md-2 display-on-mobile">
+                                                    <img src="<?php bloginfo('template_directory')?>/images/avatar-doc.png" alt="" />
+                                                </div>
+                                                <?php echo $comentario->comment_content?>
+                                            </div>
+                                            <div class="avatar col-md-2 hide-on-mobile">
                                                 <img src="<?php bloginfo('template_directory')?>/images/avatar-doc.png" alt="" />
                                             </div>
-                                            <?php echo $comentario->comment_content?>
+                                            
                                         </div>
-                                        <div class="avatar col-md-2 hide-on-mobile">
-                                            <img src="<?php bloginfo('template_directory')?>/images/avatar-doc.png" alt="" />
-                                        </div>
-                                        
-                                    </div>
-                        		<?php }?>
-                            
-                            <?php endforeach?>
-                            
-                    <?php }?>
-                <?php endforeach;?>
-               <div class="separator"></div> 
+                                    <?php }?>
+                                
+                                <?php endforeach?>
+                                
+                        <?php }?>
+                    <?php endforeach;?>
+                    <div class="separator"></div> 
+                </div>
+            </div>    
+            
         	</div>
         </section>
         <div class="clear separator"></div>
-        <section class="container contactt">
+        <section class="container contactt white">
         	<div class="row">
-            	<h2>Haz tu consulta aquí</h2>
-                <div class="line-green"></div>
                 <div class="form">
                     <?php $args = array(
         				'fields' => apply_filters( 'comment_form_default_fields', array(
@@ -138,6 +225,17 @@ Template Name: Alo Doctor
 
 		
         <div class="clear separator"></div>
+
+                <section class="container spokesman white">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3><?php echo get_field('vocero_medico')?></h3>
+                    <div class="line-green-0"></div>
+                    <span>Vocero Médico</span>
+                    <?php echo apply_filters('the_content' , get_field('comentario_vocero'))?>
+                </div>
+            </div>
+        </section>
         
         <section class="container-fluid suscribe">
                 <div class="row">
@@ -148,12 +246,12 @@ Template Name: Alo Doctor
                 </div>
         </section>
         
-        
+
         
         
         <!-- Modal -->
         <div class="modal fade container modal-inscripcion" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog col-md-10 col-md-offset-1" style="width:100%">
+          <div class="modal-dialog col-md-10" style="width:100%">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>

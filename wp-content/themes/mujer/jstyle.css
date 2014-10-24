@@ -1,8 +1,8 @@
 .green-nav{margin-top: -60px}
-.varices{background-size: cover !important;}
+.varices{background-size: cover !important; height:auto;}
 
 
-.chat-consult{ background-color:#33d0b4}
+.chat-consult{ background-color:#33d0b4; height: 120vh;}
 .chat-consult .separator{ padding:15px;}
 .comentario-doc{ text-align: right}
 
@@ -54,12 +54,16 @@ margin-top:40px;
 .form-submit{ text-align:center; margin-top:30px; margin-bottom: 30px;}
 .contactt #submit{ background-color:#3ee1c4; color:#fff ; width:55%; margin: 0 auto;}
 
-.testiimagen{ padding:30px;border-radius:400px; width: 100%;
+img.testiimagen{ padding: 60px;
+border-radius: 400px;
+width: 100%;
 height: auto;}
 
 .slides-navigation.benefit-ctrl{ display: none}
 
 .modal-inscripcion input , .modal-inscripcion textarea{ width:100%; padding:15px; border:1px solid #3ee1c4; border-radius: 10px; font-size:16px; color:#525252; margin-bottom:10px; }
+
+.modal-inscripcion input[type=submit]{width: 50%;}
 
 
 .wpcf7-checkbox {
@@ -76,7 +80,7 @@ display: block;
 
 
 .videos-area figcaption img {
-width: 90px !important;
+width: 90px ;
 position: absolute;
 top: 34%;
 margin: 0px auto;
@@ -94,7 +98,7 @@ transition: 0.5s ease;
 -moz-box-shadow: 0px 1px 11px 5px rgba(255, 255, 255, 0.59);
 box-shadow: 0px 1px 11px 5px rgba(255, 255, 255, 0.59);
 border-radius: 100px;
-width: 90px !important;
+width: 90px ;
 height: 90px;
 padding: 0;
 margin: 0;}

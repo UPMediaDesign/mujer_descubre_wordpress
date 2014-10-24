@@ -9,7 +9,7 @@ Template Name: Beneficiadas
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 single-container ">
-                        <div class="jumbotron caption centered">
+                        <div class="col-md-12 jumbotron caption centered">
                             <h2><?php echo $post->post_title?></h2>
                             <span class="top-line"></span>
                             <p><?php echo $post->post_excerpt?></p>
@@ -48,15 +48,15 @@ Template Name: Beneficiadas
 
         <section class="container white">
         	<div class="row">
-        		<div class="col-md-12 medic-ask jumbotron">
+        		<div class="col-md-12 medic-ask jumbotron ">
         			<h2>Testimonios</h2>
         			<!-- Slider Casos Beneficiadas -->
         			<div class="line-green"></div>
                     <ul class="benefit bxslider">
                        
-                       <?php $testimonios = get_posts(array('post_type' => 'testimonio', 'numberposts' => 2))?>
+                       <?php $testimonios = get_posts(array('post_type' => 'testimonio', 'numberposts' => 4))?>
                        <?php foreach($testimonios as $testimonio):?>
-                       <li class="col-md-6 slide">
+                       <li class="col-md-6">
                       		<?php echo get_the_post_thumbnail($testimonio->ID , 'tratamiento' , array('class' => 'testiimagen'))?>
                         	<!--<img src="<?php bloginfo('template_directory')?>/images/marcelagarrido.png" alt=""> -->
                         	<h4><?php echo $testimonio->post_title?></h4>
@@ -64,12 +64,7 @@ Template Name: Beneficiadas
                         	<?php echo apply_filters('the_content' , $testimonio->post_content)?>
                        	</li>
                         <?php endforeach;?>
-                        <script type="text/javascript">
-                         $(document).ready(function(){
-                                $('.bxslider').bxSlider();
-                          });
-
-                        </script>
+                        
                     
                     </ul>
 
@@ -93,7 +88,7 @@ Template Name: Beneficiadas
         	<div class="row videos-area slider">
             	<script src="//f.vimeocdn.com/js/froogaloop2.min.js"></script>
             	<?php $cvideo = 0?>
-				<?php $videos = get_posts(array('post_type' => 'videos' , 'numberposts' => 10 ))?>
+				<?php $videos = get_posts(array('post_type' => 'videos' , 'tipo'=>'testimonios' , 'numberposts' => 10 ))?>
                 <?php foreach($videos as $video):?>
                 <?php $cvideo++?>
 
@@ -171,7 +166,7 @@ Template Name: Beneficiadas
 
         <!-- Modal -->
         <div class="modal fade container modal-inscripcion" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog col-md-10 col-md-offset-1" style="width:100%">
+          <div class="modal-dialog col-md-10 " style="width:100%">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -196,6 +191,19 @@ Template Name: Beneficiadas
                 maxSlides: 3,
                 pager:true,    
             });    
+        </script>
+
+        <!-- Slider Beneficiadas script -->
+        <script>
+            // jQuery('.bxslider').bxSlider({
+            //     nextSelector: '#slider-next',
+            //     prevSelector: '#slider-prev',
+            //     slideWidth: 360,
+            //     slideMargin:4,
+            //     maxSlides: 2,
+            //     minSlides: 2,
+            //     pager: true,
+            // });
         </script>
 
 <?php get_footer(); ?>

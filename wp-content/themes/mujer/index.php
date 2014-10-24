@@ -175,7 +175,7 @@ Template Name: Home
                     <div class="col-md-12">
                         <h4>Tratamientos Varices</h4>
                         <div class="border-solid"></div>
-                        <p>En los pacientes que no tienen indicación de cirugía, se pueden mencionar las siguientes medidas de tartamiento conservador para aliviar los síntomas y ayudar a evitar la progresión de la enfermedad</p>
+                        <p>En los pacientes que no tienen indicación de cirugía, se pueden mencionar las siguientes medidas de tratamiento conservador para aliviar los síntomas y ayudar a evitar la progresión de la enfermedad</p>
                         <a class="blue-btn" href="<?php echo get_page_link(6)?>/#tratamientos" title="" rel="">Infórmate Más</a>
                     </div>
                 </div>
@@ -187,7 +187,7 @@ Template Name: Home
         
         <!-- Modal -->
         <div class="modal fade container modal-inscripcion" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog col-md-10 col-md-offset-1" style="width:100%">
+          <div class="modal-dialog col-md-10" style="width:100%">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
