@@ -37,7 +37,7 @@ Template Name: Beneficiadas
                 </div>
                 <div class="col-md-6">
                     <h3>Solange Lackington</h3>
-                    <div class="line-green-0"></div>
+                    <div class="line-green-1"></div>
                     <span>Actriz</span>
                    
                     <?php echo apply_filters('the_content' , get_field('testimonio_solange_lackington'))?>
@@ -54,16 +54,71 @@ Template Name: Beneficiadas
         			<div class="line-green"></div>
                     <ul class="benefit bxslider">
                        
+                        <script src="//f.vimeocdn.com/js/froogaloop2.min.js"></script>
+                       
+                       <?php $ctest = 0;?>
                        <?php $testimonios = get_posts(array('post_type' => 'testimonio', 'numberposts' => 4))?>
                        <?php foreach($testimonios as $testimonio):?>
+                       <?php $ctest++?>
                        <li class="col-md-6">
                       		<?php echo get_the_post_thumbnail($testimonio->ID , 'tratamiento' , array('class' => 'testiimagen'))?>
                         	<!--<img src="<?php bloginfo('template_directory')?>/images/marcelagarrido.png" alt=""> -->
                         	<h4><?php echo $testimonio->post_title?></h4>
                         	<div class="line-text"></div>
                         	<?php echo apply_filters('the_content' , $testimonio->post_content)?>
+                            
+                            
+                            <a title="<?php the_permalink(); ?>" rel="nofollow" data-target="#modal-<?php echo $ctest?>" data-toggle="modal" >
+                                Ver testimonio
+                            </a>
+                            
+                            <div class="modal fade" id="modal-<?php echo $ctest?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" id="cerrar2-v-<?php echo get_field('video_id' , $testimonio->ID)?>" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                    
+                                  </div>
+                                  <div class="modal-content">
+                                      <div class='embed-container'>
+                                        <iframe src='http://player.vimeo.com/video/<?php echo get_field('video_id' , $testimonio->ID)?>?api=1' id="vi-<?php echo get_field('video_id' , $testimonio->ID)?>" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                                        <script type="text/javascript">
+                                        jQuery(document).ready(function($) {
+                                            var iframe = document.getElementById('vi-<?php echo get_field('video_id' , $testimonio->ID)?>');
+                                            $f == Froogaloop
+                                            var player = $f(iframe);
+                                            
+                                            var pauseButton = document.getElementById("cerrar2-v-<?php echo get_field('video_id' , $testimonio->ID)?>");
+                                            pauseButton.addEventListener("click", function() {
+                                              player.api("pause");
+                                            });
+                                            
+                                            var pauseButton = document.getElementById("modal-<?php echo $ctest?>");
+                                            pauseButton.addEventListener("click", function() {
+                                              player.api("pause");
+                                            });
+                                            
+                                        }); 
+                                        </script>
+                                      </div>
+                                </div>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            
+                            
                        	</li>
                         <?php endforeach;?>
+
+                       
+                        
+
+                         
+                        
+                        
+                
+                        
                         
                     
                     </ul>
@@ -86,7 +141,7 @@ Template Name: Beneficiadas
         	</div>
 
         	<div class="row videos-area slider">
-            	<script src="//f.vimeocdn.com/js/froogaloop2.min.js"></script>
+            	
             	<?php $cvideo = 0?>
 				<?php $videos = get_posts(array('post_type' => 'videos' , 'tipo'=>'testimonios' , 'numberposts' => 10 ))?>
                 <?php foreach($videos as $video):?>
@@ -95,9 +150,9 @@ Template Name: Beneficiadas
         		<div class="col-md-4 pdlr0 ">
                 
                 	<figure class="slide">
-                    	<?php echo get_the_post_thumbnail($video->ID , 'filosofia' , array('data-toggle' => 'modal' , 'data-target'=> '#modal-'.$cvideo , 'class' => 'btn btn-primary'))?>
+                    	<?php echo get_the_post_thumbnail($video->ID , 'filosofia' , array('data-toggle' => 'modal' , 'data-target'=> '#modalb-'.$cvideo , 'class' => 'btn btn-primary'))?>
                     	<figcaption>
-                        	<img src="<?php bloginfo('template_directory')?>/images/play.png" alt="" width="90" data-toggle="modal" data-target="#modal-<?php echo $cvideo?>" />
+                        	<img src="<?php bloginfo('template_directory')?>/images/play.png" alt="" width="90" data-toggle="modal" data-target="#modalb-<?php echo $cvideo?>" />
                         </figcaption>
                     </figure>
 						
@@ -129,7 +184,7 @@ Template Name: Beneficiadas
             <?php $cvideo = 0;?>
             <?php foreach($videos as $video):?>
             <?php $cvideo++?>
-                <div class="modal fade bs-example-modal-lg" id="modal-<?php echo $cvideo?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal fade bs-example-modal-lg" id="modalb-<?php echo $cvideo?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-header">
                                 <button type="button" id="cerrar-v-<?php echo get_field('id_del_video' , $video->ID)?>" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -149,7 +204,7 @@ Template Name: Beneficiadas
                                           player.api("pause");
                                         });
                                         
-                                        var pauseButton = document.getElementById("modal-<?php echo $cvideo?>");
+                                        var pauseButton = document.getElementById("modalb-<?php echo $cvideo?>");
                                         pauseButton.addEventListener("click", function() {
                                           player.api("pause");
                                         });

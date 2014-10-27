@@ -2,7 +2,7 @@
 .varices{background-size: cover !important; height:auto;}
 
 
-.chat-consult{ background-color:#33d0b4; height: 120vh;}
+.chat-consult{ background-color:#33d0b4;}
 .chat-consult .separator{ padding:15px;}
 .comentario-doc{ text-align: right}
 
@@ -48,23 +48,96 @@ margin-top:40px;
 .comment-reply-title, .comment-notes{ display:none}
 
 .contactt input, .contactt textarea{ width:100%; border:1px solid #3ee1c4; border-radius: 10px; padding:20px; font-size:20px; color:#525252;}
-.contactt textarea{ min-height:200px}
+.contactt textarea{ min-height:200px; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease;}
+.contactt textarea:hover{border: 1px solid #31BAA1; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; -webkit-box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.97);
+-moz-box-shadow:    0px 0px 12px 0px rgba(50, 50, 50, 0.97);
+box-shadow:         0px 0px 12px 0px rgba(50, 50, 50, 0.97);}
 .form-allowed-tags{ display:none}
 
 .form-submit{ text-align:center; margin-top:30px; margin-bottom: 30px;}
-.contactt #submit{ background-color:#3ee1c4; color:#fff ; width:55%; margin: 0 auto;}
+.contactt #submit{ background-color:#3ee1c4; color:#fff ; width:55%; margin: 0 auto; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; cursor:pointer;}
+.contactt #submit:hover{background-color:#31BAA1; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; cursor:pointer;}
 
 img.testiimagen{ padding: 60px;
 border-radius: 400px;
 width: 100%;
 height: auto;}
 
+.comment-form-author input[type=text],
+.comment-form-apellido input[type=text],
+.comment-form-email input[type=text],
+.comment-form-edad input[type=text]{
+      -webkit-transition: 0.5s ease;
+-moz-transition: 0.5s ease;
+-ms-transition: 0.5s ease;
+transition: 0.5s ease;}
+
+.comment-form-author input[type=text]:hover,
+.comment-form-apellido input[type=text]:hover,
+.comment-form-email input[type=text]:hover,
+.comment-form-edad input[type=text]:hover{
+      border: 1px solid #31BAA1;
+-webkit-transition: 0.5s ease;
+-moz-transition: 0.5s ease;
+-ms-transition: 0.5s ease;
+transition: 0.5s ease;
+-webkit-box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.97);
+-moz-box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.97);
+box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.97);}
+
 .slides-navigation.benefit-ctrl{ display: none}
 
 .modal-inscripcion input , .modal-inscripcion textarea{ width:100%; padding:15px; border:1px solid #3ee1c4; border-radius: 10px; font-size:16px; color:#525252; margin-bottom:10px; }
 
-.modal-inscripcion input[type=submit]{width: 50%;}
+.modal-inscripcion input[type=text]:hover, 
+.modal-inscripcion textarea[type=text]:hover{
+      border: 1px solid #31BAA1;
+-webkit-transition: 0.5s ease;
+-moz-transition: 0.5s ease;
+-ms-transition: 0.5s ease;
+transition: 0.5s ease;
+-webkit-box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.97);
+-moz-box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.97);
+box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.97);
+}
 
+.modal-inscripcion input[type=submit]{width: 95%; display: block; margin: 0 auto; background:#3ee1c4; color:#ffffff;
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      -ms-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;}
+.modal-inscripcion input[type=submit]:hover{background:#31BAA1;
+-webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      -ms-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;}
+.wpcf7-form-control-wrap.ocupacion textarea,
+.wpcf7-form-control-wrap.tiempo textarea,
+.wpcf7-form-control-wrap.diagnostico textarea,
+.wpcf7-form-control-wrap.operada textarea,
+.wpcf7-form-control-wrap.consecuencias textarea,
+.wpcf7-form-control-wrap.sintomas textarea,
+.wpcf7-form-control-wrap.autoestima textarea{
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      -ms-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+}
+.wpcf7-form-control-wrap.ocupacion textarea:hover,
+.wpcf7-form-control-wrap.tiempo textarea:hover,
+.wpcf7-form-control-wrap.diagnostico textarea:hover,
+.wpcf7-form-control-wrap.operada textarea:hover,
+.wpcf7-form-control-wrap.consecuencias textarea:hover,
+.wpcf7-form-control-wrap.sintomas textarea:hover,
+.wpcf7-form-control-wrap.autoestima textarea:hover{
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      -ms-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+      -webkit-box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.97);
+      -moz-box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.97);
+      box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.97);
+}
 
 .wpcf7-checkbox {
 font-size: 16px;
@@ -102,3 +175,13 @@ width: 90px ;
 height: 90px;
 padding: 0;
 margin: 0;}
+
+.btn{-webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      -ms-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;}
+
+.btn:hover{-webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      -ms-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;}

@@ -34,8 +34,8 @@
 /*	-moz-box-shadow: 0 0 5px #ccc;
 	-webkit-box-shadow: 0 0 5px #ccc;
 	box-shadow: 0 0 5px #ccc;
-	border:  5px solid #fff;*/
-	left: -5px;
+	border:  5px solid #fff;
+	left: -5px;*/
 	background: #fff;
 	
 	/*fix other elements on the page moving (on Chrome)*/
@@ -75,6 +75,7 @@
 	font-weight: bold;
 	color: #666;
 	padding-top: 20px;
+	display:none;
 }
 
 .bx-wrapper .bx-pager .bx-pager-item,
@@ -107,21 +108,41 @@
 /* DIRECTION CONTROLS (NEXT / PREV) */
 
 .bx-wrapper .bx-prev {
-	left: 10px;
-	background: url(images/controls.png) no-repeat 0 -32px;
+	background-image: url("../images/left-arrow.png"); background-repeat: no-repeat;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	right:100%;
+	border: 1px solid #eb4483;
+	border-radius: 30px;
+	background-position: 50%;
 }
 
 .bx-wrapper .bx-next {
-	right: 10px;
-	background: url(images/controls.png) no-repeat -43px -32px;
+	background-image: url("../images/right-arrow.png"); background-repeat: no-repeat;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	left:100%;
+	border: 1px solid #eb4483;
+	border-radius: 30px;
+	background-position: 50%;
 }
 
 .bx-wrapper .bx-prev:hover {
-	background-position: 0 0;
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .bx-wrapper .bx-next:hover {
-	background-position: -43px 0;
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .bx-wrapper .bx-controls-direction a {

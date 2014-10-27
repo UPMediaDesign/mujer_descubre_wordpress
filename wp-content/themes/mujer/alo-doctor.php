@@ -132,9 +132,9 @@ Template Name: Alo Doctor
         <section class="container white" style=" height:600px; overflow:auto">
         	<div class="row">
             
-            <div class="col-md-12">
-                <div class="chat-consult">
-                    <div class="separator"></div>
+            <div class="col-md-12 chat-consult">
+
+                    <div class="separator clear"></div>
                     <?php
                         //Gather comments for a specific page/post 
                         $comments = get_comments(array(
@@ -157,7 +157,7 @@ Template Name: Alo Doctor
                                         <div class="avatar col-md-2 display-on-mobile">
                                             <img src="<?php bloginfo('template_directory')?>/images/avatar-user.png" alt="" />
                                         </div>
-                                        <?php echo $comentario->comment_content?>
+                                        <p><?php echo $comentario->comment_content?></p>
                                     </div>
                                     
                                 </div>
@@ -173,7 +173,9 @@ Template Name: Alo Doctor
                                                 <div class="avatar col-md-2 display-on-mobile">
                                                     <img src="<?php bloginfo('template_directory')?>/images/avatar-doc.png" alt="" />
                                                 </div>
-                                                <?php echo $comentario->comment_content?>
+                                                <p>
+                                                    <?php echo $comentario->comment_content?>
+                                                </p>
                                             </div>
                                             <div class="avatar col-md-2 hide-on-mobile">
                                                 <img src="<?php bloginfo('template_directory')?>/images/avatar-doc.png" alt="" />
@@ -186,8 +188,8 @@ Template Name: Alo Doctor
                                 
                         <?php }?>
                     <?php endforeach;?>
-                    <div class="separator"></div> 
-                </div>
+                    <div class="separator clear"></div> 
+                
             </div>    
             
         	</div>

@@ -439,6 +439,7 @@ th {
   margin: auto;
   text-align: left;
 }
+.clear{clear:both;}
 
 /*******************************************************************************
 Grilla Bootstrap ***************************************************************
@@ -1168,7 +1169,10 @@ background: -o-linear-gradient(top,  rgba(34,162,243,1) 0%,rgba(20,111,169,1) 10
 background: -ms-linear-gradient(top,  rgba(34,162,243,1) 0%,rgba(20,111,169,1) 100%); /* IE10+ */
 background: linear-gradient(to bottom,  rgba(34,162,243,1) 0%,rgba(20,111,169,1) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#22a2f3', endColorstr='#146fa9',GradientType=0 ); /* IE6-9 */
- padding: 16px; border-radius: 5px; transition:0.5s ease; -webkit-transition:0.5s ease;}
+ padding: 16px; border-radius: 5px; -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;}
 
  .blue-btn:hover{background: rgb(34,162,243); /* Old browsers */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(54, 130, 178, 1)), color-stop(100%,rgba(20, 77, 113, 1))); /* Chrome,Safari4+ */
@@ -1177,7 +1181,10 @@ background: -o-linear-gradient(top,  rgba(54, 130, 178, 1) 0%,rgba(20, 77, 113, 
 background: -ms-linear-gradient(top,  rgba(54, 130, 178, 1) 0%,rgba(20, 77, 113, 1) 100%); /* IE10+ */
 background: linear-gradient(to bottom,  rrgba(54, 130, 178, 1) 0%,rgba(20, 77, 113, 1) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#22a2f3', endColorstr='#146fa9',GradientType=0 ); /* IE6-9 */
- padding: 16px; border-radius: 5px; transition:0.5s ease; -webkit-transition:0.5s ease;}
+ padding: 16px; border-radius: 5px; -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;}
 
 /* Correspondientes a slider Big Carousel */
 /*.bigcarousel{position: relative; overflow: hidden; width: 100%; height: 800px; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); touch-action: none; color: #ffffff;}*/
@@ -1219,16 +1226,29 @@ background: linear-gradient(to bottom, rgba(6,4,2,0.02) 0%,rgba(6,4,2,0.65) 100%
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05060402', endColorstr='#a6060402',GradientType=0 );}
 .case h3{color: #ffffff; letter-spacing: 1px; padding-top: 21px; margin-top: 0;} 
 .case span{clear: both; text-align: center; font-family: 'helveticaNeue', helvetica, arial, sans-serif; color: #ffffff; font-size: 20px; font-weight: bold; line-height: 160%;}
-.case a{clear: both; display: block; text-transform: uppercase; font-size: 12px; line-height: 160%; color: #ffffff; font-weight: bold; text-decoration: none; border-top: 4px solid #eb4483; margin: 20px auto 0; padding-top: 5px; width: 70px; padding-bottom: 20px;}
+.case a{clear: both; display: block; text-transform: uppercase; font-size: 12px; line-height: 160%; color: #ffffff; font-weight: bold; text-decoration: none; border-top: 4px solid #eb4483; margin: 20px auto 0; padding-top: 5px; width: 70px; padding-bottom: 20px;
+-webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+-ms-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out;}
+.case a:hover{-webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+-ms-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out;
+color: #eb4483;}
 /* Vocero Médico */
 .consult{margin-top: 50px;}
 .consult img{margin: 0 auto; display: block;}
 .consult h3{text-align: center; font-family: 'helveticaNeue', helvetica, arial, sans-serif; font-size: 40px; font-weight: bold; color: #8d8d8d; margin-bottom: 20px;}
 .consult p{text-align: center; text-transform: uppercase; color: #eb4483; border-top: 2px solid #eb4483; margin: 25px 45%; padding-top: 10px; font-size: 12px;}
-.consult a{text-align: center; display: table; margin: 0 auto; color: #ffffff; text-decoration: none; margin-bottom: 45px; transition: 0.5s ease;
--webkit-transition: 0.5s ease;}
-.consult a:hover{text-align: center; display: table; margin: 0 auto; color: #ffffff; text-decoration: none; margin-bottom: 45px; transition: 0.5s ease;
--webkit-transition: 0.5s ease;}
+.consult a{text-align: center; display: table; margin: 0 auto; color: #ffffff; text-decoration: none; margin-bottom: 45px; -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;}
+.consult a:hover{text-align: center; display: table; margin: 0 auto; color: #ffffff; text-decoration: none; margin-bottom: 45px; -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;}
 .council p{font-size: 30px; font-family: 'helvetica', arial, sans-serif; font-weight: lighter; line-height: 140%; text-align: center; color: #b8b8b8; margin-top: 25px; margin-bottom: 45px; padding: 0 12%;}
 .council p strong{font-weight: lighter; background-color: #eb4483; color: #ffffff;} 
 .stadistics p{font-family: helvetica, arial, sans-serif; font-weight: 500; font-size: 24px; text-align: center; color: #a0a09f; line-height: 150%; border-top: 1px solid #8d8d8d; border-bottom: 1px solid #8d8d8d; padding: 15px 0;}
@@ -1283,6 +1303,7 @@ span.top-line{border-top: 5px solid #eb4483; width: 100px; display: block; margi
 .about p{font-family: 'helveticaNeue',Helvetica, Arial, sans-serif; font-weight: lighter; font-size: 20px; text-align: center; color: #8d8d8d; line-height: 150%; margin: 20px 10% 30px;}
 .line-green{border-top:5px solid #33d0b4; display: block; margin: 20px auto 30px; width:16%; }
 .line-green-0 {border-top: 5px solid #33d0b4; display: block; margin: 20px auto 10px; width: 16%; }
+.line-green-1 {border-top: 5px solid #33d0b4; display: block; margin: 20px 0 10px; width: 16%; }
 /* Tratamientos */
 .treatments h2{text-align: center;font-family: 'helveticaNeue',Helvetica, Arial, sans-serif; font-weight: bold ;font-size: 40px ; text-align: center; color:#8d8d8d; line-height: 140%; margin-bottom:0;}
 .treatments a{text-align: center; text-decoration: none; display:block; padding:0 5%; color: #ffffff; font-weight:bold; font-size: 25px; font-family: 'helveticaNeue', helvetica, arial, sans-serif; line-height:140%; background: transparent; border: none;}
@@ -1321,8 +1342,8 @@ border: 2px solid #adadad;-webkit-transition: 0.5s ease; -moz-transition: 0.5s e
 
 /* Incribete en el Programa */
 .suscribe{background-image: url("images/bg-inscript.jpg"); background-size: cover !important; background-repeat: no-repeat;}
-.suscribe h3{text-align:center; font-family: 'helveticaNeue', helvetica, arial, sans-serif; font-weight: lighter; font-size: 36px; display: block; color: #ffffff; background-size: 100%;}
-.suscribe a{border: 2px solid #ffffff; text-align: center; font-family: 'helveticaNeue', helvetica, arial, sans-serif; font-weight: bold; font-size: 14px; display: table; margin: 0 auto 40px; color:#ffffff; text-decoration: none; padding: 1.5% 50px; text-transform: uppercase; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; cursor:pointer;}
+.suscribe h3{text-align:center; font-family: 'helveticaNeue', helvetica, arial, sans-serif; font-weight: lighter; font-size: 36px; display: block; color: #ffffff; background-size: 100%; margin-top:40px;}
+.suscribe a{border: 2px solid #ffffff; text-align: center; font-family: 'helveticaNeue', helvetica, arial, sans-serif; font-weight: bold; font-size: 14px; display: table; margin: 0 auto 60px; color:#ffffff; text-decoration: none; padding: 15px 50px; text-transform: uppercase; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; cursor:pointer;}
 .suscribe a:hover{-webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; border-radius: 10px; color: #000000; background: #fff; cursor:pointer; text-decoration: none;}
 
 
@@ -1332,7 +1353,7 @@ border: 2px solid #adadad;-webkit-transition: 0.5s ease; -moz-transition: 0.5s e
 /* ¿Tienes Consultas? */
 .medic-ask h2{font-family: 'helveticaNeue', Helvetica, Arial, sans-serif;
 font-weight: bold; font-size: 40px; text-align: center; color: #8d8d8d; line-height: 140%; margin-bottom: 0;}
-.medic-ask.jumbotron p{text-align: center; font-family:'helveticaNeue', helvetica, arial, sans-serif; font-weight: lighter; font-size: 20px; padding: 0; color: #6c6c6c; line-height: 160%;}
+.medic-ask.jumbotron p{text-align: center; font-family:'helveticaNeue', helvetica, arial, sans-serif; font-weight: lighter; font-size: 21px; padding: 0; color: #6c6c6c; line-height: 160%; margin-bottom: 35px;}
 
 /* Consultas al Doctor */
 .spokesman{background-size: 100%; height: auto; color: #8b8b8b;}
@@ -1356,6 +1377,18 @@ ul.benefit {padding:0;}
 .benefit-ctrl a.lefta{background: url("images/left-arrow.png"); background-size: 100%; background-repeat: no-repeat; width: 20px; height: 14px; list-style: none; float: left; display: block; border:none;}
 .benefit-ctrl a.righta{ background: url("images/right-arrow.png");
 background-size: 100%; background-repeat: no-repeat; width: 20px; height: 14px; list-style: none; float: right; margin-left: 100%; border:none;}
+.benefit a{color: #ffffff; font-weight: 500; letter-spacing: 1px; font-size: 20px; background: #33d0b4; padding: 20px; border-radius: 5px; -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;}
+.benefit a:hover{background:#31BAA1; 
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;}
+.bx-controls-direction{position:relative; bottom:110px;}
+
+
 
 /* Caja Video Mujeres Beneficiadas */
 .videos h2{font-family: 'helveticaNeue', Helvetica, Arial, sans-serif;
@@ -1390,11 +1423,29 @@ figure.slide{margin:0;}
 .mailsender span{text-transform: uppercase; color: #ffffff; font-family: 'helveticaNeue', helvetica, arial, sans-serif; font-weight: bold; margin-bottom: 15px; float: left; margin-top: 20px;}
 .mailsender form[method="post"]{margin-top:30px;width: 100%; max-width: 350px;}
 .mailsender input[type="email"]{width: 82%; height: 40px; padding: 8px; float: left;}
-.mailsender input[type="send"]{width: 45px; height: 40px; float: left; background: #187cbc url("images/sendmail-icon.png"); border: none; background-repeat: no-repeat; background-position: 50%; cursor:pointer;}
+.mailsender input[type="send"]{width: 45px; height: 40px; float: left; background: #187cbc url("images/sendmail-icon.png"); border: none; background-repeat: no-repeat; background-position: 50%; cursor:pointer;
+-webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+-ms-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out;}
+.mailsender input[type="send"]:hover{background: #125B89 url("images/sendmail-icon.png"); width: 45px; height: 40px; float: left; border: none; background-repeat: no-repeat; background-position: 50%; cursor:pointer;
+-webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+-ms-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out;}
 
 .copyrighted{float:right; text-align: right; font-size: 11px; font-family:'helveticaNeue', helvetica, arial, sans-serif; font-weight: 400; color: #ffffff; margin: 20px 0; display: inline-table; padding-right: 3%;}
 
-.logged-in-as{padding: 0 0 0 20px;}
+.logged-in-as{padding: 20px 0 0 20px;
+font-size: 20px;}
+.logged-in-as a{color:#3ee1c4; -webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+-ms-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out;}
+.logged-in-as a:hover{color: #31BAA1; -webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+-ms-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out;}
 
 ul.bxslider.panel-group.questions{padding: 0;}
 
@@ -1717,7 +1768,8 @@ border-radius: 5px 5px 5px 5px;
     .spokesman h3{margin-top:25px;}
     .varices {background-size: cover !important; height: 75vh; }
     .display-on-mobile{display: none}
-
+/*    .chat-consult{height: 155vh !important}
+*/
 }
 @media only screen and (min-width: 935px) and (max-width: 1023px){
   .logo{margin:0;}
@@ -1736,7 +1788,8 @@ border-radius: 5px 5px 5px 5px;
   .spokesman h3{margin-top:25px;}
   .varices {background-size: cover !important; height: 75vh; }
 
-
+/*  .chat-consult{height: 100% !important}
+*/
 
   .display-on-mobile{display: none}
 
@@ -1745,14 +1798,16 @@ border-radius: 5px 5px 5px 5px;
 @media only screen and (min-width: 769px) and (max-width: 934px) {
   .nav>ul{float: right; width: 68%;}
   .display-on-mobile{display: none}
-}
+/*  .chat-consult{background-size: 100% !important}
+*/}
 
 @media only screen and (min-width: 641px) and (max-width: 768px){
   .nav>ul{float: none; width: 100%; background-color: rgba(235,68,131,0.5); margin-top: 20px; border-radius: 20px;}
   .nav>ul>li{float: none; display: table; margin: 0 auto; padding: 10px 0;}
   .display-on-mobile{display: block; margin-bottom: 15px;}
   .hide-on-mobile{display: none;}
-
+/*  .chat-consult{height: 100% !important}
+*/
 }
 
 @media only screen and (min-width: 641px) and (max-width: 934px){
@@ -1785,11 +1840,14 @@ border-radius: 5px 5px 5px 5px;
 
    .line-green{margin: 10px auto;}
    .line-green-0{margin: 10px auto;}
+   .line-green-1{margin: 10px auto;}
    .display-on-mobile{display: block; margin-bottom: 15px;}
    .hide-on-mobile{display: none;}
    .comentario-doc .content-coment:after{display: none;}
    .comentario-user .content-coment:after{display: none;}
-}
+   .bx-wrapper .bx-pager{display: block !important;}
+/*   .chat-consult{height: 100% !important}
+*/}
 
 @media only screen and (max-width: 640px){
   .logo{width: 60%; max-width: 200px;}
@@ -1824,12 +1882,15 @@ border-radius: 5px 5px 5px 5px;
   .spokesman span{text-align: center; margin: 0 auto; display: block; padding: 10px 0 0;}
   .spokesman p{text-align: center; padding:15px 0 30px;}
 
+/*  .chat-consult{height: 435vh !important}
+*/
   .actress {background-size: cover !important;}
   .actress img{display:none;}
   .actress h3{margin-top:25px !important; text-align: center;}
   .actress span{text-align: center; margin: 0 auto; display: block; padding: 10px 0 0;}
   .actress p{text-align: center; padding:15px 0;}
 
+  .line-green-1,
   .line-green-0,
   .line-green{margin: 10px auto;}
   .form-submit{margin-bottom: 30px;}
@@ -1856,8 +1917,17 @@ border-radius: 5px 5px 5px 5px;
 
   .treatments figcaption{bottom:40.5%;}
   .bx-wrapper .bx-viewport{height:auto !important;}
-  .videos-area figcaption img{width:40px !important; height:auto; top:30% !important;}
+  .videos-area figcaption img{width: 30px !important; height: auto; top: 15% !important;}
   .videos-area figcaption img:hover {width: 40px !important; height: auto !important; border-radius: 50px !important;}
 
   .benefit li h4{height:50px;}
+  .modal-inscripcion input[type=submit] {width: 85% !important; margin: 20px auto; display: block; }
+
+  .bx-wrapper .bx-controls-direction{display:none;}
+  .bx-wrapper .bx-pager{display: block !important;}
+
+  .form{margin-top: 20px;}
+  .videos-area img{padding: 0 0px 15px;}  
+  .modal.in .modal-dialog{width: 95%; display: block; margin: 0 auto;}
+
 }

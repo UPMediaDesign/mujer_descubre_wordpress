@@ -47,7 +47,7 @@ Template Name: Las Varices
                     </div>
                 </div>
 
-            <div class="container white videos">
+            <div class="col-md-12 white videos">
                 <div class="row">
                   <div class="col-md-12 videos">
                     <h2>Videos</h2>
@@ -58,13 +58,21 @@ Template Name: Las Varices
                <div class="row videos-area slider">
                   <script src="//f.vimeocdn.com/js/froogaloop2.min.js"></script>
                     <?php $cvideo = 0?>
-                    <?php $videos = get_posts(array('post_type' => 'videos' , 'numberposts' => 10 ))?>
+                    <?php $videos = get_posts(array('post_type' => 'videos' ,'tipo' => 'capsulas', 'numberposts' => 10 ))?>
+                    
+                    
+                    
                     <?php foreach($videos as $video):?>
                     <?php $cvideo++?>
 
                 <div class="col-md-4 pdlr0 ">
                       <figure class="slide">
+                      	<?php if(get_the_post_thumbnail($video->ID)){?>
                           <?php echo get_the_post_thumbnail($video->ID , 'filosofia' , array('data-toggle' => 'modal' , 'data-target'=> '#modal-'.$cvideo , 'class' => 'btn btn-primary'))?>
+                          <?php }else{?>
+                          	<img src="//placehold.it/375x215">
+						  <?php }?>
+
                           <figcaption>
                               <img src="<?php bloginfo('template_directory')?>/images/play.png" alt="" width="90" data-toggle="modal" data-target="#modal-<?php echo $cvideo?>" />
                             </figcaption>
@@ -82,8 +90,8 @@ Template Name: Las Varices
 
             <!-- Llamado a inscripción -->
         </div>
-
-                <div class="row">
+        <div class="container white">
+                <div class="row ">
                     <div class="col-md-12 treatments">
                         
                         <h2 id="tratamientos">Tratamientos</h2>
@@ -127,47 +135,8 @@ Template Name: Las Varices
 
                     </div>
                 </div>
-
-                <!-- <div class="row">
-                    <div class="col-md-12 questions">
-                        <h2 id="preguntas-frecuentes">Preguntas Frecuentes</h2>
-                        <div class="line-green"></div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                           Elastislide Carousel -->
-                    <!-- <div class="col-md-12">
-                    <ul class="bxSlider panel-group questions">
-                        
-                        
-                         <?php $npreg //= 0;?>
-                          <?php $preguntas //= get_posts(//array('post_type' => 'preguntas_frecuentes' , 'numberposts' => 10 ))?>
-                          <?php //foreach($preguntas as $pregunta):?>
-                          <?php $npreg//++?>
-                          <li class="panel panel-default">
-                            <div class="panel-heading">
-                              <h4 class="panel-title">
-                                <a data-toggle="modal" data-target="#myModalb-<?php //echo $npreg?>" >
-                                  <?php //echo $pregunta->post_title?>
-                                </a>
-                              </h4>
-                            </div>
-
-                            <div id="collapse-<?php //echo $npreg?>" class="panel-collapse collapse">
-                              <div class="panel-body">
-                                <p>
-                                <?php //echo $pregunta->post_content?>
-                                </p>
-                              </div>
-                            </div> 
-                            
-                        </li>
-                        <?php //endforeach ?>
-                    </ul> -->
-                    <!-- End Elastislide Carousel -->
-
+                
+                <!-- End Elastislide Carousel -->
                 <div class="row">
                     <div class="col-md-12 questions">
                         <h2 id="preguntas-frecuentes">Preguntas Frecuentes</h2>
@@ -238,26 +207,6 @@ Template Name: Las Varices
                     </div>
                 </div>
             </div>
-       					<!-- Modal preguntas -->
-<!--                         <?php $npreg //= 0;?>
-                        <?php //foreach($preguntas as $pregunta):?>
-                        <?php $npreg//++?>
-                        <div class="modal fade" id="myModalb-<?php //echo $npreg?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                <h4 class="modal-title" id="myModalLabel"><?php //echo $pregunta->post_title?></h4>
-                              </div>
-                              <div class="modal-body">
-                                <?php //echo $pregunta->post_content?>
-                              </div>
-                              
-                            </div>
-                          </div>
-                        </div>
-                        <?php //endforeach;?> -->
-                        <!-- Fin Modal  -->
         <!-- Modal Videos -->
             <?php $cvideo = 0;?>
             <?php foreach($videos as $video):?>
@@ -321,7 +270,7 @@ Template Name: Las Varices
 
         <script>
             jQuery('.slider').bxSlider({
-                slideWidth: 600,
+                slideWidth: 605,
                 slideMargin:5,
                 minSlides: 3,
                 maxSlides: 3,
