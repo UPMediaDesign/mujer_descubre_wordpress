@@ -7,7 +7,7 @@
                        <li><a href="" title="Las Varices" rel="nofollow">Las Varices</a></li>
                        <li><a href="" title="Aló Doctor" rel="nofollow">Aló Doctor</a></li>
                        <li><a href="" title="Mujeres Beneficiadas" rel="nofollow">Mujeres Beneficiadas</a></li>
-                       <li><a href="" title="Inscribite en el Programa" rel="nofollow">Inscríbite en el Programa</a></li>  
+                       <li><a href="" title="Inscribete en el Programa" rel="nofollow">Inscríbete en el Programa</a></li>  
                     </ul> 
 
                     <div class="col-md-5 credits">

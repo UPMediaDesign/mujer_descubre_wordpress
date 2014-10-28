@@ -132,7 +132,7 @@ Template Name: Beneficiadas
         	</div>
         </section>
 		
-        <section class="container white videos">
+        <section class="container white videos pdbottom30">
         	<div class="row">
         		<div class="col-md-12 videos">
         			<h2>Videos</h2>
@@ -154,6 +154,7 @@ Template Name: Beneficiadas
                     	<figcaption>
                         	<img src="<?php bloginfo('template_directory')?>/images/play.png" alt="" width="90" data-toggle="modal" data-target="#modalb-<?php echo $cvideo?>" />
                         </figcaption>
+                        <h3><?php echo get_the_title($video->ID , array('data-toggle' => 'modal' , 'data-target'=> '#modal-'.$cvideo , 'class' => 'btn btn-primary'))?></h3>
                     </figure>
 						
 					
@@ -244,7 +245,7 @@ Template Name: Beneficiadas
                 slideMargin:5,
                 minSlides: 3,
                 maxSlides: 3,
-                pager:true,    
+                pager:false,    
             });    
         </script>
 

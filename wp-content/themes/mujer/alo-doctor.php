@@ -52,6 +52,7 @@ Template Name: Alo Doctor
                         <?php echo get_the_post_thumbnail($video->ID , 'filosofia' , array('data-toggle' => 'modal' , 'data-target'=> '#modal-'.$cvideo , 'class' => 'btn btn-primary'))?>
                         <figcaption>
                             <img src="<?php bloginfo('template_directory')?>/images/play.png" alt="" width="90" data-toggle="modal" data-target="#modal-<?php echo $cvideo?>" />
+                            <h3><?php echo get_the_title($video->ID , array('data-toggle' => 'modal' , 'data-target'=> '#modal-'.$cvideo , 'class' => 'btn btn-primary'))?></h3>
                         </figcaption>
                     </figure>
                         
@@ -73,7 +74,7 @@ Template Name: Alo Doctor
                 slideMargin:5,
                 minSlides: 3,
                 maxSlides: 3,
-                pager:true,    
+                pager:false,    
             });    
         </script>
 

@@ -66,7 +66,7 @@ Template Name: Las Varices
                     <?php $cvideo++?>
 
                 <div class="col-md-4 pdlr0 ">
-                      <figure class="slide">
+                      <figure class="slide" data-toggle="modal" data-target="#modal-<?php echo $cvideo?>">
                       	<?php if(get_the_post_thumbnail($video->ID)){?>
                           <?php echo get_the_post_thumbnail($video->ID , 'filosofia' , array('data-toggle' => 'modal' , 'data-target'=> '#modal-'.$cvideo , 'class' => 'btn btn-primary'))?>
                           <?php }else{?>
@@ -75,6 +75,7 @@ Template Name: Las Varices
 
                           <figcaption>
                               <img src="<?php bloginfo('template_directory')?>/images/play.png" alt="" width="90" data-toggle="modal" data-target="#modal-<?php echo $cvideo?>" />
+                              <h3><?php echo get_the_title($video->ID , array('data-toggle' => 'modal' , 'data-target'=> '#modal-'.$cvideo , 'class' => 'btn btn-primary'))?></h3>
                             </figcaption>
                         </figure>
                 <!-- Fin Ventana Modal -->
@@ -103,7 +104,7 @@ Template Name: Las Varices
                         <?php $ctrata++?>
 
                         <!-- Button trigger modal 1-->
-                        <figure class="col-md-3 mlr0 pdlr05 treatments">
+                        <figure class="col-md-3 mlr0 pdlr05 treatments pointer" data-toggle="modal" data-target="#myModal-<?php echo $ctrata?>">
                         <?php echo get_the_post_thumbnail($tratamiento->ID, 'tratamiento')?>
                         <!--<img src="<?php bloginfo('template_directory'); ?>/images/treatment4.jpg" alt=""> -->
                             <figcaption>
@@ -143,10 +144,10 @@ Template Name: Las Varices
                         <div class="line-green"></div>
                     <!-- Contenido Colapsable -->
                         
-                        <div class="panel-group questions" id="accordion">
+                        <div class="panel-group questions qSlider" id="accordion">
                           
                           <?php $npreg = 0;?>
-                          <?php $preguntas = get_posts(array('post_type' => 'preguntas_frecuentes' , 'numberposts' => 5 ))?>
+                          <?php $preguntas = get_posts(array('post_type' => 'preguntas_frecuentes' , 'numberposts' => 99 ))?>
                           <?php foreach($preguntas as $pregunta):?>
                           <?php $npreg++?>
                           <div class="panel panel-default">
@@ -268,15 +269,17 @@ Template Name: Las Varices
         </section>
         <!-- Fin Contenido Varices -->
 
+        <!-- Slider Videos -->
         <script>
             jQuery('.slider').bxSlider({
                 slideWidth: 605,
                 slideMargin:5,
                 minSlides: 3,
                 maxSlides: 3,
-                pager:true,    
+                pager:false,    
             });    
         </script>
+        <!-- Slider Acordion -->
         <script>
           jQuery('.qSlider').bxSlider({
             mode: 'vertical',
@@ -286,6 +289,23 @@ Template Name: Las Varices
             maxSlides: 5,
             pager: true
           });
-    </script>
+        </script>
+        <!-- Direccionador links internos <a href="#"></a> -->
+        <script>
+        jQuery(document).ready(function(){
+            $('a[href^="#"]').on('click',function (e) {
+                e.preventDefault();
+
+                var target = this.hash;
+                $target = $(target);
+
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top
+                }, 800, 'swing', function () {
+                    window.location.hash = target;
+                });
+            });
+        });
+        </script>
 
 <?php get_footer()?>

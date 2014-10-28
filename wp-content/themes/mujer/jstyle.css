@@ -155,14 +155,14 @@ display: block;
 .videos-area figcaption img {
 width: 90px ;
 position: absolute;
-top: 34%;
+top: 24%;
 margin: 0px auto;
 left: 35%;
 cursor:pointer;
 -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease;
 }
 
-.videos-area figcaption img:hover{ top: 35%;
+.videos-area figcaption img:hover{ top: 24%;
 -webkit-transition: 0.5s ease;
 -moz-transition: 0.5s ease;
 -ms-transition: 0.5s ease;
