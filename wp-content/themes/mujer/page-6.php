@@ -144,10 +144,10 @@ Template Name: Las Varices
                         <div class="line-green"></div>
                     <!-- Contenido Colapsable -->
                         
-                        <div class="panel-group questions qSlider" id="accordion">
+                        <div class="panel-group questions" id="accordion">
                           
                           <?php $npreg = 0;?>
-                          <?php $preguntas = get_posts(array('post_type' => 'preguntas_frecuentes' , 'numberposts' => 99 ))?>
+                          <?php $preguntas = get_posts(array('post_type' => 'preguntas_frecuentes' , 'numberposts' => 5 ))?>
                           <?php foreach($preguntas as $pregunta):?>
                           <?php $npreg++?>
                           <div class="panel panel-default">
