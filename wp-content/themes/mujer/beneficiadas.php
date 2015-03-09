@@ -174,8 +174,8 @@ Template Name: Beneficiadas
  		<section class="container-fluid suscribe">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Inscríbete en el Programa</h3>
-                        <a title="" rel="" data-toggle="modal" data-target="#myModal" >Ingresa Aquí</a>
+                        <h3>Conoce a más sobre los tratamientos</h3>
+                        <a title="" href="<?php echo get_page_link(6)?>" >Ingresa Aquí</a>
                     </div>
                 </div>
         </section>

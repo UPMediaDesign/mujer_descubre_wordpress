@@ -142,7 +142,7 @@ Template Name: Alo Doctor
                             'post_id' => $post->ID,
                             'status' => 'approve', //Change this to the type of comments to be displayed
                             //'orderby' => 'ID',
-                            'order' => 'ASC',
+                            'order' => 'DESC',
                         ));
                     ?>
                    
@@ -159,6 +159,7 @@ Template Name: Alo Doctor
                                             <img src="<?php bloginfo('template_directory')?>/images/avatar-user.png" alt="" />
                                         </div>
                                         <p><?php echo $comentario->comment_content?></p>
+                                        <small><em><?php echo $comentario->comment_author?> <?php echo get_comment_meta( $comentario->comment_ID, 'apellido', true )?>, <?php echo get_comment_meta( $comentario->comment_ID, 'edad', true )?> años</em></small>
                                     </div>
                                     
                                 </div>
@@ -175,7 +176,7 @@ Template Name: Alo Doctor
                                                     <img src="<?php bloginfo('template_directory')?>/images/avatar-doc.png" alt="" />
                                                 </div>
                                                 <p>
-                                                    <?php echo $comentario->comment_content?>
+                                                    <?php echo $comentarioinside->comment_content?>
                                                 </p>
                                             </div>
                                             <div class="avatar col-md-2 hide-on-mobile">
@@ -243,8 +244,8 @@ Template Name: Alo Doctor
         <section class="container-fluid suscribe">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Inscríbete en el Programa</h3>
-                        <a title="" rel="" data-toggle="modal" data-target="#myModal" >Ingresa Aquí</a>
+                        <h3>Conoce a las beneficiadas</h3>
+                        <a title="" href="<?php echo get_page_link(10)?>" >Ingresa Aquí</a>
                     </div>
                 </div>
         </section>

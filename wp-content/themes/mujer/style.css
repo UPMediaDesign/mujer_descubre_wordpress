@@ -25,72 +25,17 @@ Description: Iram · Expertos en Oncología
 }
 
 
-/* FONTFACE */
-
-@font-face {
-    font-family: 'helveticaNeue';
-    src: url('fonts/HelveticaNeueThin.otf');
-    font-weight:100;
-    font-style:normal;
-
-}
-
-@font-face {
-    font-family: 'helveticaNeue';
-    src: url('fonts/HelveticaNeueLight.otf');
-    font-weight:300;
-    font-style:normal;
-
-}
-
-@font-face {
-    font-family: 'helveticaNeue';
-    src: url('fonts/HelveticaNeueBOLD.otf');
-    font-weight:600;
-    font-style:normal;
-
-}
 
 
 /*FONTFACE END*/
 
 body{
-	 font-family: 'helveticaNeue', Helvetica, Arial, sans-serif;
+	 font-family: 'Lato', Helvetica, Arial, sans-serif;
 	 font-weight:300;
 	 background-color:#f7f7f7;
 }
 
 
-/******************************************************************************
-Fuentes *******************************************************************
-*******************************************************************************/
-@font-face {
-    font-family: 'HelveticaNeueLTStd35Thin';
-    src: url('fonts/helveticaneueltstd-th.eot');
-    src: url('fonts/helveticaneueltstd-th.eot') format('embedded-opentype'),
-         url('fonts/helveticaneueltstd-th.woff2') format('woff2'),
-         url('fonts/helveticaneueltstd-th.woff') format('woff'),
-         url('fonts/helveticaneueltstd-th.ttf') format('truetype'),
-         url('fonts/helveticaneueltstd-th.svg#HelveticaNeueLTStd35Thin') format('svg');
-}
-@font-face {
-    font-family: 'HelveticaNeueLTStd45Light';
-    src: url('fonts/helveticaneueltstd-lt.eot');
-    src: url('fonts/helveticaneueltstd-lt.eot') format('embedded-opentype'),
-         url('fonts/helveticaneueltstd-lt.woff2') format('woff2'),
-         url('fonts/helveticaneueltstd-lt.woff') format('woff'),
-         url('fonts/helveticaneueltstd-lt.ttf') format('truetype'),
-         url('fonts/helveticaneueltstd-lt.svg#HelveticaNeueLTStd45Light') format('svg');
-}
-@font-face {
-    font-family: 'HelveticaNeueLTStd75Bold';
-    src: url('fonts/helveticaneueltstd-bd.eot');
-    src: url('fonts/helveticaneueltstd-bd.eot') format('embedded-opentype'),
-         url('fonts/helveticaneueltstd-bd.woff2') format('woff2'),
-         url('fonts/helveticaneueltstd-bd.woff') format('woff'),
-         url('fonts/helveticaneueltstd-bd.ttf') format('truetype'),
-         url('fonts/helveticaneueltstd-bd.svg#HelveticaNeueLTStd75Bold') format('svg');
-}
 
 /*******************************************************************************
 Normalizador *******************************************************************
@@ -1191,10 +1136,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#22a2f3', end
 /*.bigcarousel{position: relative; overflow: hidden; width: 100%; height: 800px; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); touch-action: none; color: #ffffff;}*/
 /*ul.slides-container{position: relative; height: 100%; width: 100%; left: -1885px; padding-left: 0;} 
 li.bg1{position: absolute; overflow: hidden; height: 100%; width: 100%; top: -15px; left: 1885px; display: block; z-index: 0; background-image: url("images/slide-im1.jpg"); background-size: 100% !important; background-position: 50% 0%; background-repeat: no-repeat;} */
-.carousel-caption.jumbotron h1{font-size: 44px; font-family: 'HelveticaNeueLTStd45Light', helvetica, arial, sans-serif; font-weight: lighter; line-height: 0; padding-top: 50px; margin-bottom: 0; line-height: 120%; margin-top: 0; padding-top: 0; text-align: left; color:#ffffff;}
-.carousel-caption.jumbotron h3{font-size: 18px; font-family: 'HelveticaNeueLTStd45Light', helvetica, arial, sans-serif; font-weight: bold; line-height: 0; padding-top: 10px; margin-bottom: 20px; text-align: left; margin-top: 0; line-height: 140%; color:#ffffff;}
+.carousel-caption.jumbotron h1{font-size: 44px; font-family: 'lato', helvetica, arial, sans-serif; font-weight: 900; line-height: 0; padding-top: 50px; margin-bottom: 0; line-height: 120%; margin-top: 0; padding-top: 0; text-align: left; color:#ffffff;}
+.carousel-caption.jumbotron h3{font-size: 18px; font-family: 'lato', helvetica, arial, sans-serif; font-weight: 300; line-height: 0; padding-top: 10px; margin-bottom: 20px; text-align: left; margin-top: 0; line-height: 140%; color:#ffffff;}
 span.left-line{border-top: 3px solid #ffffff; float: left; display: block; width: 6%; height: 6px; margin-top: 10px; margin-right: 5px;}
-.carousel-caption.jumbotron p{color: #eb4483; display: block; height: 6px; text-align: left; line-height:120%; font-weight:bold;}
+.carousel-caption.jumbotron p{color: #eb4483; display: block; height: 6px; text-align: left; line-height:100%; font-weight:400;}
 .carousel-caption{position: absolute; bottom: 0; top: 0; left: 0; z-index: 999; color: #fff; height: 340px; max-width: 800px; padding: 60px; margin: auto; text-align: center;}
 ul.slide-team{position: relative; height: 100%; width: 100%; left: -1885px;} 
 li.bg1{position: absolute; overflow: hidden; height: 100%; width: 100%; top: -15px; left: 1885px; display: block; z-index: 0; background-image: url("images/slide-im1.jpg"); background-size: 100% !important; background-position: 50% 0%; background-repeat: no-repeat;} 
@@ -1212,9 +1157,9 @@ ul.slide-control {position: absolute; bottom: 10%; left: 49%; width: 92px; displ
 /* CUERPO */
 /* Área casos mujeres */
 span.pink-border{border-top:#eb4483; background-color: #ffffff; width:50px; height:5px;}
-h3.title-case{font-size: 45px; text-align: center; font-weight: bold; line-height: 140%; color: #eb4483; margin-bottom: 0; margin: -20px auto 0; display: block;} 
+h3.title-case{font-size: 45px; text-align: center; font-weight: 900; line-height: 140%; color: #eb4483; margin-bottom: 0; margin: -20px auto 0; display: block;} 
 .title-line{border-top: 2px solid #eb4483; margin-top: -75px; margin-bottom: 50px;}
-span.reference-case{text-align: center; display: block; font-family: helvetica, arial, sans-serif; font-weight: lighter; font-size: 22px; margin: 0 auto 20px; color: #8d8d8d;}
+span.reference-case{text-align: center; display: block; font-family: lato, helvetica, arial, sans-serif; font-weight: lighter; font-size: 22px; margin: 0 auto 20px; color: #8d8d8d;}
 .case{padding: 0 0 0 5px; margin: 0 auto;}
 .case img{width: 100%; height: auto;}
 .case figcaption{position: relative; bottom: 115px; width: 100%; height: auto;text-align: center; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -1225,8 +1170,8 @@ background: -o-linear-gradient(top, rgba(6,4,2,0.02) 0%,rgba(6,4,2,0.65) 100%);
 background: -ms-linear-gradient(top, rgba(6,4,2,0.02) 0%,rgba(6,4,2,0.65) 100%);
 background: linear-gradient(to bottom, rgba(6,4,2,0.02) 0%,rgba(6,4,2,0.65) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05060402', endColorstr='#a6060402',GradientType=0 );}
-.case h3{color: #ffffff; letter-spacing: 1px; padding-top: 21px; margin-top: 0;} 
-.case span{clear: both; text-align: center; font-family: 'helveticaNeue', helvetica, arial, sans-serif; color: #ffffff; font-size: 20px; font-weight: bold; line-height: 160%;}
+.case h3{color: #ffffff; letter-spacing: 1px; padding-top: 21px; margin-top: 0; text-transform:uppercase; font-weight:900} 
+.case span{clear: both; text-align: center; font-family: 'Lato', helvetica, arial, sans-serif; color: #ffffff; font-size: 20px; font-weight: bold; line-height: 160%;}
 .case a{clear: both; display: block; text-transform: uppercase; font-size: 12px; line-height: 160%; color: #ffffff; font-weight: bold; text-decoration: none; border-top: 4px solid #eb4483; margin: 20px auto 0; padding-top: 5px; width: 70px; padding-bottom: 20px;
 -webkit-transition: all .2s ease-in-out;
 -moz-transition: all .2s ease-in-out;
@@ -1240,8 +1185,8 @@ color: #eb4483;}
 /* Vocero Médico */
 /*.consult{margin-top: 50px;}*/
 .consult img{margin: 0 auto; display: block;}
-.consult h3{text-align: center; font-family: 'helveticaNeue', helvetica, arial, sans-serif; font-size: 40px; font-weight: bold; color: #8d8d8d; margin-bottom: 0;}
-.consult p{text-align: center; text-transform: uppercase; color: #eb4483; border-top: 2px solid #eb4483; margin: 15px 45%; padding-top: 10px; font-size: 12px;}
+.consult h3{text-align: center; font-family: 'Lato', helvetica, arial, sans-serif; font-size: 40px; font-weight: bold; color: #8d8d8d; margin-bottom: 0;}
+.consult p{text-align: center; text-transform: uppercase; color: #eb4483; border-top: 2px solid #eb4483; margin: 15px 40%; padding-top: 10px; font-size: 12px; font-weight: 900;}
 .consult a{text-align: center; display: table; margin: 0 auto; color: #ffffff; text-decoration: none; margin-bottom: 10px; -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -ms-transition: all .2s ease-in-out;
@@ -1250,18 +1195,18 @@ color: #eb4483;}
   -moz-transition: all .2s ease-in-out;
   -ms-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;}
-.council p{font-size: 30px; font-family: 'helveticaNeue', arial, sans-serif; font-weight: lighter; line-height: 140%; text-align: center; color: #b8b8b8; margin-top: 25px; margin-bottom: 45px; padding: 0 12%; letter-spacing: 1px}
-.council p strong{font-weight: lighter; background-color: #eb4483; color: #ffffff;} 
-.stadistics p{font-family: helvetica, arial, sans-serif; font-weight: 500; font-size: 24px; text-align: center; color: #a0a09f; line-height: 150%; border-top: 1px solid #8d8d8d; border-bottom: 1px solid #8d8d8d; padding: 15px 0;}
+.council p{font-size: 30px; font-family: 'Lato', arial, sans-serif; font-weight: 400; line-height: 140%; text-align: center; color: #b8b8b8; margin-top: 25px; margin-bottom: 45px; padding: 0 12%; letter-spacing: 1px}
+.council p strong{font-weight: 700; background-color: #eb4483; color: #ffffff; display:inline-block; padding: 0px 3px;} 
+.stadistics p{font-family: lato, helvetica, arial, sans-serif; font-weight: 700; text-transform:uppercase; font-size: 24px; text-align: center; color: #a0a09f; line-height: 150%; border-top: 1px solid #8d8d8d; border-bottom: 1px solid #8d8d8d; padding: 15px 0;}
 .stadistics img{margin: 0 auto; display: block; width:100%; height:auto;}
 /* Area sugerencias contra las varices */
 .sugerences {background: url("images/bg-varices.jpg"); background-size: 100%; width:100%; background-repeat:no-repeat; padding-bottom: 60px; padding-top:30px;}
 .sugerences a{text-align: center; display: table; margin: 0 auto; color: #ffffff; text-decoration: none; margin-bottom: 30px; transition: 0.5s ease;
--webkit-transition: 0.5s ease;}
+-webkit-transition: 0.5s ease; font-weight:900}
 .sugerences a:hover{color:#ffffff; text-decoration: none; transition: 0.5s ease;
 -webkit-transition: 0.5s ease;}
-.sugerences p{text-align: center; color: #ffffff; font-family:'helveticaNeue', helvetica, arial, sans-serif; font-weight: lighter; font-size: 30px; line-height: 140%; margin: 20px 15%; letter-spacing: 1px;}
-.sugerences h4{text-align: center; font-family: 'helveticaNeue', helvetica, arial, sans-serif; font-size: 30px; font-weight: bold; line-height: 140%; color: #ffffff; margin-bottom: 15px;}
+.sugerences p{text-align: center; color: #ffffff; font-family:'lato', helvetica, arial, sans-serif; font-weight: 400; font-size: 30px; line-height: 140%; margin: 20px 15%; letter-spacing: 1px;}
+.sugerences h4{text-align: center; font-family: 'lato', helvetica, arial, sans-serif; font-size: 30px; font-weight: 900; line-height: 140%; color: #ffffff; margin-bottom: 15px; text-transform: uppercase;}
 
 /* Auxiliares */
 .mtop60{margin-top:60px;}
@@ -1299,28 +1244,28 @@ color: #eb4483;}
 .varices{background-image: url("../images/bg-varices-single.jpg"); width: 100%; display: block; z-index: 0; background-size: cover !important; background-position: 50% 0%; background-repeat: no-repeat; height: 540px;}
 .single-container{margin-top: 120px; margin-bottom:40px;padding-top: 0.5%;}
 span.top-line{border-top: 5px solid #eb4483; width: 100px; display: block; margin: 20px auto;}
-.jumbotron.caption.centered p{line-height: 160%; margin: 0 10%; font-weight: lighter; font-size: 20px; font-family: 'HelveticaNeueLTStd45Light', helvetica, arial, sans-serif; color: #ffffff;}
-.jumbotron.caption.centered h2{font-family: 'HelveticaNeueLTStd75Bold', helvetica, arial, sans-serif; font-size: 44px; font-weight: bold; margin-bottom: 0; color: #ffffff;}
+.jumbotron.caption.centered p{line-height: 140%; margin: 0 10%;  font-size: 20px; font-family: 'Lato', helvetica, arial, sans-serif; color: #ffffff; font-weight:400}
+.jumbotron.caption.centered h2{font-family: 'Lato', helvetica, arial, sans-serif; font-size: 44px; font-weight: 900; margin-bottom: 0; color: #ffffff; }
 
 /* Subnavegación verde */
 .green-nav{background:#33d0b4; margin-top: -57px; padding: 0;}
 .green-nav ul{padding: 0; margin: 0;}
-.green-nav li{float: left; display: block; font-size: 14px;font-family:'HelveticaNeueLTStd75Bold', helvetica, arial, sans-serif;text-transform: uppercase; font-weight: bold;-webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; padding:20px 0;}
+.green-nav li{float: left; display: block; font-size: 14px;font-family:'Lato', helvetica, arial, sans-serif;text-transform: uppercase; font-weight: bold;-webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; padding:20px 0; font-weight:700}
 .green-nav li:hover{background:#2baa93; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease;}
 .green-nav a{color:#ffffff; text-decoration: none;-webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; padding: 20px}
 .green-nav a:hover{color:#175a4e;-webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; text-decoration: none;}
 
 /* Contenido Varices */
-.about h2{text-align: center;font-family: 'helveticaNeue', Helvetica, Arial, sans-serif; font-weight: bold ;font-size: 40px ; text-align: center; color:#8d8d8d; line-height: 140%; margin-bottom:0; padding-top: 30px;}
-.about p{font-family: 'helveticaNeue',Helvetica, Arial, sans-serif; font-weight: lighter; font-size: 20px; text-align: center; color: #8d8d8d; line-height: 150%; margin: 20px 10% 30px; letter-spacing: 1px;}
+.about h2{text-align: center;font-family: 'lato', Helvetica, Arial, sans-serif; font-weight: 900 ;font-size: 40px ; text-align: center; color:#8d8d8d; line-height: 140%; margin-bottom:0; padding-top: 30px;}
+.about p{font-family: 'lato',Helvetica, Arial, sans-serif; font-weight: 400; font-size: 20px; text-align: center; color: #8d8d8d; line-height: 150%; margin: 20px 10% 30px; letter-spacing: 1px;}
 .line-green{border-top:5px solid #33d0b4; display: block; margin: 10px auto 30px; width:16%; }
 .line-green-0 {border-top: 5px solid #33d0b4; display: block; margin: 10px auto 10px; width: 16%; }
 .line-green-1 {border-top: 5px solid #33d0b4; display: block; margin: 10px 0 10px; width: 16%; }
 /* Tratamientos */
-.treatments h2{text-align: center;font-family: 'helveticaNeue',Helvetica, Arial, sans-serif; font-weight: bold ;font-size: 40px ; text-align: center; color:#8d8d8d; line-height: 140%; margin-bottom:0;}
-.treatments a{text-align: center; text-decoration: none; display:block; padding:0 5%; color: #ffffff; font-weight:bold; font-size: 25px; font-family: 'helveticaNeue', helvetica, arial, sans-serif; line-height:140%; background: transparent; border: none;}
+.treatments h2{text-align: center;font-family: 'lato',Helvetica, Arial, sans-serif; font-weight: 900 ;font-size: 40px ; text-align: center; color:#8d8d8d; line-height: 140%; margin-bottom:0;}
+.treatments a{text-align: center; text-decoration: none; display:block; padding:0 5%; color: #ffffff; font-weight:bold; font-size: 25px; font-family: 'lato', helvetica, arial, sans-serif; line-height:140%; background: transparent; border: none;}
 .treatments a:hover{background:transparent; border:none;}
-.treatments p{text-align: center; font-family: 'helveticaNeue',helvetica, arial, sans-serif; font-weight: lighter; font-size:13px; padding:10px 5%; color:#ffffff; line-height: 140%;}
+.treatments p{text-align: center; font-family: 'lato',helvetica, arial, sans-serif; font-weight: 400; font-size:13px; padding:10px 5%; color:#ffffff; line-height: 140%;}
 .treatments img{width: 100%; height: auto;}
 .treatments figcaption{position: relative; bottom: 80px;
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -1336,8 +1281,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05060402', e
 .line-pink{border-top:5px solid #eb4483; margin: 10px auto; display: block; width:50%;}
 
 /* Preguntas Frecuentes */
-.questions h2{text-align: center;font-family: 'helveticaNeue',Helvetica, Arial, sans-serif; font-weight: bold ;font-size: 40px ; text-align: center; color:#8d8d8d; line-height: 140%; margin-bottom:0; margin-top: -90px; padding-top: 60px;}
-.questions a{font-family: 'helveticaNeue', helvetica, arial, sans-serif; font-size: 27px; font-weight: lighter; text-align: center; line-height: 160%; display: block; color: #8d8d8d; border: 2px solid #8d8d8d; border-radius: 5px; margin: 3px 18%; padding: 2%; text-decoration: none; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; cursor: pointer;}
+.questions h2{text-align: center;font-family: 'lato',Helvetica, Arial, sans-serif; font-weight: bold ;font-size: 40px ; text-align: center; color:#8d8d8d; line-height: 140%; margin-bottom:0; margin-top: -90px; padding-top: 60px;}
+.questions a{font-family: 'lato', helvetica, arial, sans-serif; font-size: 27px; font-weight: lighter; text-align: center; line-height: 160%; display: block; color: #8d8d8d; border: 2px solid #8d8d8d; border-radius: 5px; margin: 3px 18%; padding: 2%; text-decoration: none; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; cursor: pointer;}
 .questions a:hover{color: #adadad;
 border: 2px solid #adadad;-webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; border-radius: 15px; border:2px solid transparent;}
 .questions.panel-default {border-color: none; }
@@ -1347,15 +1292,15 @@ border: 2px solid #adadad;-webkit-transition: 0.5s ease; -moz-transition: 0.5s e
 
 
 /* Precauciones */
-.cautions h2{text-align: center;font-family: 'helveticaNeue', Helvetica, Arial, sans-serif; font-weight: bold ;font-size: 40px ; text-align: center; color:#8d8d8d; line-height: 140%; margin-bottom:0;}
+.cautions h2{text-align: center;font-family: 'lato', Helvetica, Arial, sans-serif; font-weight: bold ;font-size: 40px ; text-align: center; color:#8d8d8d; line-height: 140%; margin-bottom:0;}
 .cautions img{width:180px; max-width: 100%; margin:0 auto; display: block;}
-.cautions h4{text-align: center; font-family:'helveticaNeue',helvetica, arial, sans-serif; font-weight: bold; font-size: 18px; color:#8d8d8d; margin-bottom:15px; margin-top:25px;}
-.cautions p{text-align: center; font-family:'helveticaNeue', helvetica, arial, sans-serif; font-weight:lighter; font-size: 15px; color:#adadad; line-height:140%; padding: 0 15% 40px; letter-spacing:1px;}
+.cautions h4{text-align: center; font-family:'lato',helvetica, arial, sans-serif; font-weight: bold; font-size: 18px; color:#8d8d8d; margin-bottom:15px; margin-top:25px;}
+.cautions p{text-align: center; font-family:'lato', helvetica, arial, sans-serif; font-weight:lighter; font-size: 15px; color:#adadad; line-height:140%; padding: 0 15% 40px; letter-spacing:1px;}
 
 /* Incribete en el Programa */
 .suscribe{background-image: url("images/bg-inscript.jpg"); background-size: cover !important; background-repeat: no-repeat;}
-.suscribe h3{text-align:center; font-family: 'helveticaNeue', helvetica, arial, sans-serif; font-weight: lighter; font-size: 36px; display: block; color: #ffffff; background-size: 100%; margin-top:40px;}
-.suscribe a{border: 2px solid #ffffff; text-align: center; font-family: 'helveticaNeue', helvetica, arial, sans-serif; font-weight: bold; font-size: 14px; display: table; margin: 0 auto 60px; color:#ffffff; text-decoration: none; padding: 15px 50px; text-transform: uppercase; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; cursor:pointer;}
+.suscribe h3{text-align:center; font-family: 'lato', helvetica, arial, sans-serif; font-weight: lighter; font-size: 36px; display: block; color: #ffffff; background-size: 100%; margin-top:40px;}
+.suscribe a{border: 2px solid #ffffff; text-align: center; font-family: 'lato', helvetica, arial, sans-serif; font-weight: bold; font-size: 14px; display: table; margin: 0 auto 60px; color:#ffffff; text-decoration: none; padding: 15px 50px; text-transform: uppercase; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; cursor:pointer;}
 .suscribe a:hover{-webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; border-radius: 10px; color: #000000; background: #fff; cursor:pointer; text-decoration: none;}
 
 
@@ -1363,28 +1308,28 @@ border: 2px solid #adadad;-webkit-transition: 0.5s ease; -moz-transition: 0.5s e
 .beneficiadas{background-image: url("images/bg-beneficiadas-single.jpg"); width: 100%; display: block; z-index: 0; background-size: cover !important; background-position: 50% 0%; background-repeat: no-repeat; height: 540px;}
 
 /* ¿Tienes Consultas? */
-.medic-ask h2{font-family: 'helveticaNeue', Helvetica, Arial, sans-serif;
+.medic-ask h2{font-family: 'lato', Helvetica, Arial, sans-serif;
 font-weight: bold; font-size: 40px; text-align: center; color: #8d8d8d; line-height: 140%; margin-bottom: 0;}
-.medic-ask.jumbotron p{text-align: center; font-family:'helveticaNeue', helvetica, arial, sans-serif; font-weight: lighter; font-size: 21px; padding: 0; color: #6c6c6c; line-height: 160%; margin-bottom: 35px;}
+.medic-ask.jumbotron p{text-align: center; font-family:'lato', helvetica, arial, sans-serif; font-weight: lighter; font-size: 21px; padding: 0; color: #6c6c6c; line-height: 160%; margin-bottom: 35px;}
 
 /* Consultas al Doctor */
 .spokesman{background-size: 100%; height: auto; color: #8b8b8b;}
-.spokesman h3{text-align: center; font-family: 'helveticaNeue', helvetica, arial, sans-serif; font-size: 40px; color: #8b8b8b; line-height: 140%; font-weight: bold; margin-bottom: 0; margin-top: 40px;}
-.spokesman span {font-size: 11px; color: #8b8b8b; font-weight: bold; text-align: center; text-transform: uppercase; font-family: 'helveticaNeue', Helvetica, Arial, sans-serif; margin: 0 auto 20px; display: block; }
-.spokesman p{font-size: 18px; font-family: 'helveticaNeue', Helvetica, Arial, sans-serif; text-align: left; font-weight: lighter; line-height: 160%; color: #8b8b8b; padding: 0 5%; text-align: center; margin-bottom: 50px;}
+.spokesman h3{text-align: center; font-family: 'lato', helvetica, arial, sans-serif; font-size: 40px; color: #8b8b8b; line-height: 140%; font-weight: bold; margin-bottom: 0; margin-top: 40px;}
+.spokesman span {font-size: 11px; color: #8b8b8b; font-weight: bold; text-align: center; text-transform: uppercase; font-family: 'lato', Helvetica, Arial, sans-serif; margin: 0 auto 20px; display: block; }
+.spokesman p{font-size: 18px; font-family: 'lato', Helvetica, Arial, sans-serif; text-align: left; font-weight: lighter; line-height: 160%; color: #8b8b8b; padding: 0 5%; text-align: center; margin-bottom: 50px;}
 
 
 /* Beneficiadas Área Solange Lackington */
 .actress{background-image: url("images/bg-solange.jpg");  background-repeat: no-repeat; background-size: 100%; height: auto;}
-.actress h3{text-align: left; font-family:'helveticaNeue', helvetica, arial, sans-serif; font-size: 40px; color: #ffffff; line-height: 140%; font-weight: bold; margin-bottom: 0; margin-top: 80px;}
-.actress span {font-size: 11px; color: #ffffff; font-weight: bold; text-align: left; text-transform: uppercase; font-family: 'helveticaNeue', Helvetica, Arial, sans-serif; }
-.actress p{font-size: 18px; font-family: 'helveticaNeue', Helvetica, Arial, sans-serif; text-align: left; font-weight: lighter; line-height: 160%; color: #ffffff; padding-right: 15%; padding-top:15px;}
+.actress h3{text-align: left; font-family:'lato', helvetica, arial, sans-serif; font-size: 40px; color: #ffffff; line-height: 140%; font-weight: bold; margin-bottom: 0; margin-top: 80px;}
+.actress span {font-size: 11px; color: #ffffff; font-weight: bold; text-align: left; text-transform: uppercase; font-family: 'lato', Helvetica, Arial, sans-serif; }
+.actress p{font-size: 18px; font-family: 'lato', Helvetica, Arial, sans-serif; text-align: left; font-weight: lighter; line-height: 160%; color: #ffffff; padding-right: 15%; padding-top:15px;}
 
 /* Área Slider Beneficiadas */
 .line-text{border-top: 3px solid #eb4483; width: 120px; display:block; margin:10px auto;}
 ul.benefit {padding:0;}
 .benefit li{text-align: center; list-style: none; font-size:20px; }
-.benefit li h4{font-size:25px; font-family:'helveticaNeue', helvetica, arial, sans-serif; text-align: center; color:#6c6c6c; font-weight: bold; margin-top: 30px;}
+.benefit li h4{font-size:25px; font-family:'lato', helvetica, arial, sans-serif; text-align: center; color:#6c6c6c; font-weight: bold; margin-top: 30px;}
 .slides-navigation.benefit-ctrl {position: relative; width: 100%; display: block; top: 160px; height: 20px; max-width: 1000px;}
 .benefit-ctrl a.lefta{background: url("images/left-arrow.png"); background-size: 100%; background-repeat: no-repeat; width: 20px; height: 14px; list-style: none; float: left; display: block; border:none;}
 .benefit-ctrl a.righta{ background: url("images/right-arrow.png");
@@ -1403,11 +1348,11 @@ background-size: 100%; background-repeat: no-repeat; width: 20px; height: 14px; 
 
 
 /* Caja Video Mujeres Beneficiadas */
-.videos h2{font-family: 'helveticaNeue', Helvetica, Arial, sans-serif;
+.videos h2{font-family: 'lato', Helvetica, Arial, sans-serif;
 font-weight: bold; font-size: 40px; text-align: center; color: #8d8d8d; line-height: 140%; margin-bottom: 0;}
-.videos.jumbotron p{text-align: center; font-family:'helveticaNeue', helvetica, arial, sans-serif; font-weight: lighter; font-size: 20px; padding: 10px 10%; color: #6c6c6c; line-height: 160%;}
+.videos.jumbotron p{text-align: center; font-family:'lato', helvetica, arial, sans-serif; font-weight: lighter; font-size: 20px; padding: 10px 10%; color: #6c6c6c; line-height: 160%;}
 ul.videos-area{}
-.videos-area li{list-style: none; display: block; float: left; font-family:'helveticaNeue', helvetica, arial, sans-serif;}
+.videos-area li{list-style: none; display: block; float: left; font-family:'lato', helvetica, arial, sans-serif;}
 .videos-area img{background: transparent; border: none; width: 100%; height:auto;padding: 0 5px 10px;}
 .videos-area img:hover{background: transparent; border: none;}
 section.container.white.pdlr0.videos{padding:0;}
@@ -1416,7 +1361,7 @@ section.container.white.pdlr0.videos{padding:0;}
 .slides-pagination.videos-ctrl{position: relative; width: 100%; margin: 0 auto; display: block;}
 .slides-pagination.videos-ctrl a{ margin: 0 5px; background:#eb4483; border:3px solid #ffffff; float: left; display: block;}
 figure.slide{margin:0;}
-figure.slide h3{text-align: center; font-size: 14px; font-family: 'helveticaNeue', Helvetica, Arial, sans-serif; margin-top:10px; padding: 0 5%; letter-spacing: 1px; line-height: 140%; font-weight:600; color:#eb4483}
+figure.slide h3{text-align: center; font-size: 14px; font-family: 'lato', Helvetica, Arial, sans-serif; margin-top:10px; padding: 0 5%; letter-spacing: 1px; line-height: 140%; font-weight:600; color:#eb4483}
 
 /* Area Modal Box */
 .modal.in .modal-dialog{background: #f7f7f7; border-radius: 10px;}
@@ -1425,15 +1370,15 @@ figure.slide h3{text-align: center; font-size: 14px; font-family: 'helveticaNeue
 /******* ESTILOS RELACIONADOS AL FOOTER *******/
 .pinkfoot{background: #eb4483;}
 .pinkfoot ul{list-style: none; margin-top:20px;}
-.pinkfoot li.tupp{text-transform: uppercase; color: #ffffff; font-family: 'helveticaNeue', helvetica, arial, sans-serif; font-weight: bold; margin-bottom: 25px; margin-top:0;}
+.pinkfoot li.tupp{text-transform: uppercase; color: #ffffff; font-family: 'lato', helvetica, arial, sans-serif; font-weight: bold; margin-bottom: 25px; margin-top:0;}
 .pinkfoot li{margin:5px 0 ;}
 .pinkfoot li a{color: #ffffff; font-size: 14px; line-height: 140%; text-decoration: none; font-weight: lighter;}
-.credits span{text-transform: uppercase; color: #ffffff; font-family: 'helveticaNeue', helvetica, arial, sans-serif; font-weight: bold; margin-bottom: 15px; float: left; margin-top: 20px;}
+.credits span{text-transform: uppercase; color: #ffffff; font-family: 'lato', helvetica, arial, sans-serif; font-weight: bold; margin-bottom: 15px; float: left; margin-top: 20px;}
 .credits a{float: left; clear: both;}
-.credits p{clear: both; font-family: 'helveticaNeue', helvetica, arial, sans-serif; color: #ffffff; font-weight: lighter; text-align: left; padding-right: 20%; line-height: 160%;}
+.credits p{clear: both; font-family: 'lato', helvetica, arial, sans-serif; color: #ffffff; font-weight: lighter; text-align: left; padding-right: 20%; line-height: 160%;}
 
 /* Relacionado al formulario */
-.mailsender span{text-transform: uppercase; color: #ffffff; font-family: 'helveticaNeue', helvetica, arial, sans-serif; font-weight: bold; margin-bottom: 15px; float: left; margin-top: 20px;}
+.mailsender span{text-transform: uppercase; color: #ffffff; font-family: 'lato', helvetica, arial, sans-serif; font-weight: bold; margin-bottom: 15px; float: left; margin-top: 20px;}
 .mailsender form[method="post"]{margin-top:30px;width: 100%; max-width: 350px;}
 .mailsender input[type="email"]{width: 82%; height: 40px; padding: 8px; float: left;}
 .mailsender input[type="send"]{width: 45px; height: 40px; float: left; background: #187cbc url("images/sendmail-icon.png"); border: none; background-repeat: no-repeat; background-position: 50%; cursor:pointer;
@@ -1447,7 +1392,7 @@ transition: all .2s ease-in-out;}
 -ms-transition: all .2s ease-in-out;
 transition: all .2s ease-in-out;}
 
-.copyrighted{float:right; text-align: right; font-size: 11px; font-family:'helveticaNeue', helvetica, arial, sans-serif; font-weight: 400; color: #ffffff; margin: 20px 0; display: inline-table; padding-right: 3%;}
+.copyrighted{float:right; text-align: right; font-size: 11px; font-family:'lato', helvetica, arial, sans-serif; font-weight: 400; color: #ffffff; margin: 20px 0; display: inline-table; padding-right: 3%;}
 
 .logged-in-as{padding: 20px 0 0 20px;
 font-size: 20px;}
@@ -1545,7 +1490,7 @@ border-bottom:1px solid #efeded;
 .nav>ul>li>a{
 	color:#fff;
 	padding:10px 1px;
-  -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease;
+  -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; font-weight:700
 }
 
 .nav>ul>li.current-menu-item>a {

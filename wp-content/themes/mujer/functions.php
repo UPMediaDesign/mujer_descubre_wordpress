@@ -138,7 +138,7 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'testimonioBig',650, 320, true);
 }
 ?>
-<? function truncate($string, $limit, $break=".", $pad="...") {
+<?php function truncate($string, $limit, $break=".", $pad="...") {
 
        if(strlen($string) <= $limit) return $string;
 
@@ -156,7 +156,7 @@ if ( function_exists( 'add_image_size' ) ) {
 }
 add_action( 'admin_head', 'favicon4admin' );
 ?>
-<?
+<?php
 if ( function_exists('register_sidebar') )
 register_sidebar(array(
 'name' => 'Contacto',
@@ -166,7 +166,7 @@ register_sidebar(array(
 'after_title' => '</h2>',
 ));
 ?>
-<?
+<?php
 if ( function_exists('register_sidebar') )
 register_sidebar(array(
 'name' => 'Seguro Form',

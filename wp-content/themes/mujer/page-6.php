@@ -203,8 +203,8 @@ Template Name: Las Varices
             <div class="container-fluid suscribe">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Inscríbete en el Programa</h3>
-                        <a title="" rel="" data-toggle="modal" data-target="#myModal" >Ingresa Aquí</a>
+                        <h3>Haz tus consultas al Doctor</h3>
+                        <a title="" href="<?php echo get_page_link(8)?>" >Ingresa Aquí</a>
                     </div>
                 </div>
             </div>

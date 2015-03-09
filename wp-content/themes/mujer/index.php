@@ -149,7 +149,7 @@ Template Name: Home
 
                     <div class="col-md-12 council">
                         <p>
-                            Las várices es una de las patologías más frecuentes a <strong>nivel mundial</strong>. Según cifras internacionales, aproximadamente 1 de 3 personas en edad adulta sufren de algún grado de várices. De éstas el <strong>70% son mujeres</strong>.
+                            Las várices son una de las patologías más frecuentes a <strong>nivel mundial</strong>. Según cifras internacionales, aproximadamente 1 de cada 3 personas en edad adulta sufren de algún grado de várices. De éstas el <strong>70% son mujeres</strong>.
                         </p>
                     </div>
 
@@ -173,7 +173,7 @@ Template Name: Home
             <div class="container-fluid sugerences">
                 <div class="row">
                     <div class="col-md-12">
-                        <h4>Tratamientos Varices</h4>
+                        <h4>Tratamientos Várices</h4>
                         <div class="border-solid"></div>
                         <p>En los pacientes que no tienen indicación de cirugía, se pueden mencionar las siguientes medidas de tratamiento conservador para aliviar los síntomas y ayudar a evitar la progresión de la enfermedad</p>
                         <a class="blue-btn" href="<?php echo get_page_link(6)?>/#tratamientos" title="" rel="">Infórmate Más</a>
