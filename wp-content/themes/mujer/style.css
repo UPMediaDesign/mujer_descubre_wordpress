@@ -1712,6 +1712,35 @@ border-radius: 5px 5px 5px 5px;
   background: #eb4483;
 }
 
+/* Rediseño Aló Doctor */
+.comentario p {min-height: 154px; background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, rgba(89, 89, 89, 1)), color-stop(1, rgba(35, 215, 182, 1))); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+.content-coment p em{min-height: 70px; }
+p.name-pacient{min-height: 55px !important; font-size: 13px; color: #525252 !important; background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, rgba(89, 89, 89, 1)), color-stop(1, rgba(89, 89, 89, 1))); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+button.btn.btn-primary.question{background: #009681; border: none; display: block; margin: 0 auto; width: 95%; text-transform: uppercase; -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+transition: opacity 0.3s, transform 0.3s;
+-webkit-transform: translateY(10px);
+-moz-transform: translateY(10px);
+transform: translateY(10px);}
+button.btn.btn-primary.question:hover {background: #007968; -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+transition: opacity 0.3s, transform 0.3s;
+-webkit-transform: translateY(10px);
+-moz-transform: translateY(10px);
+transform: translateY(10px);}
+/* Modalbox */
+.askk {line-height: 180%; margin: 20px 50px; }
+p.name-pacient.modal{float: right; padding-right: 7%; min-height: 55px !important; font-size: 13px; color: #525252 !important; background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, rgba(89, 89, 89, 1)), color-stop(1, rgba(89, 89, 89, 1))); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+.anss {/*margin: 0 45px 30px;*/ line-height: 160%; }
+.clear.separator.border{border-top:1px solid #009681; margin: 0 20px;}
+p.name-pacient.counter {float: right; padding-right: 45px;}
+.doc-prof img{width: 100%;}
+.doc-prof p {min-height: 0; background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, rgba(89, 89, 89, 1)), color-stop(1, rgba(89, 89, 89, 1))); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 11px; text-align: center; }
+/* Paginador */
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus
+{z-index: 2; color: #fff; background-color: #009681; border-color: #009681; cursor: default;}
+ul.pagination{margin: 20px 25px;}
+
 @media only screen and (min-width: 1024px){
   li.bg1{background-size: cover !important;}
   .sugerences{background-size: cover !important;}

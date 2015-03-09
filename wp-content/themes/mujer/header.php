@@ -27,6 +27,9 @@
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/jstyle.css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/superslides.css">
+
+<!-- FontAwesome -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <!-- bxSlider CSS file -->
 <script src="<?php bloginfo('template_directory'); ?>/js/bxslider.js"></script>
 <link href="<?php bloginfo('template_directory'); ?>/css/jquery.bxslider.css" rel="stylesheet" />
