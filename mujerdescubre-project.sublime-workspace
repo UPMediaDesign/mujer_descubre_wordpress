@@ -4,12 +4,16 @@
 		"selected_items":
 		[
 			[
-				"padding-",
-				"padding-bottom"
+				"font",
+				"font-size"
 			],
 			[
-				"font",
-				"font-family"
+				"content",
+				"content-coment"
+			],
+			[
+				"padding-",
+				"padding-bottom"
 			],
 			[
 				"h",
@@ -335,63 +339,33 @@
 			"file": "wp-content/themes/mujer/alo-doctor.php",
 			"settings":
 			{
-				"buffer_size": 13538,
+				"buffer_size": 16661,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "wp-content/themes/mujer/page-6.php",
+			"contents": "Searching 1369 files for \"Aló Doctor\"\n\n/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/alo-doctor.php:\n  168                                  \n  169                                  <?php foreach($comments as $comentarioinside):?>\n  170:                                 Aló Doctor\n  171                                      <?php if($comentarioinside->user_id == 1  && $comentarioinside->comment_parent == $comentario->comment_ID ){?>\n  172                                          \n\n/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/footer.php:\n    6                         <li class=\"tupp\">About</li> \n    7                         <li><a href=\"\" title=\"Las Varices\" rel=\"nofollow\">Las Varices</a></li>\n    8:                        <li><a href=\"\" title=\"Aló Doctor\" rel=\"nofollow\">Aló Doctor</a></li>\n    9                         <li><a href=\"\" title=\"Mujeres Beneficiadas\" rel=\"nofollow\">Mujeres Beneficiadas</a></li>\n   10                         <li><a href=\"\" title=\"Inscribete en el Programa\" rel=\"nofollow\">Inscríbete en el Programa</a></li>  \n\n/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/index.php:\n  145                      <h3>Dr. Fuenzalida</h3>\n  146                      <p>Vocero Médico</p>\n  147:                     <a class=\"blue-btn\" href=\"<?php echo get_page_link(8)?>\" title=\"\" rel=\"\">Ingresa a Aló Doctor</a>\n  148                      </div>\n  149  \n\n/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/page-165.php:\n    9          <section class=\"container contactt white\" style=\" text-align:center\">\n   10              <div class=\"row\">\n   11:                 <h2>Listado de consultas Aló Doctor</h2>\n   12                  <div class=\"line-green\"></div>\n   13                  <a href=\"<?php echo get_page_link(168)?>\" class=\"btn btn-success\">Descargar listado</a>\n\n/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/style.css:\n 1713  }\n 1714  \n 1715: /* Rediseño Aló Doctor */\n 1716  .comentario p {min-height: 154px;}\n 1717  .content-coment small em {height: 70px; }\n\n6 matches across 5 files\n",
 			"settings":
 			{
-				"buffer_size": 14881,
-				"line_ending": "Unix"
+				"buffer_size": 2100,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
 			}
 		},
 		{
-			"file": "wp-content/themes/mujer/index.php",
+			"file": "/Users/upmedia/GitHub/santodomingo/category.php",
 			"settings":
 			{
-				"buffer_size": 9570,
-				"line_ending": "Windows"
+				"buffer_size": 2464,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "wp-content/themes/mujer/header.php",
 			"settings":
 			{
-				"buffer_size": 5220,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/mujer/footer.php",
-			"settings":
-			{
-				"buffer_size": 1827,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "wp-content/themes/mujer/css/jquery.bxslider.css",
-			"settings":
-			{
-				"buffer_size": 4608,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/mujer/functions.php",
-			"settings":
-			{
-				"buffer_size": 15217,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/mujer/beneficiadas.php",
-			"settings":
-			{
-				"buffer_size": 13213,
+				"buffer_size": 5452,
 				"line_ending": "Unix"
 			}
 		},
@@ -399,7 +373,7 @@
 			"file": "wp-content/themes/mujer/style.css",
 			"settings":
 			{
-				"buffer_size": 62586,
+				"buffer_size": 62757,
 				"line_ending": "Unix"
 			}
 		},
@@ -407,41 +381,17 @@
 			"file": "wp-content/themes/mujer/jstyle.css",
 			"settings":
 			{
-				"buffer_size": 6993,
+				"buffer_size": 7013,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "wp-content/themes/mujer/js/jquery.bxslider.js",
+			"contents": "<!-- Large modal -->\n<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\".bs-example-modal-lg\">Large modal</button>\n\n<div class=\"modal fade bs-example-modal-lg\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myLargeModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-lg\">\n    <div class=\"modal-content\">\n      ...\n    </div>\n  </div>\n</div>\n",
 			"settings":
 			{
-				"buffer_size": 50573,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/mujer/js/superslides.js",
-			"settings":
-			{
-				"buffer_size": 14620,
+				"buffer_size": 379,
 				"line_ending": "Unix",
-				"name": "/*! Superslides - v0.6.3-wip - 2013-12-17"
-			}
-		},
-		{
-			"file": "wp-content/themes/mujer/alo-doctor-b.php",
-			"settings":
-			{
-				"buffer_size": 3995,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/mujer/bootstrap/css/bootstrap.min.css",
-			"settings":
-			{
-				"buffer_size": 100275,
-				"line_ending": "Unix"
+				"name": "<!-- Large modal -->"
 			}
 		}
 	],
@@ -469,16 +419,22 @@
 	},
 	"file_history":
 	[
-		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/jfunctions.php",
+		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/page-165.php",
+		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/bootstrap/css/bootstrap.min.css",
+		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/alo-doctor-b.php",
+		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/js/superslides.js",
+		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/js/jquery.bxslider.js",
 		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/beneficiadas.php",
 		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/functions.php",
-		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/fndc/functions.php",
-		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/header.php",
-		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/wp_bootstrap_navwalker.php",
+		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/css/jquery.bxslider.css",
 		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/footer.php",
-		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/bootstrap/css/bootstrap.min.css",
-		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/bootstrap/css/bootstrap-theme.min.css",
+		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/header.php",
 		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/index.php",
+		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/page-6.php",
+		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/jfunctions.php",
+		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/fndc/functions.php",
+		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/wp_bootstrap_navwalker.php",
+		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/bootstrap/css/bootstrap-theme.min.css",
 		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-includes/comment-template.php",
 		"/Users/upmedia/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/upmedia/GitHub/banmedica-descubre/beneficiadas.html",
@@ -590,13 +546,7 @@
 		"/Users/upmedia/Desktop/carpeta sin título/respaldo-black/cgi-bin/datos/tbk_config.dat",
 		"/Volumes/KINGSTON/respaldo-almahue/wp-content/themes/almahue/functions.php",
 		"/Users/upmedia/Desktop/SITIOS/UPMEDIA/public_html/regcom/wp-content/themes/front/css/estilo.css",
-		"/Volumes/KINGSTON/respaldo-almahue/wp-content/themes/almahue/page-contacto.php",
-		"/Volumes/KINGSTON/Respaldo Compite+1000/wp-content/themes/compite/functions.php",
-		"/Volumes/KINGSTON/respaldo-almahue/wp-content/themes/almahue/page-proyectos.php",
-		"/Users/upmedia/Desktop/SITIOS/UPMEDIA/public_html/regcom/wp-content/themes/front/header.php",
-		"/Users/upmedia/Desktop/candideit/candidator-master/smart_profile/__init__.py",
-		"/Users/upmedia/Desktop/tienda jump seller/home.php",
-		"/private/var/folders/qt/8cc7xcts4cjccztx7wylwbjh0000gn/T/fz3temp-1/jquery.superslides.js"
+		"/Volumes/KINGSTON/respaldo-almahue/wp-content/themes/almahue/page-contacto.php"
 	],
 	"find":
 	{
@@ -604,9 +554,11 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
+			"",
+			"/Users/upmedia/GitHub/santodomingo"
 		]
 	},
 	"find_state":
@@ -614,6 +566,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".border",
+			"border",
+			"Aló Doctor",
+			"substr",
 			"container white videos pdbottom30",
 			"Beneficiadas",
 			"post",
@@ -737,11 +693,7 @@
 			".footer-wrap",
 			".footer-wrap.footer-wrap",
 			".footer-wrap",
-			"search",
-			"navigation",
-			"slide",
-			"description",
-			"slide"
+			"search"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -759,7 +711,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -767,15 +719,15 @@
 					"file": "wp-content/themes/mujer/alo-doctor.php",
 					"settings":
 					{
-						"buffer_size": 13538,
+						"buffer_size": 16661,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11663,
-								11663
+								10900,
+								10900
 							]
 						],
 						"settings":
@@ -789,36 +741,68 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4822.0,
+						"translation.y": 2802.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "wp-content/themes/mujer/page-6.php",
 					"settings":
 					{
-						"buffer_size": 14881,
+						"buffer_size": 2100,
 						"regions":
 						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										286,
+										296
+									],
+									[
+										788,
+										798
+									],
+									[
+										815,
+										825
+									],
+									[
+										1370,
+										1380
+									],
+									[
+										1676,
+										1686
+									],
+									[
+										1969,
+										1979
+									]
+								],
+								"scope": ""
+							}
 						},
 						"selection":
 						[
 							[
-								62,
-								0
+								112,
+								112
 							]
 						],
 						"settings":
 						{
+							"detect_indentation": false,
 							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -828,18 +812,18 @@
 				},
 				{
 					"buffer": 2,
-					"file": "wp-content/themes/mujer/index.php",
+					"file": "/Users/upmedia/GitHub/santodomingo/category.php",
 					"settings":
 					{
-						"buffer_size": 9570,
+						"buffer_size": 2464,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4533,
-								4558
+								1452,
+								1501
 							]
 						],
 						"settings":
@@ -849,11 +833,10 @@
 							"synced": false,
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1613.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -863,15 +846,15 @@
 					"file": "wp-content/themes/mujer/header.php",
 					"settings":
 					{
-						"buffer_size": 5220,
+						"buffer_size": 5452,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4000,
-								4040
+								1906,
+								1906
 							]
 						],
 						"settings":
@@ -881,138 +864,10 @@
 							"synced": false,
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1334.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "wp-content/themes/mujer/footer.php",
-					"settings":
-					{
-						"buffer_size": 1827,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								622,
-								622
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "wp-content/themes/mujer/css/jquery.bxslider.css",
-					"settings":
-					{
-						"buffer_size": 4608,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1063,
-								1063
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 471.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "wp-content/themes/mujer/functions.php",
-					"settings":
-					{
-						"buffer_size": 15217,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1370,
-								792
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "wp-content/themes/mujer/beneficiadas.php",
-					"settings":
-					{
-						"buffer_size": 13213,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6097,
-								6097
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2094.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1024,19 +879,19 @@
 			"sheets":
 			[
 				{
-					"buffer": 8,
+					"buffer": 4,
 					"file": "wp-content/themes/mujer/style.css",
 					"settings":
 					{
-						"buffer_size": 62586,
+						"buffer_size": 62757,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								31981,
-								31981
+								55739,
+								55739
 							]
 						],
 						"settings":
@@ -1050,25 +905,25 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 33154.0,
+						"translation.y": 29005.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 5,
 					"file": "wp-content/themes/mujer/jstyle.css",
 					"settings":
 					{
-						"buffer_size": 6993,
+						"buffer_size": 7013,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6273,
-								6273
+								353,
+								353
 							]
 						],
 						"settings":
@@ -1082,133 +937,36 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 911.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "wp-content/themes/mujer/js/jquery.bxslider.js",
-					"settings":
-					{
-						"buffer_size": 50573,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "wp-content/themes/mujer/js/superslides.js",
+					"buffer": 6,
 					"settings":
 					{
-						"buffer_size": 14620,
+						"buffer_size": 379,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3072,
-								3072
+								144,
+								378
 							]
 						],
 						"settings":
 						{
-							"auto_name": "/*! Superslides - v0.6.3-wip - 2013-12-17",
+							"auto_name": "<!-- Large modal -->",
 							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
 							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "wp-content/themes/mujer/alo-doctor-b.php",
-					"settings":
-					{
-						"buffer_size": 3995,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "wp-content/themes/mujer/bootstrap/css/bootstrap.min.css",
-					"settings":
-					{
-						"buffer_size": 100275,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								86122,
-								86122
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 16010.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1244,7 +1002,7 @@
 		"cols":
 		[
 			0.0,
-			0.761935642799,
+			0.554624891933,
 			1.0
 		],
 		"rows":

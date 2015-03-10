@@ -135,7 +135,17 @@ Template Name: Alo Doctor
             
             <div class="col-md-12 chat-consult">
 
-                    <div class="separator clear"></div>
+                    <div class="separator clear"></div>                    
+                    <div class="col-md-6 col-md-offset-3 input-group">
+                        <input type="text" class="form-control" id="text-search" placeholder="Buscar Preguntas" aria-label="..."/>
+                        <div class="input-group-btn">
+                          <button type="button" class="btn btn-warning" id="borrar"><span class="fa fa-close fa-fw"></span></button>
+                          <button type="button" class="btn btn-success" id="buscar"><span class="fa fa-search fa-fw"></span> Buscar</button>
+                        </div>
+                    </div>
+                    
+                    <div class="clear separator"></div>
+                    
                     <?php
                         //Gather comments for a specific page/post 
                         $comments = get_comments(array(
@@ -146,96 +156,73 @@ Template Name: Alo Doctor
                             'numberposts' => -1
                         ));
                     ?>
-                   	
-                    <div class="col-md-6 col-md-offset-3">
-                    	<input type="text" value="" placeholder="Buscar Pregunta..." class="form-control" />
-                    </div>
-                    <div class="clear"></div>
-                    <div role="tabpanel">
-
-                   
-                                        
-                    <?php $itcount = 0?>
-                    <div class="tab-content">
                     
-                    <div role="tabpanel" class="tab-pane active" id="itt-1">
+                    <div id="tabs">
+                    <?php 
+						wp_list_comments( array(
+					  		'type' => 'comment',
+					  		'callback' => 'custom_comment',
+					  		'per_page' => 12
+					 	), $comments);
+					?>
+                    
+                    <div class="clear separator"></div>
+                    <?php wp_paginate_comments();?>
+                    </div>
+                    
+                    
+                    
+                    
+                    <div class="hidden" id="preguntas">
+                    <?php foreach($comments as $comentario):?>
+                        <?php if( $comentario->comment_parent == 0){?>
+                        <?php $itcount ++?>     
+                                <div class="comentario col-md-3 hidden">
+                                    <div class="content-coment" data-toggle="modal" data-target="#modal-id-<?php echo $comentario->comment_ID?>">
+                                        <p><?php echo substr($comentario->comment_content , 0, 100)?></p>
+                                        <p class="name-pacient"><?php echo $comentario->comment_author?> <?php echo get_comment_meta( $comentario->comment_ID, 'apellido', true )?>, <?php echo get_comment_meta( $comentario->comment_ID, 'edad', true )?> años</p>
+
+                                        <button type="button" class="btn btn-primary question" data-toggle="modal" data-target="#modal-id-<?php echo $comentario->comment_ID?>">Leer Pregunta</button>
+                                    </div> 
+                                </div>
+                        <?php }?>
+                    <?php endforeach;?>
+                    </div> 
+                    
+                    <div class="clear separator"></div> 
+					
+                    <div id="modals">
                     <?php foreach($comments as $comentario):?>
                       
                         <?php if( $comentario->comment_parent == 0){?>
                         <?php $itcount ++?> 	
-                        	
-                                <?php //var_dump($comentario->comment_ID)?>
-                                
-                                <div class="comentario col-md-3">
-
-                                    <div class="content-coment">
-                                        <div class="avatar col-md-2 display-on-mobile">
-                                            <img src="<?php bloginfo('template_directory')?>/images/avatar-user.png" alt="" />
-                                        </div>
-                                        <p><?php echo substr($comentario->comment_content , 0, 100)?></p>
-                                        <p class="name-pacient"><em><?php echo $comentario->comment_author?> <?php echo get_comment_meta( $comentario->comment_ID, 'apellido', true )?>, <?php echo get_comment_meta( $comentario->comment_ID, 'edad', true )?> años</em></p>
-
-                                        <button type="button" class="btn btn-primary question" data-toggle="modal" data-target="#modal-id-<?php echo $comentario->comment_ID?>">Leer Pregunta <i class="fa fa-share"></i></button>
-                                        
-                                       <!--  <?php //echo get_the_title($comments->ID , array('data-toggle' => 'modal' , 'data-target'=> '#modal-'.$comments , 'class' => 'btn btn-primary'))?> -->
-                                       
-                                       
-                                    </div> 
-                                    
                                     <?php  foreach($comments as $comentarioinside):?>
                                     <?php if($comentarioinside->user_id == 1  && $comentarioinside->comment_parent == $comentario->comment_ID ){?>
-                                            <?php //var_dump($comentario)?>
                                             <div class="modal fade bs-example-modal-lg" id="modal-id-<?php echo $comentario->comment_ID ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                                               <div class="modal-dialog modal-lg">
                                                 <div class="modal-content">
-                                                	
+                                                	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                     <div class="askk"><?php echo $comentario->comment_content?></div>
                                                     <p class="name-pacient counter"><em><?php echo $comentario->comment_author?> <?php echo get_comment_meta( $comentario->comment_ID, 'apellido', true )?>, <?php echo get_comment_meta( $comentario->comment_ID, 'edad', true )?> años</em></p>
-                                                    
-                                                	<div class="clear separator border"></div>
                                                     <div class="col-md-2 doc-prof">
-                                                        <img src="<?php bloginfo('template_directory')?>/images/avatar-doc.png" alt="" />
-                                                        <p>Doctor Juan Pablo Fuenzalida Gálvez</p>
+                                                            <img class="img-responsive" src="<?php bloginfo('template_directory')?>/images/avatar-doc.png" alt="" />
+                                                            <p>Doctor Juan Pablo Fuenzalida Gálvez</p>
                                                     </div>
-                                                  	<div class="anss col-md-10">
-                                                        <?php echo $comentarioinside->comment_content?>
+                                                    <div class="anss col-md-10">
+                                                            <?php echo $comentarioinside->comment_content?>
                                                     </div>
                                                     <div class="clear separator"></div>
+                                                    
                                                 </div>
                                               </div>
                                             </div>
                                     <?php }?>
-                                	<?php endforeach ?>
+                                	<?php endforeach  ?>
                                     
-                                </div>
-                                
-                                
-                                
                         <?php }?>
-                        
-                        <?php if($itcount % 12 == 0){echo '</div><div role="tabpanel" class="tab-pane" id="itt-'.$itcount.'">';}?>
-                        
                     <?php endforeach;?>
                     </div>
                     </div>
-                    </div>
-                    
-                    <nav>
-                      <ul class="pagination" role="tablist">
-                        
-                        <li role="presentation" class="active counter"><a href="#itt-1" aria-controls="home" role="tab" data-toggle="tab">1</a></li>
-						<?php $pager = 0?>
-                        <?php $ncount = 1?>
-                        <?php foreach($comments as $comc):?>
-							<?php if( $comc->comment_parent == 0){?>
-                                <?php $pager ++?> 
-                                <?php if($pager %12 == 0 ){?><?php $ncount ++?><li role="presentation" class="counter"><a href="#itt-<?php echo $pager?>"  aria-controls="home" role="tab" data-toggle="tab"><?php echo $ncount?></a></li><?php }?>
-                            <?php }?>
-                        <?php endforeach;?>
-                        
-                      </ul>
-                    </nav>  
-
                     <div class="separator clear"></div> 
                 
             </div>    
@@ -281,7 +268,7 @@ Template Name: Alo Doctor
                 <div class="col-md-12">
                     <h3><?php echo get_field('vocero_medico')?></h3>
                     <div class="line-green-0"></div>
-                    <span>Vocero Médico</span>
+                   <!--  <span>Vocero Médico</span> -->
                     <?php echo apply_filters('the_content' , get_field('comentario_vocero'))?>
                 </div>
             </div>
@@ -317,5 +304,38 @@ Template Name: Alo Doctor
           </div>
         </div>
         <!-- Fin Contenido Varices -->
+
+        <script>
+		jQuery( document ).ready(function() {
+            jQuery(function() {    
+                jQuery('#buscar').bind('click', function(ev) {
+                    // pull in the new value
+                    var searchTerm = jQuery('#text-search').val();
+
+                    // remove any old highlighted terms
+                    jQuery('#tabs').addClass('hidden');
+                    jQuery('#preguntas').removeClass('hidden').addClass('show')
+                    $('body').removeHighlight();
+
+                    // disable highlighting if empty
+                    if ( searchTerm ) {
+                        // highlight the new term
+                        jQuery('#preguntas').highlight( searchTerm );
+                        jQuery('.highlight').parent('p').parent('.content-coment').parent('.comentario').removeClass('hidden').addClass('show')            
+                    }
+                });
+
+                jQuery('#borrar').click(function(event) {
+                     
+                    jQuery('.show').addClass('hidden')
+                    jQuery('#text-search').val('')
+                    jQuery('#tabs').removeClass('hidden').addClass('show')
+                    jQuery('#preguntas').removeClass('show').addClass('hidden')
+                    
+                });
+                
+            });
+		 });
+        </script>
 
 <?php get_footer(); ?>

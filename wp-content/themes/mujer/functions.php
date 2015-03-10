@@ -55,8 +55,12 @@ add_action( 'after_setup_theme', 'wpt_setup' );
         } endif;
 ?>
 <?php 
+
+
+
 function wpt_register_js() {
-    wp_register_script('jquery.bootstrap.min', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', 'jquery');
+	wp_deregister_script( 'jquery' );
+    wp_register_script('jquery.bootstrap.min', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', 'bootstrap');
     wp_enqueue_script('jquery.bootstrap.min');
 }
 add_action( 'init', 'wpt_register_js' );
@@ -380,11 +384,58 @@ function pagenavi($before = '', $after = '') {
 }
 ?>
 <?php
-function string_limit_words($string, $word_limit)
-{
-$words = explode(' ', $string, ($word_limit + 1));
-if(count($words) > $word_limit)
-array_pop($words);
-return implode(' ', $words);
-}
+    function string_limit_words($string, $word_limit)
+    {
+    $words = explode(' ', $string, ($word_limit + 1));
+    if(count($words) > $word_limit)
+    array_pop($words);
+    return implode(' ', $words);
+    }
+    ?>
+<?php // comprobamos que la función existe
+if ( ! function_exists( 'custom_comment' ) ) :
+
+  function custom_comment( $comment, $args, $depth ) {
+    $GLOBALS['comment'] = $comment;
+    // en el caso de que el comentario no sea humano
+    switch ( $comment->comment_type ) :
+      case 'pingback' :
+      case 'trackback' :
+
+        // código HTML para pings...
+
+    break;
+    // en el caso de que el comentario sea humano
+      default :
+
+        // si el comentario está pendiente de aprobación
+        if ($comment->comment_approved == '0') {
+           // mensaje y código HTML para comentarios pendientes de aprobación 
+	   // "Tu comentario debe ser aprobado por un editor antes de publicarse."
+           // o algo así
+
+        // si el comentario está aprobado
+        } else {?>
+			
+            <?php if($comment->comment_parent == 0){?>
+			
+			<div class="comentario col-md-3">
+                  <div class="content-coment" data-toggle="modal" data-target="#modal-id-<?php echo $comment->comment_ID?>">
+                      <p><?php echo substr($comment->comment_content , 0, 100)?></p>
+                      <p class="name-pacient"><em><?php echo $comment->comment_author?> <?php echo get_comment_meta( $comment->comment_ID, 'apellido', true )?>, <?php echo get_comment_meta( $comment->comment_ID, 'edad', true )?> años</em></p>
+                      <button type="button" class="btn btn-primary question" data-toggle="modal" data-target="#modal-id-<?php echo $comment->comment_ID?>">Leer Pregunta</button>
+                  </div> 
+              </div>
+		
+          <?php } // código HTML para cada comentario
+           // incluir la comment_reply_link() para habilitar la respuesta a un comentario:
+           // comment_reply_link( array_merge( $args, array( 'reply_text' => 'Responder a este comentario', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) );
+        } // end if comment is approved
+
+    break;
+    endswitch;
+  } // end function custom_comment
+
+endif; // end comprobación custom_comment()
+
 ?>
