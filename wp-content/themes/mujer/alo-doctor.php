@@ -139,7 +139,6 @@ Template Name: Alo Doctor
                     <div class="col-md-6 col-md-offset-3 input-group">
                         <input type="text" class="form-control" id="text-search" placeholder="Buscar Preguntas" aria-label="..."/>
                         <div class="input-group-btn">
-                          <button type="button" class="btn btn-warning" id="borrar"><span class="fa fa-close fa-fw"></span></button>
                           <button type="button" class="btn btn-success" id="buscar"><span class="fa fa-search fa-fw"></span> Buscar</button>
                         </div>
                     </div>
@@ -329,6 +328,15 @@ Template Name: Alo Doctor
                      
                     jQuery('.show').addClass('hidden')
                     jQuery('#text-search').val('')
+                    jQuery('#tabs').removeClass('hidden').addClass('show')
+                    jQuery('#preguntas').removeClass('show').addClass('hidden')
+                    
+                });
+
+                jQuery('#text-search').bind( 'keyup change' ,function(event) {
+                     
+                    jQuery('.show').addClass('hidden')
+                    //jQuery('#text-search').val('')
                     jQuery('#tabs').removeClass('hidden').addClass('show')
                     jQuery('#preguntas').removeClass('show').addClass('hidden')
                     

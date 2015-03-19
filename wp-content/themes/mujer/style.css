@@ -1714,18 +1714,10 @@ border-radius: 5px 5px 5px 5px;
 
 /* Rediseño Aló Doctor */
 .comentario p {min-height: 154px; background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, rgba(89, 89, 89, 1)), color-stop(1, rgba(35, 215, 182, 1))); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
-.content-coment p em{min-height: 70px; }
+.content-coment p em{min-height: 75px; font-size:12px;}
 p.name-pacient{min-height: 55px !important; font-size: 13px; color: #525252 !important; background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, rgba(89, 89, 89, 1)), color-stop(1, rgba(89, 89, 89, 1))); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
-button.btn.btn-primary.question{background: #009681; border: none; display: block; margin: 0 auto; width: 95%; text-transform: uppercase; -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -ms-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out; -moz-transform 0.3s;
-transition: opacity 0.3s; }
-button.btn.btn-primary.question:hover {background: #007968; -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -ms-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out; -moz-transform 0.3s;
-transition: opacity 0.3s; }
+button.btn.btn-primary.question {background: #009681; border: none; display: block; margin: 0 auto; width: 95%; text-transform: uppercase; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out; }
+button.btn.btn-primary.question:hover {background: #007968; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out; }
 /* Modalbox */
 .askk {line-height: 180%; margin: 20px 30px; font-size: 17px; border-bottom: 1px solid #000; padding-bottom: 20px; font-weight: 600;}
 p.name-pacient.modal{float: right; padding-right: 7%; min-height: 55px !important; font-size: 13px; color: #525252 !important; background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, rgba(89, 89, 89, 1)), color-stop(1, rgba(89, 89, 89, 1))); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
@@ -1745,7 +1737,7 @@ button.close:hover{color:#fff; box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.9
 /* Paginador */
 .pagination{width: 100%;}
 .wp-paginate li {float: left; display: block; padding: 0 5px; }
-ol.wp-paginate.wp-paginate-comments {float: left; display: block; padding-left: 1%; }
+ol.wp-paginate.wp-paginate-comments {float: none; display: table; padding-left: 0; margin: 0 auto; }
 ol.pagination>.wp-paginate.wp-paginate-comments li{list-style: none; float:left; display: block;}
 ol.pagination>.wp-paginate.wp-paginate-comments li
 {z-index: 2; color: #fff; background-color: #009681; border-color: #009681; cursor: default;   border-radius: 50%; border-bottom-left-radius: 50% !important; border-top-left-radius: 50% !important; float: left; display:block;} 
@@ -1756,7 +1748,7 @@ span.title{width: 100% !important;}
   -moz-transition: all .2s ease-in-out;
   -ms-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out; }
-  .pagination>.wp-paginate.wp-paginate-comments a:hover{background-color: #eee;
+  .pagination>.wp-paginate.wp-paginate-comments a:hover{background-color: #D7D7D7;
   border-color: #ddd;-webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -ms-transition: all .2s ease-in-out;
@@ -1805,6 +1797,7 @@ ul.pagination{margin: 20px 25px;}
 */
 
   .display-on-mobile{display: none}
+  .content-coment p em {font-size: 12px; }
 
 }
 
@@ -1947,5 +1940,13 @@ ul.pagination{margin: 20px 25px;}
 
   .consult{margin-top: 20px;}
   figure.slide h3{display: none;}
+
+  .col-md-6.col-md-offset-3.input-group {padding-left: 15px; padding-right: 15px; }
+
+  .medic-ask h2{font-size: 30px; line-height: 140%;}
+  .medic-ask.jumbotron p{font-size: 16px; line-height: 140%; margin-bottom: 0px;}
+
+  span.title {display: none; }
+  .pagination>.wp-paginate.wp-paginate-comments a{margin-bottom: 10px;}
 
 }

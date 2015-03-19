@@ -75,10 +75,25 @@
 
 <!--//FACEBOOK OG-->
 
+<!-- LOADER -->
+<script type="text/javascript">
+jQuery(window).load(function() {
+  $(".loader").fadeOut("slow");
+})
+</script>
+
 </head>
 
 
 <body class="grey">
+
+  <div class="loader"></div>
+  <!-- Inicio Loader -->
+  <style type="text/css">
+    .loader{ height:100%; width:100%; position:fixed; top:0; right:0; left:0; right:0; background-image:url(<?php bloginfo('template_directory')?>/images/loader.gif); background-repeat: no-repeat; background-position: center 50%; background-color:#fff; z-index:999999999999999999;}
+  </style>
+  <!-- Fin Loader -->
+
       <header class="overhead pd0">
         <div id="container-fluid header">
               <div class="logo">
