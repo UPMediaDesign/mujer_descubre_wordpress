@@ -1,6 +1,7 @@
 /*Theme Name: Mujer · Descubre tus piernas
 Theme URI: http://www.mujerdescubretuspiernas.cl/
 Author: Rodrigo Sotomayor Castillo - UpMedia Agency
+Front: Carlos Peña & Joaquín Jara - UpMedia Agency;
 Author URI: http://www.upmedia.cl/
 Description: Mujer · Descubre tus piernas
 Version: 1.0
@@ -9,7 +10,7 @@ License URI: http://www.upmedia.cl
 Tags: mujer, piernas, varices
 Text Domain: Iram · Expertos en Oncología
 */
-Description: Iram · Expertos en Oncología
+Description: Banmédica · Mujer Descubre tus Piernas
 */
 
 
@@ -64,7 +65,7 @@ header,
 hgroup,
 main,
 nav,
-section,
+section,s
 summary {
   display: block;
 }
@@ -1098,8 +1099,8 @@ Grilla Bootstrap ***************************************************************
 Generales **********************************************************************
 *******************************************************************************/
 /* HEADER */
-.logo{width: 30%; float: left; margin-right: 3.5%; background: #eb4483; margin: 0px 15px 0px 0px; padding: 15px 0; float: left;}
-.logo img{float: right; margin-right: 5%;}
+.logo {width: 100%; float: left; margin-right: 3.5%; background: #00285d; margin: 0px 15px 0px 0px; padding: 15px 0; float: left;} 
+.logo img{float: left; margin-left: 12%; max-width: 226px; width: 12%;}
 .overhead{position: absolute; top: 0px; padding: 0px 3% 0 0; width: 100%; z-index: 1000; background: none !important;} 
 #header{background: none !important; z-index: 2000;}
 #header:before{}
@@ -1132,15 +1133,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#22a2f3', end
   -ms-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;}
 
-/* Correspondientes a slider Big Carousel */
-/*.bigcarousel{position: relative; overflow: hidden; width: 100%; height: 800px; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); touch-action: none; color: #ffffff;}*/
-/*ul.slides-container{position: relative; height: 100%; width: 100%; left: -1885px; padding-left: 0;} 
-li.bg1{position: absolute; overflow: hidden; height: 100%; width: 100%; top: -15px; left: 1885px; display: block; z-index: 0; background-image: url("images/slide-im1.jpg"); background-size: 100% !important; background-position: 50% 0%; background-repeat: no-repeat;} */
 .carousel-caption.jumbotron h1{font-size: 44px; font-family: 'lato', helvetica, arial, sans-serif; font-weight: 900; line-height: 0; padding-top: 50px; margin-bottom: 0; line-height: 120%; margin-top: 0; padding-top: 0; text-align: left; color:#ffffff;}
 .carousel-caption.jumbotron h3{font-size: 18px; font-family: 'lato', helvetica, arial, sans-serif; font-weight: 300; line-height: 0; padding-top: 10px; margin-bottom: 20px; text-align: left; margin-top: 0; line-height: 140%; color:#ffffff;}
 span.left-line{border-top: 3px solid #ffffff; float: left; display: block; width: 6%; height: 6px; margin-top: 10px; margin-right: 5px;}
 .carousel-caption.jumbotron p{color: #eb4483; display: block; height: 6px; text-align: left; line-height:100%; font-weight:400;}
-.carousel-caption{position: absolute; bottom: 0; top: 0; left: 0; z-index: 999; color: #fff; height: 340px; max-width: 800px; padding: 60px; margin: auto; text-align: center;}
+.carousel-caption{position: absolute; bottom: 0; top: 140px; left: 40%; z-index: 999; color: #fff; height: 340px; max-width: 800px; padding: 60px; margin: auto; text-align: center; right: 0;}
 ul.slide-team{position: relative; height: 100%; width: 100%; left: -1885px;} 
 li.bg1{position: absolute; overflow: hidden; height: 100%; width: 100%; top: -15px; left: 1885px; display: block; z-index: 0; background-image: url("images/slide-im1.jpg"); background-size: 100% !important; background-position: 50% 0%; background-repeat: no-repeat;} 
 .slide-team h2{font-size: 44px; font-family: 'HelveticaNeueLTStd45Light', helvetica, arial, sans-serif; font-weight: lighter; line-height: 0; padding-top: 50px; margin-bottom: 25px; line-height: 120%; margin-top: 0; padding-top: 0;}
@@ -1157,10 +1154,10 @@ ul.slide-control {position: absolute; bottom: 10%; left: 49%; width: 92px; displ
 /* CUERPO */
 /* Área casos mujeres */
 span.pink-border{border-top:#eb4483; background-color: #ffffff; width:50px; height:5px;}
-h3.title-case{font-size: 45px; text-align: center; font-weight: 900; line-height: 140%; color: #eb4483; margin-bottom: 0; margin: -20px auto 0; display: block;} 
+h3.title-case{font-size: 45px; text-align: center; font-weight: lighter; line-height: 140%; color: #eb4483; margin-bottom: 0; margin: -20px auto 0; display: block;} 
 .title-line{border-top: 2px solid #eb4483; margin-top: -75px; margin-bottom: 50px;}
 span.reference-case{text-align: center; display: block; font-family: lato, helvetica, arial, sans-serif; font-weight: lighter; font-size: 22px; margin: 0 auto 20px; color: #8d8d8d;}
-.case{padding: 0 0 0 5px; margin: 0 auto;}
+/*.case{padding: 0 0 0 5px; margin: 0 auto;}*/
 .case img{width: 100%; height: auto;}
 .case figcaption{position: relative; bottom: 115px; width: 100%; height: auto;text-align: center; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
 background: -moz-linear-gradient(top, rgba(6,4,2,0.02) 0%, rgba(6,4,2,0.65) 100%);
@@ -1480,8 +1477,8 @@ border-bottom:1px solid #efeded;
 	float: left;
   display: block;
   list-style: none;
-  padding-left: 4%;
-  padding-top: 50px;
+  padding-left: 0;
+  padding-top: 0;
   -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease;
 }
 
@@ -1489,17 +1486,11 @@ border-bottom:1px solid #efeded;
 
 .nav>ul>li>a{
 	color:#fff;
-	padding:10px 1px;
+	padding:13px 20px;
   -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; font-weight:700
 }
 
-.nav>ul>li.current-menu-item>a {
-	font-weight:bold;
-	padding:10px 2px;
-	color:#ffffff;
-  border-bottom: 5px solid #ffffff;
-
-}
+.nav>ul>li.current-menu-item>a {font-weight: bold; padding: 13px 20px; color: #ffffff; background: #33d0b4; }
 
 .nav.azul>ul>li>a{
 	color:#00aeef;
@@ -1557,16 +1548,7 @@ transform: translateY(10px);
 }
 .nav>ul>li>a:hover span.active{border: none;}
 
-.nav>ul>li>a:hover{padding: 10px 2px;
-border-radius: 5px;
-color: #ffffff;
--webkit-transition: 0.6s ease;
--moz-transition: 0.6s ease;
--ms-transition: 0.6s ease;
-transition: 0.6s ease;
-border-bottom: 5px solid #ffffff;
-background: none;
-border-radius: 0;}
+.nav>ul>li>a:hover{padding: 13px 20px; color: #ffffff; -webkit-transition: 0.6s ease; -moz-transition: 0.6s ease; -ms-transition: 0.6s ease; transition: 0.6s ease; background: #33d0b4;} 
 
 .nav>ul>li>a::after{
   position: absolute;
@@ -1624,10 +1606,12 @@ border-radius: 5px 5px 5px 5px;
 
 .icon-bar{background:#ffffff;}
 
+nav.navbar-collapse {background: #eb4483; }
 
 /*superslides*/
 #slides {
   position: relative;
+  height: 670px !important;
 }
 #slides .slides-container {
   display: none;

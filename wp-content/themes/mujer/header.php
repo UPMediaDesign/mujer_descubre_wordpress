@@ -96,31 +96,35 @@ jQuery(window).load(function() {
 
       <header class="overhead pd0">
         <div id="container-fluid header">
-              <div class="logo">
+
+          <div class="logo">
                   <a href="<?php echo home_url() ?>"><img src="<?php bloginfo('template_directory'); ?>/images/mujerlogo.png" /></a>
-              </div>
-              <div class="container-fluid">
-                <div class="navbar-header">
-                <button class="navbar-toggle collapsed btn-lg icon-bar" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-                  <span class="sr-only">Menú</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              </div>
-              <nav class="nav navbar-collapse bs-navbar-collapse collapse" role="navigation" id="menu" style="height: 1px;">
-                    <?php /* Primary navigation */
-                      wp_nav_menu( array(
-                      'menu' => 'top_menu',
-                      'depth' => 2,
-                      'container' => false,
-                      'menu_class' => 'nav col-md-8',
-                      //Process nav menu using our custom nav walker
-                      'walker' => new wp_bootstrap_navwalker())
-                    );
-                    ?>
-             </nav>
-              </div>
           </div>
 
-        </header>
+          <div class="container-fluid">
+                <div class="navbar-header">
+                  <button class="navbar-toggle collapsed btn-lg icon-bar" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Menú</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+
+          </div>
+
+          <nav class="nav navbar-collapse bs-navbar-collapse collapse initial-nav" role="navigation" id="menu" style="height: 1px;">
+                <?php /* Primary navigation */
+                    wp_nav_menu( array(
+                    'menu' => 'top_menu',
+                    'depth' => 2,
+                    'container' => false,
+                    'menu_class' => 'nav col-md-8',
+                    //Process nav menu using our custom nav walker
+                    'walker' => new wp_bootstrap_navwalker())
+                    );
+                ?>
+          </nav>
+
+        </div>
+      </header>

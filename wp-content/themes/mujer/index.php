@@ -23,8 +23,8 @@ Template Name: Home
                         <div class="carousel-caption jumbotron">
                             <h1><?php echo get_the_title($slide->ID)?></h1>
                             <h3><?php echo $slide->post_content?></h3>
-                            <span class="left-line"></span>
-                            <p><?php echo $slide->post_excerpt?></p>
+                            <!-- <span class="left-line"></span>
+                            <p><?php //echo $slide->post_excerpt?></p> -->
                         </div>
                     </li>
                     <?php endforeach;?>
@@ -95,7 +95,7 @@ Template Name: Home
 
                     <?php query_posts( 'page_id=6' );?>
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                    <figure class="col-md-esp col-md-4 case">
+                    <figure class="col-md-4 col-md-offset-2 case">
                         <?php the_post_thumbnail('home-boxes'); ?>
                         <figcaption>
                             <h3><?php the_title(); ?></h3>
@@ -108,7 +108,7 @@ Template Name: Home
 
                     <?php query_posts( 'page_id=10' );?>
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                    <figure class="col-md-esp col-md-4 case">
+                    <figure class="col-md-4 case">
                         <?php the_post_thumbnail('home-boxes'); ?>
                         <figcaption>
                             <h3><?php the_title(); ?></h3>
@@ -119,22 +119,30 @@ Template Name: Home
                     <?php endwhile; endif; ?>
                     <?php wp_reset_query(); ?>
 
-                    <?php query_posts( 'page_id=8' );?>
-                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                    <figure class="col-md-esp col-md-4 case">
-                        <?php the_post_thumbnail('home-boxes'); ?>
-                        <figcaption>
-                            <h3><?php the_title(); ?></h3>
-                            
-                            <a href="<?php the_permalink(); ?>" title="<?php the_permalink(); ?>" >Ver Más</a>
-                        </figcaption>
-                    </figure>
-                    <?php endwhile; endif; ?>
-                    <?php wp_reset_query(); ?>
                 </div>
             </div>
         </section>
         <!-- Fin Listado de casos -->
+
+        <section>
+            <div class="container">
+                <div class="col-md-12">
+                    <?php query_posts( 'page_id=8' );?>
+                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                    
+                        <?php the_post_thumbnail('home-boxes'); ?>
+                        
+                            <h3><?php the_title(); ?></h3>
+                            
+                            <a href="<?php the_permalink(); ?>" title="<?php the_permalink(); ?>" >Ver Más</a>
+                        
+                    
+                    <?php endwhile; endif; ?>
+                    <?php wp_reset_query(); ?>
+                </div>
+            </div>
+
+        </section>
 
         <!-- Sugerencias del Médico -->
         <section>
