@@ -130,7 +130,7 @@ add_theme_support( 'post-thumbnails' );
 <?php
 if ( function_exists( 'add_image_size' ) ) { 
 	add_image_size( 'page-thumb', 9999, 800, true );
-	add_image_size( 'home-boxes',327, 218, true);
+	add_image_size( 'home-boxes',368, 368, true);
 	add_image_size( 'imagenPage',1400, 400, true);
 	add_image_size( 'doctor',207, 207, true);
 	add_image_size( 'award',250, 250, true);

@@ -101,6 +101,10 @@ jQuery(window).load(function() {
                   <a href="<?php echo home_url() ?>"><img src="<?php bloginfo('template_directory'); ?>/images/mujerlogo.png" /></a>
           </div>
 
+          <div class="logo-banmedica">
+            <a href="http://www.fundacionbanmedica.cl" title="Fundación Banmédica" rel="nofollow" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/logo-white.png"></a>
+          </div>
+
           <div class="container-fluid">
                 <div class="navbar-header">
                   <button class="navbar-toggle collapsed btn-lg icon-bar" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">

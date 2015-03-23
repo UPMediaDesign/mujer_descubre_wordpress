@@ -122,19 +122,25 @@ Template Name: Home
                 </div>
             </div>
         </section>
+
+        <section class="arrow">
+            
+        </section>
         <!-- Fin Listado de casos -->
 
-        <section>
-            <div class="container">
-                <div class="col-md-12">
+        <section class="bg-doctor">
+            <div class="container doc-new">
+                <div class="col-md-6 col-md-offset-6">
                     <?php query_posts( 'page_id=8' );?>
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                     
                         <?php the_post_thumbnail('home-boxes'); ?>
                         
-                            <h3><?php the_title(); ?></h3>
+                        <h3>Dr. Fuenzalida</h3>
+                        <p class="upper">Vocero Médico</p>
+                        <p><?php echo substr(strip_tags($post->post_content), 0, 288); ?></p>
                             
-                            <a href="<?php the_permalink(); ?>" title="<?php the_permalink(); ?>" >Ver Más</a>
+                        <a href="<?php the_permalink(); ?>" title="<?php the_permalink(); ?>" >Ingresa a Aló Doctor</a>
                         
                     
                     <?php endwhile; endif; ?>
@@ -145,33 +151,22 @@ Template Name: Home
         </section>
 
         <!-- Sugerencias del Médico -->
-        <section>
-            <div class="container mbottom80">
+        <section class="deep-blue">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-12 consult">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/dr-arancibia.png">
-                    <h3>Dr. Fuenzalida</h3>
-                    <p>Vocero Médico</p>
-                    <a class="blue-btn" href="<?php echo get_page_link(8)?>" title="" rel="">Ingresa a Aló Doctor</a>
-                    </div>
+                        <h3>Probabilidad de Varices por Edad</h3>
 
-                    <div class="col-md-12 council">
-                        <p>
-                            Las várices son una de las patologías más frecuentes a <strong>nivel mundial</strong>. Según cifras internacionales, aproximadamente 1 de cada 3 personas en edad adulta sufren de algún grado de várices. De éstas el <strong>70% son mujeres</strong>.
-                        </p>
-                    </div>
+                        <div class="col-md-3 col-md-offset-2 stadistics">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/graph-3.png" title="" rel="">
+                        </div>
+                       
+                        <div class="col-md-3 col-md-offset-1 stadistics">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/graph-4.png" title="" rel="">
+                        </div>
 
-                    <div class="col-md-3 col-md-offset-1 stadistics">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/graph1.png" title="" rel="">
-                    </div>
-                    <div class="col-md-4 stadistics mtop60 nophone">
-                        <p>Probabilidad de Varices por Edad</p>
-                    </div>
-                    <div class="col-md-3 stadistics">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/graph-2.png" title="" rel="">
                     </div>
                 </div>
-
             </div>
         </section>
         <!-- Fin Sugerencias del Médico -->
@@ -184,7 +179,7 @@ Template Name: Home
                         <h4>Tratamientos Várices</h4>
                         <div class="border-solid"></div>
                         <p>En los pacientes que no tienen indicación de cirugía, se pueden mencionar las siguientes medidas de tratamiento conservador para aliviar los síntomas y ayudar a evitar la progresión de la enfermedad</p>
-                        <a class="blue-btn" href="<?php echo get_page_link(6)?>/#tratamientos" title="" rel="">Infórmate Más</a>
+                        <a href="<?php echo get_page_link(6)?>/#tratamientos" title="" rel="">Infórmate Más</a>
                     </div>
                 </div>
             </div>  

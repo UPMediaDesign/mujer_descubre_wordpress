@@ -178,7 +178,7 @@ Template Name: Alo Doctor
                         <?php $itcount ++?>     
                                 <div class="comentario col-md-3 hidden">
                                     <div class="content-coment" data-toggle="modal" data-target="#modal-id-<?php echo $comentario->comment_ID?>">
-                                        <p><?php echo substr($comentario->comment_content , 0, 100)?></p>
+                                        <p><?php echo substr($comentario->comment_content , 0, 110)?>...</p>
                                         <p class="name-pacient"><?php echo $comentario->comment_author?> <?php echo get_comment_meta( $comentario->comment_ID, 'apellido', true )?>, <?php echo get_comment_meta( $comentario->comment_ID, 'edad', true )?> años</p>
 
                                         <button type="button" class="btn btn-primary question" data-toggle="modal" data-target="#modal-id-<?php echo $comentario->comment_ID?>">Leer Pregunta</button>
