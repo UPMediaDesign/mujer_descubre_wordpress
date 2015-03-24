@@ -95,14 +95,14 @@ jQuery(window).load(function() {
   <!-- Fin Loader -->
 
       <header class="overhead pd0">
-        <div id="container-fluid header">
+        <div class="container-fluid header">
 
           <div class="logo">
-                  <a href="<?php echo home_url() ?>"><img src="<?php bloginfo('template_directory'); ?>/images/mujerlogo.png" /></a>
+                  <a href="<?php echo home_url() ?>"><img src="<?php bloginfo('template_directory'); ?>/images/mujerlogohigh.png" /></a>
           </div>
 
           <div class="logo-banmedica">
-            <a href="http://www.fundacionbanmedica.cl" title="Fundación Banmédica" rel="nofollow" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/logo-white.png"></a>
+            <a href="http://www.fundacionbanmedica.cl" title="Fundación Banmédica" rel="nofollow" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/logo-whitehigh.png"></a>
           </div>
 
           <div class="container-fluid">

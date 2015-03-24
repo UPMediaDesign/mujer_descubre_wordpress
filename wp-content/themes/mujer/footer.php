@@ -10,19 +10,27 @@
                        <li><a href="" title="Inscribete en el Programa" rel="nofollow">Inscríbete en el Programa</a></li>  
                     </ul> 
 
-                    <div class="col-md-5 credits">
+                    <div class="col-md-3 credits">
                         <span>Una iniciativa de:</span>
                         <a href="http://www.fundacionbanmedica.cl" title="Fundación Banmédica" rel="nofollow" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/logo-white.png"></a>
                         <p>Por un Chile más saludable y feliz.</p>
                     </div>
 
-                    <div class="col-md-4 mailsender">
-                        <!--<span>Newsletter</span>
-                        <form  method="post">
-                            <input type="email" placeholder="Deja tu correo aqui">
-                            <input type="send">
-                        </form> -->
-                    </div>  
+                    <div class="col-md-6 credits">
+                      
+                      <span>Clínicas asociadas:</span>
+                      <div class="clear"></div>
+                      <div class="clinicas">
+                                    
+                        <?php $clinicas = get_field('clinicas_asociadas' , 'options')?>
+                          <?php foreach( $clinicas as $clinica):?>
+                              <div class="col-xs-4 col-md-3 clicnics">
+                                  <a href="<?php echo $clinica['link_clinica']?>" target="_blank" title="Adquirir Pack de la vida en <?php echo $clinica['nombre_de_la_clinica']?>"><img src="<?php echo $clinica['logo_clinica']?>" width="100%" alt="" /></a>
+                              </div>
+                        <?php endforeach;?>
+                      </div>
+                                
+                    </div>
                 </div>
             </div>
 

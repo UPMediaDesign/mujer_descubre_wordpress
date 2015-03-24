@@ -1099,9 +1099,11 @@ Grilla Bootstrap ***************************************************************
 Generales **********************************************************************
 *******************************************************************************/
 /* HEADER */
-.logo {width: 80%; float: left; margin-right: 0; background: #EB4483; padding: 15px 0; float: left;} 
-.logo img{float: left; margin-left: 12%; max-width: 226px; width: 12%;}
-.logo-banmedica {width: 20%; float: left; background: #00285d; padding: 14px 30px; }
+.container-fluid.header {padding: 0; }
+.logo {width: 80%; float: left; margin-right: 0; background: #EB4483; padding: 12px 0; float: left;} 
+.logo img{float: left; margin-left: 12%; max-width: 187px; width: 100%; height: auto;}
+.logo-banmedica {width: 20%; float: left; background: #00285d; padding: 12px 30px;}
+.logo-banmedica img{max-width: 187px; width: 100%; height: auto; float: right; margin-right: 4%;}
 .overhead{position: absolute; top: 0px; padding: 0px 3% 0 0; width: 100%; z-index: 1000; background: none !important;} 
 #header{background: none !important; z-index: 2000;}
 #header:before{}
@@ -1160,8 +1162,8 @@ h3.title-case{font-size: 45px; text-align: center; font-weight: lighter; line-he
 .title-line{border-top: 2px solid #eb4483; margin-top: -75px; margin-bottom: 50px;}
 span.reference-case{text-align: center; display: block; font-family: lato, helvetica, arial, sans-serif; font-weight: lighter; font-size: 22px; margin: 0 auto 20px; color: #8d8d8d;}
 /*.case{padding: 0 0 0 5px; margin: 0 auto;}*/
-.case img{width: 100%; height: 0; border-radius: 50%; border: 20px solid #cacaca; }
-.case figcaption{position: relative; bottom: 130px; width: 100%; height: auto; text-align: center;} 
+.case img{width: 100%; height: auto; border-radius: 50%; border: 20px solid #cacaca; max-width: 320px; display: block; margin: 0 auto;}
+.case figcaption{position: relative; bottom: 130px; width: 100%; height: auto; text-align: center; height:0;} 
 .case h3{color: #ffffff; letter-spacing: 1px; padding-top: 21px; margin-top: 0; text-transform:uppercase; font-weight:900} 
 .case span{clear: both; text-align: center; font-family: 'Lato', helvetica, arial, sans-serif; color: #ffffff; font-size: 20px; font-weight: bold; line-height: 160%;}
 .case a{clear: both; display: block; text-transform: uppercase; font-size: 12px; line-height: 160%; color: #ffffff; font-weight: bold; text-decoration: none; border-top: 4px solid #eb4483; margin: 5px auto 0; padding-top: 5px; width: 70px; padding-bottom: 20px;
@@ -1181,7 +1183,7 @@ figure.col-md-4.case {margin-left: 0; }
 /* Area Skew */
 .container.pointskw{}
 /* Vocero Médico */
-.bg-doctor{background-image: url("images/alo-doctorbg.jpg"); background-size: cover; background-repeat: no-repeat; padding-bottom: 70px;}
+.bg-doctor{background-image: url("images/alo-doctorbg.jpg"); background-size: cover; background-repeat: no-repeat; padding-bottom: 160px; padding-top: 50px;}
 /*.consult{margin-top: 50px;}*/
 .consult img{margin: 0 auto; display: block;}
 .consult h3{text-align: center; font-family: 'Lato', helvetica, arial, sans-serif; font-size: 45px; font-weight: lighter; color: #fff; margin-bottom: 0; text-transform: uppercase; margin-bottom:55px;}
@@ -1197,9 +1199,9 @@ figure.col-md-4.case {margin-left: 0; }
 .council p{font-size: 30px; font-family: 'Lato', arial, sans-serif; font-weight: 400; line-height: 140%; text-align: center; color: #b8b8b8; margin-top: 25px; margin-bottom: 45px; padding: 0 12%; letter-spacing: 1px}
 .council p strong{font-weight: 700; background-color: #eb4483; color: #ffffff; display:inline-block; padding: 0px 3px;} 
 .stadistics p{font-family: lato, helvetica, arial, sans-serif; font-weight: 700; text-transform:uppercase; font-size: 24px; text-align: center; color: #a0a09f; line-height: 150%; border-top: 1px solid #8d8d8d; border-bottom: 1px solid #8d8d8d; padding: 15px 0;}
-.stadistics img{margin: 0 auto 30px; display: block; width:100%; height:auto; }
+.stadistics img{/*margin: 0 auto 30px;*/ display: block; width:100%; height:auto; max-width:285px;}
 /* Area sugerencias contra las varices */
-.sugerences {background: url("images/bg-varices.jpg"); background-size: 100%; width:100%; background-repeat:no-repeat; padding-bottom: 60px; padding-top:30px;}
+.sugerences {background: url("images/bg-varices.jpg"); background-size: 100%; width:100%; background-repeat:no-repeat; padding-bottom: 60px; padding-top: 115px;}
 .sugerences a{text-align: center; display: table; margin: 0 auto; color: #ffffff; text-decoration: none; margin-bottom: 30px; transition: 0.5s ease;
 -webkit-transition: 0.5s ease; font-weight:900}
 .sugerences a:hover{color:#ffffff; text-decoration: none; transition: 0.5s ease;
@@ -1207,13 +1209,15 @@ figure.col-md-4.case {margin-left: 0; }
 .sugerences p{text-align: center; color: #ffffff; font-family:'lato', helvetica, arial, sans-serif; font-weight: 100; font-size: 25px; line-height: 140%; margin: 20px 15%; letter-spacing: 1px;}
 .sugerences h4{text-align: center; font-family: 'lato', helvetica, arial, sans-serif;   font-size: 45px; font-weight: 100; line-height: 140%; color: #ffffff; margin-bottom: 15px; text-transform: uppercase;}
 .doc-new h3{font-weight: 900; font-size: 45px; color: #fff; margin-top: 65px;}
-.doc-new p{color: #fff; font-size: 18px; font-weight: lighter; margin-bottom: 35px; margin-top: 20px;}
+.doc-new p{color: #fff; font-size: 18px; font-weight: lighter; margin-bottom: 35px; margin-top: 20px; line-height: 160%;}
 .doc-new p.upper {border-top: 5px solid rgb(235, 68, 131); width: 185px; padding-top: 8px; margin-bottom: 0; margin-top:10px;}
 .doc-new a, .sugerences a{  border-radius: 45px; background: #eb4483 url("images/arrowcta.png"); padding: 10px 43px 10px 15px; color: #fff; font-weight: bold; text-transform: uppercase; font-size: 18px; text-decoration: none; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out; background-position: 95%; background-repeat: no-repeat; background-size: 25px;}
 .doc-new a:hover, .sugerences a:hover{background: #CF2E6A url("images/arrowcta.png");; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out; background-position: 95%; background-repeat: no-repeat; background-size: 25px;}
 
-section.arrow:after{content: ''; background-color: #f7f7f7; border-bottom: 100px solid #f7f7f7; transform: skewY(5deg); display: block; width: 50%; position: relative; top: 30px;}
-section.arrow:before{content:''; background-color: #f7f7f7; border-bottom: 100px solid #f7f7f7; transform: skewY(-5deg); display: block; width: 50%; position: relative; top:30px; float: right;}
+section.arrow:after{content: ''; background-color: #f7f7f7; border-bottom: 100px solid #f7f7f7; transform: skewY(5deg); -webkit-transform: skewY(5deg); -moz-transform: skewY(5deg);-ms-transform: skewY(5deg); -o-transform: skewY(5deg);display: block; width: 50%; position: relative; top: 30px;}
+section.arrow:before{content:''; background-color: #f7f7f7; border-bottom: 100px solid #f7f7f7; transform: skewY(-5deg); -webkit-transform: skewY(-5deg); -moz-transform: skewY(-5deg); -ms-transform: skewY(-5deg); -o-transform: skewY(-5deg);display: block; width: 50%; position: relative; top:30px; float: right;}
+section.deep-blue.surf-top:before {content: ''; border-top: 80px solid #00285d; transform: skewY(3deg); -webkit-transform: skewY(3deg); -moz-transform: skewY(3deg); -ms-transform: skewY(3deg); -o-transform: skewY(2deg) !important; background: #00285d; display: block; width: 100%; position: relative; top: -30px; }
+section.deep-blue.surf-bottom:before {content: ''; border-top: 80px solid #00285d; transform: skewY(-3deg);-webkit-transform: skewY(-3deg); -moz-transform: skewY(-3deg); -ms-transform: skewY(-3deg); -o-transform: skewY(-3deg); background: #00285d; display: block; width: 100%; position: relative; top: 30px; }
 
 
 /* Auxiliares */
@@ -1315,8 +1319,7 @@ border: 2px solid #adadad;-webkit-transition: 0.5s ease; -moz-transition: 0.5s e
 
 
 /* ESTILOS RELACIONADOS A LAS BENEFICIADAS */
-.beneficiadas{background-image: url("images/bg-beneficiadas-single.jpg"); width: 100%; display: block; z-index: 0; background-size: cover !important; background-position: 50% 0%; background-repeat: no-repeat; height: 540px;}
-
+.beneficiadas{background-image: url("images/bg-beneficiadas-single.jpg"); width: 100%; display: block; z-index: 0; background-size: cover !important; background-position: 50% 40px; background-repeat: no-repeat; height: 540px;} 
 /* ¿Tienes Consultas? */
 .medic-ask h2{font-family: 'lato', Helvetica, Arial, sans-serif;
 font-weight: bold; font-size: 40px; text-align: center; color: #8d8d8d; line-height: 140%; margin-bottom: 0;}
@@ -1385,7 +1388,7 @@ figure.slide h3{text-align: center; font-size: 14px; font-family: 'lato', Helvet
 .pinkfoot li a{color: #ffffff; font-size: 14px; line-height: 140%; text-decoration: none; font-weight: lighter;}
 .credits span{text-transform: uppercase; color: #ffffff; font-family: 'lato', helvetica, arial, sans-serif; font-weight: bold; margin-bottom: 15px; float: left; margin-top: 20px;}
 .credits a{float: left; clear: both;}
-.credits p{clear: both; font-family: 'lato', helvetica, arial, sans-serif; color: #ffffff; font-weight: lighter; text-align: left; padding-right: 20%; line-height: 160%;}
+.credits p{clear: both; font-family: 'lato', helvetica, arial, sans-serif; color: #ffffff; font-weight: lighter; text-align: left; padding-right: 20%; line-height: 160%; font-size:12px;}
 
 /* Relacionado al formulario */
 .mailsender span{text-transform: uppercase; color: #ffffff; font-family: 'lato', helvetica, arial, sans-serif; font-weight: bold; margin-bottom: 15px; float: left; margin-top: 20px;}
@@ -1428,32 +1431,11 @@ ul.bxslider.panel-group.questions{padding: 0;}
 	padding:20px 0px 0px 0px;
 }
 
-.navbar-toggle{
-	background: rgb(34,162,243) !important;
-  background: -moz-linear-gradient(top, rgba(34,162,243,1) 0%, rgba(20,111,169,1) 100%) !important;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(34,162,243,1)), color-stop(100%,rgba(20,111,169,1))) !important;
-  background: -webkit-linear-gradient(top, rgba(34,162,243,1) 0%,rgba(20,111,169,1) 100%) !important;
-  background: -o-linear-gradient(top, rgba(34,162,243,1) 0%,rgba(20,111,169,1) 100%) !important;
-  background: -ms-linear-gradient(top, rgba(34,162,243,1) 0%,rgba(20,111,169,1) 100%) !important;
-  background: linear-gradient(to bottom, rgba(34,162,243,1) 0%,rgba(20,111,169,1) 100%) !important;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#22a2f3', endColorstr='#146fa9',GradientType=0 );
-  padding: 16px;
-  border-radius: 5px;
-  -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease;
-}
+.navbar-toggle {
+  background: #33d0b4 !important;}
 
-.navbar-toggle:hover{
-    background: rgb(34,162,243) !important;
-  background: -moz-linear-gradient(top, rgba(34,162,243,1) 0%, rgba(11, 79, 123, 1) 100%) !important;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(34,162,243,1)), color-stop(100%,rgba(11, 79, 123, 1))) !important;
-  background: -webkit-linear-gradient(top, gba(34,162,243,1) 0%,rgba(11, 79, 123, 1) 100%) !important;
-  background: -o-linear-gradient(top, rgba(34,162,243,1) 0%,rgba(11, 79, 123, 1) 100%) !important;
-  background: -ms-linear-gradient(top, rgba(34,162,243,1) 0%,rgba(11, 79, 123, 1) 100%) !important;
-  background: linear-gradient(to bottom, rgba(34,162,243,1) 0%,rgba(11, 79, 123, 1) 100%) !important;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#22a2f3', endColorstr='#146fa9',GradientType=0 );
-  -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease;
-  cursor: pointer;
-}
+.navbar-toggle:hover {
+  background: #229B85 !important;}
 
 
 .navbar-header{
@@ -1484,6 +1466,7 @@ border-bottom:1px solid #efeded;
 
 .nav>ul{
 	float: right;
+  padding-bottom: 10px;
 }
 
 .nav>ul>li{
@@ -1767,7 +1750,10 @@ ul.pagination{margin: 20px 25px;}
 
 }
 @media only screen and (min-width: 1024px) and (max-width: 1199px){
-    .nav>ul>li{padding-left:2.3%;}
+    .logo{width: 50%}
+    .logo-banmedica{width: 50%;}
+/*    .nav>ul>li{padding-left:2.3%;}*/
+    .nav>ul {float: right; width: 95%; }
     .spokesman {background-size: cover !important;}
     .spokesman img{margin-top: 5%;}
     .spokesman h3{margin-top:25px;}
@@ -1777,8 +1763,10 @@ ul.pagination{margin: 20px 25px;}
 */
 }
 @media only screen and (min-width: 935px) and (max-width: 1023px){
-  .logo{margin:0;}
-  .logo img{width: 100%; max-width: 200px;}
+  .logo{margin:0; width:50%;}
+  .logo-banmedica{width:50%;}
+  .logo img{width: 100%; max-width: 187px;}
+  .logo-banmedica img{float: right; margin-right: 12%;}
   .nav>ul{float: none; width: 100%;} 
   li.bg1{background-size: cover !important;}
   .sugerences{background-size: cover !important;}
@@ -1802,13 +1790,13 @@ ul.pagination{margin: 20px 25px;}
 }
 
 @media only screen and (min-width: 769px) and (max-width: 934px) {
-  .nav>ul{float: right; width: 68%;}
+  .nav>ul{float: right; width: 100%;}
   .display-on-mobile{display: none}
 /*  .chat-consult{background-size: 100% !important}
 */}
 
 @media only screen and (min-width: 641px) and (max-width: 768px){
-  .nav>ul{float: none; width: 100%; background-color: rgba(235,68,131,0.5); margin-top: 20px; border-radius: 20px;}
+  .nav>ul{float: none; width: 100%; background-color: rgba(235,68,131,0.5); margin-top: 20px; border-radius: 20px; padding-bottom: 30px;}
   .nav>ul>li{float: none; display: table; margin: 0 auto; padding: 10px 0;}
   .display-on-mobile{display: block; margin-bottom: 15px;}
   .hide-on-mobile{display: none;}
@@ -1817,11 +1805,25 @@ ul.pagination{margin: 20px 25px;}
 }
 
 @media only screen and (min-width: 641px) and (max-width: 934px){
-   .logo img{width: 100%; max-width: 200px;}
+   .logo{width: 50%}
+   .logo img {width: 100%; max-width: 187px; }
+   .logo-banmedica {width: 50%; padding: 12px 30px; }
+   .logo-banmedica img {width: 100%; max-width: 187px; float: right; margin-right: 12%;}
    li.bg1{background-size: cover !important;}
    .sugerences{background-size: cover !important;}
-   #bigcarousel{height:95vh;}
+/*   #bigcarousel{height:95vh;}*/
    .carousel-caption.jumbotron{width: 100%; left: 0;}
+
+   /* Rediseño Home */
+   .nav>ul{width:100%;}
+
+   nav.navbar-collapse{background:none;}
+   .bg-doctor{background-color: #33d0b4; background-image: none;}
+
+  figure.col-md-4.col-md-offset-2.case{margin-left:0;}
+  .case img{width: 80%; margin: 0 auto; display: block;}
+  .stadistics img{width:80%; height:auto;}
+   /* Fin rediseño Home */
 
    .council p{font-size: 20px;}
 
@@ -1856,20 +1858,47 @@ ul.pagination{margin: 20px 25px;}
 */}
 
 @media only screen and (max-width: 640px){
-  .logo{width: 60%; max-width: 200px;}
-  .logo img{width: 100%; max-width: 400px;}
-  .nav>ul{float: none; width: 100%; background-color: rgba(235,68,131,0.7); margin-top: 20px; border-radius: 20px; padding-bottom: 30px; margin:10px auto ;}
+  .logo{width: 50%; max-width: 200px; padding: 12px 10px;}
+  .logo img{width: 100%; max-width: 187px; margin-left: 0; float: none;}
+  .logo-banmedica{width:50%; float: left; background: #00285d; padding: 12px 10px; }
+  .logo-banmedica img{margin-left:0;}
+  nav.navbar-collapse{background:none;}
+  .navbar-toggle{margin-right: 0}
+  .nav>ul{float: none; width: 100%; background-color: rgba(235,68,131,0.7); margin-top: 20px; border-radius: 10px; padding-bottom: 30px; margin:10px auto ;}
   .nav>ul>li{float: none; display: table; margin: 0 auto; padding: 10px 0;} 
   .nav>ul>li.current-menu-item>a {padding: 0 2px 20px 2px;}
-  .nav>ul>li>a:hover {padding: 10px 2px 20px;}
+  .nav>ul>li>a:hover {padding: 5px 10% 25px;}
   li.bg1{background-size: cover !important;}
-  .sugerences{background-size: cover !important;}
+  .sugerences{background-size: cover !important; padding-top: 60px; background-position: 75%;}
   .carousel-caption.jumbotron{width: 100%; left: 0; top:120px;}
   .carousel-caption.jumbotron h1 {font-size: 35px;}
 
+  /*Rediseño Home */
+  .carousel-caption{padding: 60px 20px;}
+  .slides-container li {background-position: 25% !important; }
+
+  figure.col-md-4.col-md-offset-2.case {margin-right: 0; margin-left: 0 !important; margin-bottom: 80px;}
+  .case img{border:10px solid #cacaca; margin:0 auto; display: block; width:90%; height:auto;}
+
+  .consult h3 {font-size: 30px; line-height: 150%; margin-top: 0; margin-bottom: 35px; }
+
+  .bg-doctor{background-position: 15%; padding-bottom: 80px; background-color: #33d0b4;
+  background-image: none;}
+
+  .doc-new a, .sugerences a{font-size: 15px; margin: 0 auto; display: block;}
+  .doc-new p{line-height: 140%;}
+  .doc-new h3{margin-top: 30px; font-size: 35px;}
+
+  h3.title-case{font-size:30px;}
+
+  section.arrow:before, section.arrow:after{  border: 40px solid #f7f7f7; top: 50px;}
+  section.deep-blue.surf-top:before{border-top: 50px solid #00285d; top:-20px;}
+  section.deep-blue.surf-bottom:before{border-top: 50px solid #00285d;}
+  /*Fin rediseño*/
+
   .stadistics img{width:80%;}
 
-  .case{height:225px; margin-bottom: 30px;}
+  .case{height:225px; margin-bottom: 30px; margin-left: 0 !important; margin-top: 20px;}
 
   .jumbotron.caption.centered p{margin:0 auto; font-size: 15px;}
 
@@ -1878,7 +1907,7 @@ ul.pagination{margin: 20px 25px;}
   .consult p{margin: 25px 36%;}
 
   .copyrighted{float:left;}
-  .sugerences h4{margin-bottom:10pxs;}
+  .sugerences h4{margin-bottom:10px; font-size: 30px;}
   .border-solid{margin-bottom:15px;}
   .sugerences p{font-size: 20px; margin: 20px 2%;}
   .beneficiadas{/*height: 65vh;*/ background-position: 50%;}

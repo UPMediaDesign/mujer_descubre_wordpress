@@ -90,12 +90,12 @@ Template Name: Home
                 <!-- <div class="title-line"></div> -->
                 <span class="reference-case">Un Proyecto de la Fundación Banmédica</span>
             </div>
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row mgauto">
 
                     <?php query_posts( 'page_id=6' );?>
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                    <figure class="col-md-4 col-md-offset-2 case">
+                    <figure class="col-md-4 col-md-offset-2 case col-xs-12">
                         <?php the_post_thumbnail('home-boxes'); ?>
                         <figcaption>
                             <h3><?php the_title(); ?></h3>
@@ -108,7 +108,7 @@ Template Name: Home
 
                     <?php query_posts( 'page_id=10' );?>
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                    <figure class="col-md-4 case">
+                    <figure class="col-md-4 case col-xs-12">
                         <?php the_post_thumbnail('home-boxes'); ?>
                         <figcaption>
                             <h3><?php the_title(); ?></h3>
@@ -130,7 +130,7 @@ Template Name: Home
 
         <section class="bg-doctor">
             <div class="container doc-new">
-                <div class="col-md-6 col-md-offset-6">
+                <div class="col-md-7 col-md-offset-5">
                     <?php query_posts( 'page_id=8' );?>
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                     
@@ -138,7 +138,7 @@ Template Name: Home
                         
                         <h3>Dr. Fuenzalida</h3>
                         <p class="upper">Vocero Médico</p>
-                        <p><?php echo substr(strip_tags($post->post_content), 0, 288); ?></p>
+                        <p><?php echo substr(strip_tags($post->post_content), 0, 490); ?></p>
                             
                         <a href="<?php the_permalink(); ?>" title="<?php the_permalink(); ?>" >Ingresa a Aló Doctor</a>
                         
@@ -150,6 +150,8 @@ Template Name: Home
 
         </section>
 
+        <section class="deep-blue surf-top"></section>
+
         <!-- Sugerencias del Médico -->
         <section class="deep-blue">
             <div class="container">
@@ -157,11 +159,11 @@ Template Name: Home
                     <div class="col-md-12 consult">
                         <h3>Probabilidad de Varices por Edad</h3>
 
-                        <div class="col-md-3 col-md-offset-2 stadistics">
+                        <div class="col-md-4 col-md-offset-1 stadistics">
                             <img src="<?php bloginfo('template_directory'); ?>/images/graph-3.png" title="" rel="">
                         </div>
                        
-                        <div class="col-md-3 col-md-offset-1 stadistics">
+                        <div class="col-md-4 col-md-offset-2 stadistics">
                             <img src="<?php bloginfo('template_directory'); ?>/images/graph-4.png" title="" rel="">
                         </div>
 
@@ -170,6 +172,8 @@ Template Name: Home
             </div>
         </section>
         <!-- Fin Sugerencias del Médico -->
+
+        <section class="deep-blue surf-bottom"></section>
 
         <!-- Sugerencias para varices  -->
         <section>
