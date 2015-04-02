@@ -25,10 +25,23 @@
                         <?php $clinicas = get_field('clinicas_asociadas' , 'options')?>
                           <?php foreach( $clinicas as $clinica):?>
                               <div class="col-xs-4 col-md-3 clicnics">
-                                  <a href="<?php echo $clinica['link_clinica']?>" target="_blank" title="Adquirir Pack de la vida en <?php echo $clinica['nombre_de_la_clinica']?>"><img src="<?php echo $clinica['logo_clinica']?>" width="100%" alt="" /></a>
+                                  <a href="<?php echo $clinica['link_clinica']?>" target="_blank" title="Ir a <?php echo $clinica['nombre_de_la_clinica']?>"><img src="<?php echo $clinica['logo_clinica']?>" width="100%" alt="" /></a>
                               </div>
                         <?php endforeach;?>
                       </div>
+
+                      <ul class="credits" style="padding-left:0;">
+                        <span>Visitanos en las redes:</span>
+                          <div class="clear display-on-mobile"></div>
+                        <?php $redes = get_field('redes_sociales' , 'options')?>
+                          <?php foreach($redes as $red):?>
+                          <li class="col-xs-1" style="padding: 10px 0px 5px 5px;">
+                            <a href="<?php echo $red['link_red']?>" target="_blank" title="Mujer Descubre tus Piernas - <?php echo $red['nombre_de_la_red'] ?>">
+                              <img src="<?php echo $red['logo_red']?>" alt="<?php echo $red['nombre_de_la_red'] ?>" width="100%">
+                            </a>
+                          </li>
+                        <?php endforeach;?>
+                      </ul>
                                 
                     </div>
                 </div>

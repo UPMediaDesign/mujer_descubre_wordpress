@@ -1386,8 +1386,15 @@ figure.slide h3{text-align: center; font-size: 14px; font-family: 'lato', Helvet
 .pinkfoot li.tupp{text-transform: uppercase; color: #ffffff; font-family: 'lato', helvetica, arial, sans-serif; font-weight: bold; margin-bottom: 25px; margin-top:0;}
 .pinkfoot li{margin:5px 0 ;}
 .pinkfoot li a{color: #ffffff; font-size: 14px; line-height: 140%; text-decoration: none; font-weight: lighter;}
-.credits span{text-transform: uppercase; color: #ffffff; font-family: 'lato', helvetica, arial, sans-serif; font-weight: bold; margin-bottom: 15px; float: left; margin-top: 20px;}
-.credits a{float: left; clear: both;}
+.credits span{text-transform: uppercase; color: #ffffff; font-family: 'lato', helvetica, arial, sans-serif; font-weight: bold; margin-bottom: 15px; float: left; margin-top: 20px; padding-right:5px;}
+.credits a{float: left; clear: both; -webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+-ms-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out;}
+.credits a:hover{opacity:0.6; -webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+-ms-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out;}
 .credits p{clear: both; font-family: 'lato', helvetica, arial, sans-serif; color: #ffffff; font-weight: lighter; text-align: left; padding-right: 20%; line-height: 160%; font-size:12px;}
 
 /* Relacionado al formulario */
@@ -1465,17 +1472,24 @@ border-bottom:1px solid #efeded;
 }
 
 .nav>ul{
-	float: right;
+	float: none;
   padding-bottom: 10px;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
 }
 
 .nav>ul>li{
-	float: left;
-  display: block;
   list-style: none;
   padding-left: 0;
   padding-top: 0;
-  -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  transition: 0.5s ease;
+  display: inline-block;
+  margin-bottom: 40px;
+  margin-top: 5px;
 }
 
 .nav>ul>li:hover{-webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease;}
@@ -1529,11 +1543,11 @@ transform: translateY(10px);
 
 .nav>ul>li>a span.active {
 	background: rgb(34,162,243);
-  background: -moz-linear-gradient(top, rgba(34,162,243,1) 0%, rgba(20,111,169,1) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(34,162,243,1)), color-stop(100%,rgba(20,111,169,1)));
-  background: -webkit-linear-gradient(top, rgba(34,162,243,1) 0%,rgba(20,111,169,1) 100%);
-  background: -o-linear-gradient(top, rgba(34,162,243,1) 0%,rgba(20,111,169,1) 100%);
-  background: -ms-linear-gradient(top, rgba(34,162,243,1) 0%,rgba(20,111,169,1) 100%);
+  background: -moz-linear-linear-gradient(to bottom, rgba(0,0,0,0.85) 0%,rgba(0,0,0,.35) 50% , rgba(0,0,0,0) 100%);
+  background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0.85) 0%,rgba(0,0,0,.35) 50% , rgba(0,0,0,0) 100%);
+  background: -webkit-linear-linear-gradient(to bottom, rgba(0,0,0,0.85) 0%,rgba(0,0,0,.35) 50% , rgba(0,0,0,0) 100%);
+  background: -o-linear-linear-gradient(to bottom, rgba(0,0,0,0.85) 0%,rgba(0,0,0,.35) 50% , rgba(0,0,0,0) 100%);
+  background: -ms-linear-linear-gradient(to bottom, rgba(0,0,0,0.85) 0%,rgba(0,0,0,.35) 50% , rgba(0,0,0,0) 100%);
   background: linear-gradient(to bottom, rgba(34,162,243,1) 0%,rgba(20,111,169,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#22a2f3', endColorstr='#146fa9',GradientType=0 );
   padding: 10px 7px;
@@ -1719,7 +1733,7 @@ button.close:hover{color:#fff; box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.9
   transition: all .2s ease-in-out;}
 /* Paginador */
 .pagination{width: 100%;}
-.wp-paginate li {float: left; display: block; padding: 0 5px; }
+.wp-paginate li {float: left; display: block; padding: 0px 5px 0 2px; }
 ol.wp-paginate.wp-paginate-comments {float: none; display: table; padding-left: 0; margin: 0 auto; }
 ol.pagination>.wp-paginate.wp-paginate-comments li{list-style: none; float:left; display: block;}
 ol.pagination>.wp-paginate.wp-paginate-comments li
@@ -1759,6 +1773,7 @@ ul.pagination{margin: 20px 25px;}
     .spokesman h3{margin-top:25px;}
     .varices {background-size: cover !important; height: 75vh; }
     .display-on-mobile{display: none}
+    .clear.display-on-mobile {margin: 0; }
 /*    .chat-consult{height: 155vh !important}
 */
 }
@@ -1787,11 +1802,17 @@ ul.pagination{margin: 20px 25px;}
   .display-on-mobile{display: none}
   .content-coment p em {font-size: 12px; }
 
+  ul.credits {clear: both; }
+  .clear.display-on-mobile {margin: 0; }
+  li.col-xs-1 {width: 15%; max-width: 50px; }
+
 }
 
 @media only screen and (min-width: 769px) and (max-width: 934px) {
   .nav>ul{float: right; width: 100%;}
   .display-on-mobile{display: none}
+  ul.credits {clear: both; }
+  li.col-xs-1 {width: 15%; max-width: 50px; padding: 0px 0px 5px 5px !important; }
 /*  .chat-consult{background-size: 100% !important}
 */}
 
@@ -1802,6 +1823,9 @@ ul.pagination{margin: 20px 25px;}
   .hide-on-mobile{display: none;}
 /*  .chat-consult{height: 100% !important}
 */
+  ul.credits {clear: both; }
+  .clear.display-on-mobile {margin: 0; }
+  li.col-xs-1 {width: 15%; max-width: 50px; padding: 0px 0px 5px 5px !important; }
 }
 
 @media only screen and (min-width: 641px) and (max-width: 934px){
@@ -1823,6 +1847,9 @@ ul.pagination{margin: 20px 25px;}
   figure.col-md-4.col-md-offset-2.case{margin-left:0;}
   .case img{width: 80%; margin: 0 auto; display: block;}
   .stadistics img{width:80%; height:auto;}
+
+  ul.credits {clear: both; }
+  .clear.display-on-mobile {margin: 0; }
    /* Fin rediseño Home */
 
    .council p{font-size: 20px;}
@@ -1854,6 +1881,7 @@ ul.pagination{margin: 20px 25px;}
    .comentario-doc .content-coment:after{display: none;}
    .comentario-user .content-coment:after{display: none;}
    .bx-wrapper .bx-pager{display: block !important;}
+    li.col-xs-1 {width: 15%; max-width: 50px; padding: 0px 0px 5px 5px !important; }
 /*   .chat-consult{height: 100% !important}
 */}
 
@@ -1864,7 +1892,7 @@ ul.pagination{margin: 20px 25px;}
   .logo-banmedica img{margin-left:0;}
   nav.navbar-collapse{background:none;}
   .navbar-toggle{margin-right: 0}
-  .nav>ul{float: none; width: 100%; background-color: rgba(235,68,131,0.7); margin-top: 20px; border-radius: 10px; padding-bottom: 30px; margin:10px auto ;}
+  .nav>ul{float: none; width: 100%; background-color: rgba(235,68,131,0.9); margin-top: 20px; border-radius: 0; padding-bottom: 30px; margin:10px auto ;}
   .nav>ul>li{float: none; display: table; margin: 0 auto; padding: 10px 0;} 
   .nav>ul>li.current-menu-item>a {padding: 0 2px 20px 2px;}
   .nav>ul>li>a:hover {padding: 5px 10% 25px;}
@@ -1894,6 +1922,10 @@ ul.pagination{margin: 20px 25px;}
   section.arrow:before, section.arrow:after{  border: 40px solid #f7f7f7; top: 50px;}
   section.deep-blue.surf-top:before{border-top: 50px solid #00285d; top:-20px;}
   section.deep-blue.surf-bottom:before{border-top: 50px solid #00285d;}
+
+  ul.credits {clear: both; }
+  .clear.display-on-mobile {margin: 0; }
+  li.col-xs-1 {width: 15%; max-width: 50px; padding: 0px 0px 5px 5px !important; }
   /*Fin rediseño*/
 
   .stadistics img{width:80%;}

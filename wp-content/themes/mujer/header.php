@@ -121,7 +121,7 @@ jQuery(window).load(function() {
                 <?php /* Primary navigation */
                     wp_nav_menu( array(
                     'menu' => 'top_menu',
-                    'depth' => 2,
+                    'depth' => 1,
                     'container' => false,
                     'menu_class' => 'nav col-md-8',
                     //Process nav menu using our custom nav walker
