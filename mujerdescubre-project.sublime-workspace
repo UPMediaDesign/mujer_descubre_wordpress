@@ -4,12 +4,24 @@
 		"selected_items":
 		[
 			[
-				"border",
-				"border-bottom"
+				"margin",
+				"margin-left"
 			],
 			[
 				"background",
-				"background-color"
+				"background-position"
+			],
+			[
+				"logo",
+				"logo-banmedica"
+			],
+			[
+				"re",
+				"relative"
+			],
+			[
+				"border",
+				"border-bottom"
 			],
 			[
 				"te",
@@ -74,10 +86,6 @@
 			[
 				"enfo",
 				"endforeach"
-			],
-			[
-				"margin",
-				"margin-bottom"
 			],
 			[
 				"padding",
@@ -320,10 +328,6 @@
 				"overflow"
 			],
 			[
-				"re",
-				"repeat-y"
-			],
-			[
 				"col",
 				"colBig"
 			],
@@ -363,7 +367,7 @@
 			"file": "wp-content/themes/mujer/header.php",
 			"settings":
 			{
-				"buffer_size": 6294,
+				"buffer_size": 6305,
 				"line_ending": "Unix"
 			}
 		},
@@ -379,7 +383,15 @@
 			"file": "wp-content/themes/mujer/index.php",
 			"settings":
 			{
-				"buffer_size": 9164,
+				"buffer_size": 9293,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/mujer/footer.php",
+			"settings":
+			{
+				"buffer_size": 3656,
 				"line_ending": "Unix"
 			}
 		},
@@ -387,7 +399,7 @@
 			"file": "wp-content/themes/mujer/style.css",
 			"settings":
 			{
-				"buffer_size": 66662,
+				"buffer_size": 69346,
 				"line_ending": "Unix"
 			}
 		},
@@ -571,6 +583,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"display-on-mobile",
+			"hide-on-desktop",
+			"hide-on",
 			"slides",
 			".loader",
 			"loader",
@@ -695,10 +710,7 @@
 			"a{",
 			"a{}",
 			"#top ul.nav > li a:hover",
-			"#top",
-			"#top .wc-nav li.cart a .contents",
-			"p{",
-			"p"
+			"#top"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -716,7 +728,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -756,15 +768,15 @@
 					"file": "wp-content/themes/mujer/header.php",
 					"settings":
 					{
-						"buffer_size": 6294,
+						"buffer_size": 6305,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4747,
-								4747
+								5573,
+								5573
 							]
 						],
 						"settings":
@@ -809,7 +821,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1411.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -819,15 +831,15 @@
 					"file": "wp-content/themes/mujer/index.php",
 					"settings":
 					{
-						"buffer_size": 9164,
+						"buffer_size": 9293,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6369,
-								6369
+								4062,
+								4062
 							]
 						],
 						"settings":
@@ -841,7 +853,39 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1612.0,
+						"translation.y": 2476.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "wp-content/themes/mujer/footer.php",
+					"settings":
+					{
+						"buffer_size": 3656,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2112,
+								2112
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -853,19 +897,19 @@
 			"sheets":
 			[
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "wp-content/themes/mujer/style.css",
 					"settings":
 					{
-						"buffer_size": 66662,
+						"buffer_size": 69346,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								23997,
-								23997
+								57586,
+								57586
 							]
 						],
 						"settings":
@@ -879,13 +923,13 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 17643.0,
+						"translation.y": 30448.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "wp-content/themes/mujer/jstyle.css",
 					"settings":
 					{
@@ -911,7 +955,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2086.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
