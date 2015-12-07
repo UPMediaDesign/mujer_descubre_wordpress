@@ -10,8 +10,9 @@ Template Name: Alo Doctor c
                 <div class="row">
                     <div class="col-md-12 single-container ">
                         <div class="jumbotron caption centered">
-                            <!--<h2><?php echo $post->post_title?></h2>
-                            <span class="top-line"></span> -->
+                            <h2><?php echo $post->post_title?></h2>
+				<p><?php echo $post->post_content?></p>
+                            <!--<span class="top-line"></span> -->
                             
                         </div>
                     </div>
@@ -26,10 +27,48 @@ Template Name: Alo Doctor c
         <div class="clear separator"></div>
         <section class="container contactt">
         	<div class="row" style="text-align:center">
-            	<div style="height:100px;"></div>
-                <h2>Gracias por inscribirte</h2>
+            	<div style="height:60px;"></div>
+<div class="dedito" style="
+    font-size: 100px;
+    color: #fff;
+	background-color:#3B5998;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    display: inline-block;
+    clear: both;
+    padding: 10px 20px;
+"><span class="fa fa-thumbs-up fa-fw" style="
+"></span></div>
+
+       <!--<h2>Gracias por inscribirte</h2>-->
                 <div class="line-green"></div>
-                <p><?php echo $post->post_content?></p>
+                
+
+<p>Ahora síguenos en facebook y entérate de todas las novedades que tenemos para ti</p>
+
+
+
+<?php if(is_page(158)){?>
+
+<style>
+.single-container {
+    margin-top: 230px;
+}
+
+.beneficiadas {
+    height: 400px;
+}
+
+</style>
+
+ 
+
+<div style="height:20px;"></div>
+<div class="clear"></div>
+<div class="fb-follow" data-href="https://www.facebook.com/FundacionBanmedica" data-layout="standard" data-show-faces="true"></div>
+
+<?php }?>
+
                 <div style="height:200px;"></div>
              </div>
         </section>   
@@ -40,8 +79,8 @@ Template Name: Alo Doctor c
         <section class="suscribe">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Inscribete en el Programa</h3>
-                        <a title="" rel="" data-toggle="modal" data-target="#myModal" >Ingresa Aquí</a>
+                        <h3>¿Tienes Dudas?</h3>
+                        <a title="" rel="" href="http://alodoctor.mujerdescubretuspiernas.cl/" >Haz tus consultas al Doctor</a>
                     </div>
                 </div>
         </section>
@@ -49,23 +88,7 @@ Template Name: Alo Doctor c
         
         
         
-        <!-- Modal -->
-        <div class="modal fade container modal-inscripcion" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog col-md-10 col-md-offset-1" style="width:100%">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="myModalLabel">Inscríbete</h4>
-              </div>
-              <div class="modal-body">
-                <?php echo do_shortcode('[contact-form-7 id="79" title="Formulario inscripcion"]')?>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-              </div>
-            </div>
-          </div>
-        </div>
+       
         <!-- Fin Contenido Varices -->
 
 <?php get_footer(); ?>

@@ -1100,9 +1100,9 @@ Generales **********************************************************************
 *******************************************************************************/
 /* HEADER */
 .container-fluid.header {padding: 0; }
-.logo {width: 80%; float: left; margin-right: 0; background: #EB4483; padding: 12px 0; float: left;} 
+.logo {width: 80%; float: left; margin-right: 0; background: #EB4483; padding: 12px 0 0;; float: left;} 
 .logo img{float: left; margin-left: 12%; max-width: 187px; width: 100%; height: auto;}
-.logo-banmedica {width: 20%; float: left; background: #00285d; padding: 12px 30px;}
+.logo-banmedica {width: 20%; float: left; background: #00285d; padding: 12px 30px 13px;}
 .logo-banmedica img{max-width: 187px; width: 100%; height: auto; float: right; margin-right: 4%;}
 .overhead{position: absolute; top: 0px; padding: 0px 3% 0 0; width: 100%; z-index: 1000; background: none !important;} 
 #header{background: none !important; z-index: 2000;}
@@ -1155,6 +1155,12 @@ ul.slide-control {position: absolute; bottom: 10%; left: 49%; width: 92px; displ
 .slide-control li button:hover{background: #eb4483;}
 
 
+/* Videos */
+.video-intro{background: #f2f2f2; border-bottom: 1px solid #c3c3c3; padding-bottom: 30px; margin-bottom: 40px;}
+.video-intro iframe{width: 100%; height: auto; min-height: 390px; margin: 0 auto; display: table;}
+
+.foot-video{ font-size: 18px; text-align: center; color: #8d8d8d; font-style: italic; line-height: 1.4em; margin-top: 15px;}
+
 /* CUERPO */
 /* Área casos mujeres */
 span.pink-border{border-top:#eb4483; background-color: #ffffff; width:50px; height:5px;}
@@ -1180,6 +1186,11 @@ color: #eb4483;}
 /* Area Rediseñada HOME */
 figure.col-md-4.col-md-offset-2.case {margin-right: 0; margin-left: 16.66666667%; }
 figure.col-md-4.case {margin-left: 0; }
+.stadistics.second img{max-width: 310px; margin-bottom: 10px;}
+
+ul.rrss-side{position: absolute; bottom: 65px; right: 40px;}
+.rrss-side li{list-style: none; float:left; display:block; padding-left: 10px; padding-bottom: 10px;}
+
 /* Area Skew */
 .container.pointskw{}
 /* Vocero Médico */
@@ -1199,7 +1210,7 @@ figure.col-md-4.case {margin-left: 0; }
 .council p{font-size: 30px; font-family: 'Lato', arial, sans-serif; font-weight: 400; line-height: 140%; text-align: center; color: #b8b8b8; margin-top: 25px; margin-bottom: 45px; padding: 0 12%; letter-spacing: 1px}
 .council p strong{font-weight: 700; background-color: #eb4483; color: #ffffff; display:inline-block; padding: 0px 3px;} 
 .stadistics p{font-family: lato, helvetica, arial, sans-serif; font-weight: 700; text-transform:uppercase; font-size: 24px; text-align: center; color: #a0a09f; line-height: 150%; border-top: 1px solid #8d8d8d; border-bottom: 1px solid #8d8d8d; padding: 15px 0;}
-.stadistics img{/*margin: 0 auto 30px;*/ display: block; width:100%; height:auto; max-width:285px;}
+.stadistics img{/*margin: 0 auto 30px;*/ display: block; width:100%; height:auto; max-width:420px;}
 /* Area sugerencias contra las varices */
 .sugerences {background: url("images/bg-varices.jpg"); background-size: 100%; width:100%; background-repeat:no-repeat; padding-bottom: 60px; padding-top: 115px;}
 .sugerences a{text-align: center; display: table; margin: 0 auto; color: #ffffff; text-decoration: none; margin-bottom: 30px; transition: 0.5s ease;
@@ -1211,7 +1222,7 @@ figure.col-md-4.case {margin-left: 0; }
 .doc-new h3{font-weight: 900; font-size: 45px; color: #fff; margin-top: 65px;}
 .doc-new p{color: #fff; font-size: 18px; font-weight: lighter; margin-bottom: 35px; margin-top: 20px; line-height: 160%;}
 .doc-new p.upper {border-top: 5px solid rgb(235, 68, 131); width: 185px; padding-top: 8px; margin-bottom: 0; margin-top:10px;}
-.doc-new a, .sugerences a{  border-radius: 45px; background: #eb4483 url("images/arrowcta.png"); padding: 10px 43px 10px 15px; color: #fff; font-weight: bold; text-transform: uppercase; font-size: 18px; text-decoration: none; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out; background-position: 95%; background-repeat: no-repeat; background-size: 25px;}
+.doc-new a, .sugerences a, .stadistics a{  border-radius: 45px; background: #eb4483 url("images/arrowcta.png"); padding: 10px 43px 10px 15px; color: #fff; font-weight: bold; text-transform: uppercase; font-size: 18px; text-decoration: none; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out; background-position: 95%; background-repeat: no-repeat; background-size: 25px;}
 .doc-new a:hover, .sugerences a:hover{background: #CF2E6A url("images/arrowcta.png");; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out; background-position: 95%; background-repeat: no-repeat; background-size: 25px;}
 
 section.arrow:after{content: ''; background-color: #f7f7f7; border-bottom: 100px solid #f7f7f7; transform: skewY(5deg); -webkit-transform: skewY(5deg); -moz-transform: skewY(5deg);-ms-transform: skewY(5deg); -o-transform: skewY(5deg);display: block; width: 50%; position: relative; top: 30px;}
@@ -1248,9 +1259,14 @@ section.deep-blue.surf-bottom:before {content: ''; border-top: 80px solid #00285
   box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.73);}*/
 
 /* Tonos */
+.light-grey{background-color:#f9f9f9;}
 .grey{background-color: #f7f7f7;}
 .white{background-color: #ffffff;}
 .deep-blue{background-color: #00285d;}
+
+
+/* Border */
+.border-ccc{border-bottom: 1px solid #ccc;}
 
 
 /* ESTILOS PARA LAS VARICES */
@@ -1323,7 +1339,9 @@ border: 2px solid #adadad;-webkit-transition: 0.5s ease; -moz-transition: 0.5s e
 /* ¿Tienes Consultas? */
 .medic-ask h2{font-family: 'lato', Helvetica, Arial, sans-serif;
 font-weight: bold; font-size: 40px; text-align: center; color: #8d8d8d; line-height: 140%; margin-bottom: 0;}
-.medic-ask.jumbotron p{text-align: center; font-family:'lato', helvetica, arial, sans-serif; font-weight: lighter; font-size: 21px; padding: 0; color: #6c6c6c; line-height: 160%; margin-bottom: 35px;}
+.medic-ask.jumbotron p{text-align: center; font-family: 'lato', helvetica, arial, sans-serif; font-weight: lighter; font-size: 12px; padding: 0; color: #6c6c6c; line-height: 160%; margin-bottom: 20px;}
+.medic-ask iframe{max-width:720px; width:100%; min-height:405px; height:100%; display:table; margin:0 auto;}
+
 
 /* Consultas al Doctor */
 .spokesman{background-size: 100%; height: auto; color: #8b8b8b;}
@@ -1339,15 +1357,16 @@ font-weight: bold; font-size: 40px; text-align: center; color: #8d8d8d; line-hei
 .actress p{font-size: 18px; font-family: 'lato', Helvetica, Arial, sans-serif; text-align: left; font-weight: lighter; line-height: 160%; color: #ffffff; padding-right: 15%; padding-top:15px;}
 
 /* Área Slider Beneficiadas */
+.intro-testimonios p{font-size:18px !important; line-height:1.4em !important; padding: 0 45px !important; }
 .line-text{border-top: 3px solid #eb4483; width: 120px; display:block; margin:10px auto;}
 ul.benefit {padding:0;}
-.benefit li{text-align: center; list-style: none; font-size:20px; }
-.benefit li h4{font-size:25px; font-family:'lato', helvetica, arial, sans-serif; text-align: center; color:#6c6c6c; font-weight: bold; margin-top: 30px;}
+.benefit li{text-align: center; list-style: none; font-size:20px; margin-bottom: 35px;}
+.benefit li h4{font-size:20px; font-family:'lato', helvetica, arial, sans-serif; text-align: center; color:#6c6c6c; font-weight: bold; margin-top: 10px;}
 .slides-navigation.benefit-ctrl {position: relative; width: 100%; display: block; top: 160px; height: 20px; max-width: 1000px;}
 .benefit-ctrl a.lefta{background: url("images/left-arrow.png"); background-size: 100%; background-repeat: no-repeat; width: 20px; height: 14px; list-style: none; float: left; display: block; border:none;}
 .benefit-ctrl a.righta{ background: url("images/right-arrow.png");
 background-size: 100%; background-repeat: no-repeat; width: 20px; height: 14px; list-style: none; float: right; margin-left: 100%; border:none;}
-.benefit a{color: #ffffff; font-weight: 500; letter-spacing: 1px; font-size: 20px; background: #33d0b4; padding: 20px; border-radius: 5px; cursor: pointer; -webkit-transition: all .2s ease-in-out;
+.benefit a{color: #ffffff; font-weight: 500; letter-spacing: 1px; font-size: 18px; background: #33d0b4; padding: 10px 20px; border-radius: 5px; cursor: pointer; -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -ms-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;}
@@ -1470,6 +1489,14 @@ border-bottom:1px solid #efeded;
 	background-color:#00aeef !important;
     color:#333 !important;
 }
+
+li.pink-inscript a{background-color: #EB4483 !important;-webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; }
+
+li.pink-inscript a:hover{background-color: #CF2E6A !important; }
+
+a.cta-inscript{border-radius: 45px; background: #eb4483 ; padding: 10px 15px 10px 15px; color: #fff; font-weight: bold; text-transform: uppercase; font-size: 18px; text-decoration: none; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out; background-position: 95%; background-repeat: no-repeat; background-size: 25px; float: left; }
+
+a.cta-inscript:hover{background:#CF2E6A; }
 
 .nav>ul{
 	float: none;
@@ -1886,9 +1913,9 @@ ul.pagination{margin: 20px 25px;}
 */}
 
 @media only screen and (max-width: 640px){
-  .logo{width: 50%; max-width: 200px; padding: 12px 10px;}
+  .logo{width: 50%; max-width: 200px; padding: 12px 10px 0;}
   .logo img{width: 100%; max-width: 187px; margin-left: 0; float: none;}
-  .logo-banmedica{width:50%; float: left; background: #00285d; padding: 12px 10px; }
+  .logo-banmedica{width:50%; float: left; background: #00285d; padding: 12px 10px 13px; }
   .logo-banmedica img{margin-left:0;}
   nav.navbar-collapse{background:none;}
   .navbar-toggle{margin-right: 0}
@@ -1989,7 +2016,9 @@ ul.pagination{margin: 20px 25px;}
   .videos-area figcaption img{width: 30px !important; height: auto; top: 15% !important;}
   .videos-area figcaption img:hover {width: 40px !important; height: auto !important; border-radius: 50px !important;}
 
-  .benefit li h4{height:50px;}
+  .benefit li h4{height:25px;}
+  .benefit a {clear: both; display: table; margin: 0 auto 15px; }
+
   .modal-inscripcion input[type=submit] {width: 85% !important; margin: 20px auto; display: block; }
 
   .bx-wrapper .bx-controls-direction{display:none;}
@@ -2005,7 +2034,7 @@ ul.pagination{margin: 20px 25px;}
   .col-md-6.col-md-offset-3.input-group {padding-left: 15px; padding-right: 15px; }
 
   .medic-ask h2{font-size: 30px; line-height: 140%;}
-  .medic-ask.jumbotron p{font-size: 16px; line-height: 140%; margin-bottom: 0px;}
+  .medic-ask.jumbotron p{font-size: 16px; line-height: 140%; margin-bottom: 30px;}
 
   span.title {display: none; }
   .pagination>.wp-paginate.wp-paginate-comments a{margin-bottom: 10px;}

@@ -46,47 +46,8 @@ Template Name: Las Varices
                         <?php echo apply_filters('the_content' , $post->post_content)?>
                     </div>
                 </div>
-
-            <div class="col-md-12 white videos">
-                <div class="row">
-                  <div class="col-md-12 videos">
-                    <h2>Videos</h2>
-                    <div class="line-green"></div>
-                  </div>
-                </div>
-
-               <div class="row videos-area slider">
-                  <script src="//f.vimeocdn.com/js/froogaloop2.min.js"></script>
-                    <?php $cvideo = 0?>
-                    <?php $videos = get_posts(array('post_type' => 'videos' ,'tipo' => 'capsulas', 'numberposts' => 10 ))?>
-                    
-                    
-                    
-                    <?php foreach($videos as $video):?>
-                    <?php $cvideo++?>
-
-                <div class="col-md-4 pdlr0 ">
-                      <figure class="slide" data-toggle="modal" data-target="#modal-<?php echo $cvideo?>">
-                      	<?php if(get_the_post_thumbnail($video->ID)){?>
-                          <?php echo get_the_post_thumbnail($video->ID , 'filosofia' , array('data-toggle' => 'modal' , 'data-target'=> '#modal-'.$cvideo , 'class' => 'btn btn-primary'))?>
-                          <?php }else{?>
-                          	<img src="//placehold.it/375x215">
-						  <?php }?>
-
-                          <figcaption>
-                              <img src="<?php bloginfo('template_directory')?>/images/play.png" alt="" width="90" data-toggle="modal" data-target="#modal-<?php echo $cvideo?>" />
-                              <h3><?php echo get_the_title($video->ID , array('data-toggle' => 'modal' , 'data-target'=> '#modal-'.$cvideo , 'class' => 'btn btn-primary'))?></h3>
-                            </figcaption>
-                        </figure>
-                <!-- Fin Ventana Modal -->
-                </div>
-                <?php endforeach?>
           </div>
-
-
-        <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-                </style>
-
+          
           </div>
 
             <!-- Llamado a inscripción -->

@@ -1,3 +1,5 @@
+<?php header("Location: http://alodoctor.mujerdescubretuspiernas.cl/listado-de-preguntas/");
+die();?>
 <?php get_header(); ?>
         
         <div style="height:200px"></div>

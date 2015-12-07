@@ -45,9 +45,6 @@
     </style>
     <![endif]-->
 
-    
-
-
 <script type="text/javascript" src="<?php bloginfo('template_directory')?>/js/superslides.js"></script>
 
 
@@ -73,8 +70,19 @@
 <meta property="og:type" content="website" />
 <meta property="og:image" content="<?php bloginfo('template_directory'); ?>/images/og-iram.png" /> <?php } ?>
 
-<!--//FACEBOOK OG-->
 
+<?php if(is_page(158)){?>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.5&appId=692872517452883";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<?php }?>
 <!-- LOADER -->
 <script type="text/javascript">
 jQuery(window).load(function() {
@@ -98,7 +106,7 @@ jQuery(window).load(function() {
         <div class="container-fluid header">
 
           <div class="logo">
-                  <a href="<?php echo home_url() ?>"><img src="<?php bloginfo('template_directory'); ?>/images/mujerlogohigh.png" /></a>
+                  <a href="<?php echo home_url() ?>"><img src="<?php bloginfo('template_directory'); ?>/images/mujerlogo_.png" /></a>
           </div>
 
           <div class="logo-banmedica">

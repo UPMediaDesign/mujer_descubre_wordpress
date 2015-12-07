@@ -4,10 +4,12 @@
                 <div class="row">
                     <ul class="col-md-3 ">
                        <li class="tupp">About</li> 
-                       <li><a href="" title="Las Varices" rel="nofollow">Las Varices</a></li>
-                       <li><a href="" title="Aló Doctor" rel="nofollow">Aló Doctor</a></li>
-                       <li><a href="" title="Mujeres Beneficiadas" rel="nofollow">Mujeres Beneficiadas</a></li>
-                       <li><a href="" title="Inscribete en el Programa" rel="nofollow">Inscríbete en el Programa</a></li>  
+                       <li><a href="<?php home_url( ); ?>/las-varices/" title="Las Varices" rel="nofollow">Las Varices</a></li>
+                       <li><a href="http://alodoctor.mujerdescubretuspiernas.cl/" title="Aló Doctor" rel="nofollow">Aló Doctor</a></li>
+                       <li><a href="<?php home_url(); ?>/mujeres-beneficiadas" title="Mujeres Beneficiadas" rel="nofollow">Mujeres Beneficiadas</a></li>
+                       <li><a href="http://inscripciones.mujerdescubretuspiernas.cl/" title="Inscribete en el Programa" rel="nofollow">Inscríbete en el Programa</a></li>
+                       <li><a href="http://www.fundacionbanmedica.cl" title="Fundacion">Fundación</a>
+                       </li>  
                     </ul> 
 
                     <div class="col-md-3 credits">

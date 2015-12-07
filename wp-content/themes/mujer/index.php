@@ -23,18 +23,23 @@ Template Name: Home
                         <div class="carousel-caption jumbotron">
                             <h1><?php echo get_the_title($slide->ID)?></h1>
                             <h3><?php echo $slide->post_content?></h3>
+                            <a href="http://inscripciones.mujerdescubretuspiernas.cl/" rel="nofollow" title="Inscríbete en el Programa" class="cta-inscript">Inscríbete en el Programa
+                            </a>
                             <!-- <span class="left-line"></span>
                             <p><?php //echo $slide->post_excerpt?></p> -->
                         </div>
                     </li>
                     <?php endforeach;?>
                     
-                    
                   </ul>
                   <nav class="slides-navigation">
                     <a href="#" class="next"><span class="fa fa-chevron-right"></span></a>
                     <a href="#" class="prev"><span class="fa fa-chevron-left"></span></a>
                   </nav>
+                  <ul class="rrss-side">
+                      <li><a href="https://twitter.com/fbanmedica" title="Twitter Fundación Banmédica" rel="nofollow"><img src="<?php bloginfo('template_directory')?>/images/twitter-head.png" /></a></li>
+                      <li><a href="https://www.facebook.com/FundacionBanmedica" title="Facebook Fundación Banmédica" rel="nofollow"><img src="<?php bloginfo('template_directory')?>/images/facebook-head.png" /></a></li>
+                  </ul>
                   
                   
                   
@@ -84,6 +89,26 @@ Template Name: Home
         
 
         <!-- Listado de casos -->
+
+        <section class="video-intro">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2 col-xs-12">
+
+                        <!-- <iframe src='http://player.vimeo.com/video/<?php //echo the_field('id_video_home'); ?>?api=1' id="vi-<?php //echo the_field('id_video_home'); ?>" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> -->
+
+                        <iframe src="https://player.vimeo.com/video/142524320?api=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+
+                    </div>
+                    <div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2 col-xs-12 foot-video">
+                        <p>Nélida Garrido es una de las beneficiadas del programa Mujer Descubre tus Piernas, el cual lleva a cabo Fundación Banmédica, a fin de proporcionar un tratamiento médico efectivo contra las várices.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
         <section>
             <div class="container">
                 <h3 class="title-case">Mujer Descubre Tus Piernas</h3>
@@ -136,7 +161,7 @@ Template Name: Home
                     
                         <?php the_post_thumbnail('home-boxes'); ?>
                         
-                        <h3>Dr. Fuenzalida</h3>
+                        <h3>Aló Doctor</h3>
                         <p class="upper">Vocero Médico</p>
                         <p><?php echo substr(strip_tags($post->post_content), 0, 490); ?></p>
                             
@@ -157,14 +182,14 @@ Template Name: Home
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 consult">
-                        <h3>Probabilidad de Varices por Edad</h3>
 
-                        <div class="col-md-4 col-md-offset-1 stadistics">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/graph-3.png" title="" rel="">
+                        <div class="col-md-5 col-md-offset-1 stadistics">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/hard-data.png" title="" rel="">
                         </div>
                        
-                        <div class="col-md-4 col-md-offset-2 stadistics">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/graph-4.png" title="" rel="">
+                        <div class="col-md-5 stadistics second">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/mujer-group.png" title="" rel="">
+                             <a href="<?php echo get_page_link()?>mujeres-beneficiadas" title="" rel="">Conoce sus Testimonios</a>
                         </div>
 
                     </div>

@@ -20,31 +20,18 @@ Template Name: Beneficiadas
             </div>
         </div>
 
-        <section class="container white">
+        <section class="container light-grey border-ccc">
                 <div class="row">
-                    <div class="col-md-12 medic-ask jumbotron">
+                    <div class="col-md-12 medic-ask jumbotron intro-testimonios">
                         <h2>Historias Reales</h2>
                         <div class="line-green"></div>
                         <?php echo apply_filters('the_content' , $post->post_content)?>
+                        <!-- <iframe width="100%" height="auto" src="https://www.youtube.com/embed/<?php //echo get_field('video_beneficiadas') ?>" frameborder="0" allowfullscreen></iframe> -->
+                        
                     </div>
                 </div>
         </section>
  		
-		<section class="container actress">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/solange.png">
-                </div>
-                <div class="col-md-6">
-                    <h3>Solange Lackington</h3>
-                    <div class="line-green-1"></div>
-                    <span>Actriz</span>
-                   
-                    <?php echo apply_filters('the_content' , get_field('testimonio_solange_lackington'))?>
-                    
-                </div>
-            </div>
-        </section>
 
         <section class="container white">
         	<div class="row">
@@ -57,12 +44,14 @@ Template Name: Beneficiadas
                         <script src="//f.vimeocdn.com/js/froogaloop2.min.js"></script>
                        
                        <?php $ctest = 0;?>
-                       <?php $testimonios = get_posts(array('post_type' => 'testimonio', 'numberposts' => 4))?>
+                       <?php $testimonios = get_posts(array('post_type' => 'testimonio', 'numberposts' => 8))?>
                        <?php foreach($testimonios as $testimonio):?>
                        <?php $ctest++?>
-                       <li class="col-md-6">
+                       <li class="col-md-3">
+                        <a style="background:none !important; padding:0 !important;" title="<?php the_permalink(); ?>" rel="nofollow" data-target="#modal-<?php echo $ctest?>" data-toggle="modal" >
                       		<?php echo get_the_post_thumbnail($testimonio->ID , 'tratamiento' , array('class' => 'testiimagen'))?>
-                        	<!--<img src="<?php bloginfo('template_directory')?>/images/marcelagarrido.png" alt=""> -->
+                        </a>
+                        	
                         	<h4><?php echo $testimonio->post_title?></h4>
                         	<div class="line-text"></div>
                         	<?php echo apply_filters('the_content' , $testimonio->post_content)?>
@@ -81,7 +70,7 @@ Template Name: Beneficiadas
                                   </div>
                                   <div class="modal-content">
                                       <div class='embed-container'>
-                                        <iframe src='http://player.vimeo.com/video/<?php echo get_field('video_id' , $testimonio->ID)?>?api=1' id="vi-<?php echo get_field('video_id' , $testimonio->ID)?>" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                                        <iframe src='<?php echo get_field('video_id' , $testimonio->ID)?>' id="vi-<?php echo get_field('video_id' , $testimonio->ID)?>" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                                         <script type="text/javascript">
                                         jQuery(document).ready(function($) {
                                             var iframe = document.getElementById('vi-<?php echo get_field('video_id' , $testimonio->ID)?>');
@@ -100,6 +89,18 @@ Template Name: Beneficiadas
                                             
                                         }); 
                                         </script>
+                                        <script>
+                                            jQuery(document).ready(function($) {
+                                            jQuery('.modal .close').on('click', function() {
+                                                //$('#popup-youtube-player').stopVideo();
+                                              jQuery('.modal .player')[0].contentWindow.postMessage('{"event":"command","func":"' +'stopVideo' + '","args":""}', '*');    
+                                            });
+                                            jQuery('.modal').on('click', function() {
+                                                //$('#popup-youtube-player').stopVideo();
+                                              jQuery('.modal .player')[0].contentWindow.postMessage('{"event":"command","func":"' +'stopVideo' + '","args":""}', '*');    
+                                            });
+                                            });
+                                        </script> 
                                       </div>
                                 </div>
                                   
@@ -110,16 +111,6 @@ Template Name: Beneficiadas
                             
                        	</li>
                         <?php endforeach;?>
-
-                       
-                        
-
-                         
-                        
-                        
-                
-                        
-                        
                     
                     </ul>
 

@@ -59,10 +59,7 @@ box-shadow:         0px 0px 12px 0px rgba(50, 50, 50, 0.97);}
 .contactt #submit{ background-color:#3ee1c4; color:#fff ; width:55%; margin: 0 auto; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; cursor:pointer;}
 .contactt #submit:hover{background-color:#31BAA1; -webkit-transition: 0.5s ease; -moz-transition: 0.5s ease; -ms-transition: 0.5s ease; transition: 0.5s ease; cursor:pointer;}
 
-img.testiimagen{ padding: 60px;
-border-radius: 400px;
-width: 100%;
-height: auto;}
+img.testiimagen{ padding: 20px 25px; border-radius: 400px; width: 100%; height: auto; margin: 0 auto; display: block; max-width: 305px;}
 
 .comment-form-author input[type=text],
 .comment-form-apellido input[type=text],
