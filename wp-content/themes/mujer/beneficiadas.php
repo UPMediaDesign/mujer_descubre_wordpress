@@ -4,7 +4,7 @@ Template Name: Beneficiadas
 */
 ?>
 <?php get_header(); ?>
-		<?php $topimagen = get_field('top_imagen' , $post->ID)?>
+        <?php $topimagen = get_field('top_imagen' , $post->ID)?>
         <div class="beneficiadas" style="background-image:url(<?php echo $topimagen?>)">
             <div class="container">
                 <div class="row">
@@ -31,14 +31,14 @@ Template Name: Beneficiadas
                     </div>
                 </div>
         </section>
- 		
+        
 
         <section class="container white">
-        	<div class="row">
-        		<div class="col-md-12 medic-ask jumbotron ">
-        			<h2>Testimonios</h2>
-        			<!-- Slider Casos Beneficiadas -->
-        			<div class="line-green"></div>
+            <div class="row">
+                <div class="col-md-12 medic-ask jumbotron ">
+                    <h2>Testimonios</h2>
+                    <!-- Slider Casos Beneficiadas -->
+                    <div class="line-green"></div>
                     <ul class="benefit bxslider">
                        
                         <script src="//f.vimeocdn.com/js/froogaloop2.min.js"></script>
@@ -49,120 +49,68 @@ Template Name: Beneficiadas
                        <?php $ctest++?>
                        <li class="col-md-3">
                         <a style="background:none !important; padding:0 !important;" title="<?php the_permalink(); ?>" rel="nofollow" data-target="#modal-<?php echo $ctest?>" data-toggle="modal" >
-                      		<?php echo get_the_post_thumbnail($testimonio->ID , 'tratamiento' , array('class' => 'testiimagen'))?>
+                            <?php echo get_the_post_thumbnail($testimonio->ID , 'tratamiento' , array('class' => 'testiimagen'))?>
                         </a>
-                        	
-                        	<h4><?php echo $testimonio->post_title?></h4>
-                        	<div class="line-text"></div>
-                        	<?php echo apply_filters('the_content' , $testimonio->post_content)?>
+                            
+                            <h4><?php echo $testimonio->post_title?></h4>
+                            <div class="line-text"></div>
+                            <?php echo apply_filters('the_content' , $testimonio->post_content)?>
                             
                             
-                            <a title="<?php the_permalink(); ?>" rel="nofollow" data-target="#modal-<?php echo $ctest?>" data-toggle="modal" >
-                                Ver testimonio
-                            </a>
-                            
-                            <div class="modal fade" id="modal-<?php echo $ctest?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                              <div class="modal-dialog">
-                                <div class="modal-content">
-                                  <div class="modal-header">
-                                    <button type="button" id="cerrar2-v-<?php echo get_field('video_id' , $testimonio->ID)?>" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                    
-                                  </div>
-                                  <div class="modal-content">
-                                      <div class='embed-container'>
-                                        <iframe src='<?php echo get_field('video_id' , $testimonio->ID)?>' id="vi-<?php echo get_field('video_id' , $testimonio->ID)?>" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                                        <script type="text/javascript">
-                                        jQuery(document).ready(function($) {
-                                            var iframe = document.getElementById('vi-<?php echo get_field('video_id' , $testimonio->ID)?>');
-                                            $f == Froogaloop
-                                            var player = $f(iframe);
-                                            
-                                            var pauseButton = document.getElementById("cerrar2-v-<?php echo get_field('video_id' , $testimonio->ID)?>");
-                                            pauseButton.addEventListener("click", function() {
-                                              player.api("pause");
-                                            });
-                                            
-                                            var pauseButton = document.getElementById("modal-<?php echo $ctest?>");
-                                            pauseButton.addEventListener("click", function() {
-                                              player.api("pause");
-                                            });
-                                            
-                                        }); 
-                                        </script>
-                                        <script>
-                                            jQuery(document).ready(function($) {
-                                            jQuery('.modal .close').on('click', function() {
-                                                //$('#popup-youtube-player').stopVideo();
-                                              jQuery('.modal .player')[0].contentWindow.postMessage('{"event":"command","func":"' +'stopVideo' + '","args":""}', '*');    
-                                            });
-                                            jQuery('.modal').on('click', function() {
-                                                //$('#popup-youtube-player').stopVideo();
-                                              jQuery('.modal .player')[0].contentWindow.postMessage('{"event":"command","func":"' +'stopVideo' + '","args":""}', '*');    
-                                            });
-                                            });
-                                        </script> 
-                                      </div>
-                                </div>
-                                  
-                                </div>
-                              </div>
-                            </div>
-                            
-                            
-                       	</li>
+                        </li>
                         <?php endforeach;?>
                     
                     </ul>
 
                     <nav class="slides-navigation benefit-ctrl">
-                    	<a href="#" class="slides-navigation righta"><span class="fa fa-chevron-right"></span></a>
-                    	<a href="#" class="slides-navigation lefta"><span class="fa fa-chevron-left"></span></a>
+                        <a href="#" class="slides-navigation righta"><span class="fa fa-chevron-right"></span></a>
+                        <a href="#" class="slides-navigation lefta"><span class="fa fa-chevron-left"></span></a>
                     </nav> 
                     <!-- Fin Slider Casos Beneficiadas -->
                 </div>
-        	</div>
+            </div>
         </section>
-		
+        
         <section class="container white videos pdbottom30">
-        	<div class="row">
-        		<div class="col-md-12 videos">
-        			<h2>Videos</h2>
-        			<div class="line-green"></div>
-        		</div>
-        	</div>
+            <div class="row">
+                <div class="col-md-12 videos">
+                    <h2>Videos</h2>
+                    <div class="line-green"></div>
+                </div>
+            </div>
 
-        	<div class="row videos-area slider">
-            	
-            	<?php $cvideo = 0?>
-				<?php $videos = get_posts(array('post_type' => 'videos' , 'tipo'=>'testimonios' , 'numberposts' => 10 ))?>
+            <div class="row videos-area slider">
+                
+                <?php $cvideo = 0?>
+                <?php $videos = get_posts(array('post_type' => 'videos' , 'tipo'=>'testimonios' , 'numberposts' => 10 ))?>
                 <?php foreach($videos as $video):?>
                 <?php $cvideo++?>
 
-        		<div class="col-md-4 pdlr0 ">
+                <div class="col-md-4 pdlr0 ">
                 
-                	<figure class="slide">
-                    	<?php echo get_the_post_thumbnail($video->ID , 'filosofia' , array('data-toggle' => 'modal' , 'data-target'=> '#modalb-'.$cvideo , 'class' => 'btn btn-primary'))?>
-                    	<figcaption>
-                        	<img src="<?php bloginfo('template_directory')?>/images/play.png" alt="" width="90" data-toggle="modal" data-target="#modalb-<?php echo $cvideo?>" />
+                    <figure class="slide">
+                        <?php echo get_the_post_thumbnail($video->ID , 'filosofia' , array('data-toggle' => 'modal' , 'data-target'=> '#modalb-'.$cvideo , 'class' => 'btn btn-primary'))?>
+                        <figcaption>
+                            <img src="<?php bloginfo('template_directory')?>/images/play.png" alt="" width="90" data-toggle="modal" data-target="#modalb-<?php echo $cvideo?>" />
                         </figcaption>
                         <h3><?php echo get_the_title($video->ID , array('data-toggle' => 'modal' , 'data-target'=> '#modal-'.$cvideo , 'class' => 'btn btn-primary'))?></h3>
                     </figure>
-						
-					
-					<!-- Fin Ventana Modal -->
-				</div>
+                        
+                    
+                    <!-- Fin Ventana Modal -->
+                </div>
                 <?php endforeach?>
 
 
-				<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+                <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
                 </style>
 
-        	</div>
+            </div>
 
             <!-- Llamado a inscripción -->
         </section>
-		<div class="clear separator"></div>
- 		<section class="container-fluid suscribe">
+        <div class="clear separator"></div>
+        <section class="container-fluid suscribe">
                 <div class="row">
                     <div class="col-md-12">
                         <h3>Conoce a más sobre los tratamientos</h3>

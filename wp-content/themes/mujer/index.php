@@ -23,8 +23,7 @@ Template Name: Home
                         <div class="carousel-caption jumbotron">
                             <h1><?php echo get_the_title($slide->ID)?></h1>
                             <h3><?php echo $slide->post_content?></h3>
-                            <a href="http://inscripciones.mujerdescubretuspiernas.cl/" rel="nofollow" title="Inscríbete en el Programa" class="cta-inscript">Inscríbete en el Programa
-                            </a>
+                            
                             <!-- <span class="left-line"></span>
                             <p><?php //echo $slide->post_excerpt?></p> -->
                         </div>
@@ -86,10 +85,7 @@ Template Name: Home
                         */?>
             </div>
 
-        
-
-        <!-- Listado de casos -->
-
+        <!-- Video Casos -->
         <section class="video-intro">
             <div class="container">
                 <div class="row">
@@ -108,7 +104,9 @@ Template Name: Home
                 </div>
             </div>
         </section>
+        <!-- Fin Video Casos -->
 
+        <!-- Listado de casos -->
         <section>
             <div class="container">
                 <h3 class="title-case">Mujer Descubre Tus Piernas</h3>
